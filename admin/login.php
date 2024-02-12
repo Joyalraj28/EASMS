@@ -28,13 +28,10 @@
     margin: 10px;
     font-weight: bold;
    }
-
-   
-
- </style>
-<body class="hold-transition login-page">
-
-<!-- <div id="preloader"></div> -->
+  
+</style>
+<body class="hold-transition  login-page" style="<?php echo "background-image: url(".validate_image($_settings->info('login_bg')).");" ?>">
+<!-- <div id="preloader"></div> --> 
   <script>
     start_loader()
   </script>
@@ -42,7 +39,6 @@
 
 </div>
 <div class="login-box">
-
   <!-- /.login-logo -->
   <div class="card card-primary">
   <div class="headerlogin">
