@@ -1,0 +1,115 @@
+logout
+
+login
+Accountant
+Accountant
+{"status":"success"}
+1
+logout
+
+login
+{"status":"success"}
+1
+
+login
+{"status":"success"}
+1
+1
+1
+login
+{"status":"incorrect","last_qry":"SELECT * from users where username = 'admin' and password = md5('admin12') "}
+login
+{"status":"success"}
+1
+login
+{"status":"success"}
+1
+1
+
+login
+{"status":"incorrect","last_qry":"SELECT * from users where username = '' and password = md5('') "}
+login
+{"status":"incorrect","last_qry":"SELECT * from users where username = 'aa' and password = md5('') "}
+login
+{"status":"incorrect","last_qry":"SELECT * from users where username = 'aa' and password = md5('') "}
+login
+{"status":"incorrect","last_qry":"SELECT * from users where username = '' and password = md5('') "}
+login
+{"status":"incorrect","last_qry":"SELECT * from users where username = '' and password = md5('') "}
+login
+{"status":"incorrect","last_qry":"SELECT * from users where username = '' and password = md5('') "}
+
+login
+{"status":"incorrect","last_qry":"SELECT * from users where username = '' and password = md5('') "}
+login
+{"status":"incorrect","last_qry":"SELECT * from users where username = '' and password = md5('') "}
+login
+{"status":"incorrect","last_qry":"SELECT * from users where username = 'Joyal' and password = md5('][sd') "}
+
+
+login
+{"status":"success"}
+1
+logout
+
+login
+{"status":"incorrect","last_qry":"SELECT * from users where username = 'admin' and password = md5('Admin12') "}
+login
+{"status":"incorrect","last_qry":"SELECT * from users where username = 'admin' and password = md5('Admin123') "}
+login
+{"status":"incorrect","last_qry":"SELECT * from users where username = 'admin' and password = md5('Admin123') "}
+login
+{"status":"success"}
+1
+1
+logout
+
+
+
+
+login
+{"status":"incorrect","last_qry":"SELECT * from users where username = 'admin' and password = md5('Admin123') "}
+login
+{"status":"incorrect","last_qry":"SELECT * from users where username = 'admin' and password = md5('Admin123') "}
+login
+{"status":"incorrect","last_qry":"SELECT * from users where username = 'admin' and password = md5('Admin123') "}
+login
+{"status":"incorrect","last_qry":"SELECT * from users where username = 'admin' and password = md5('Admin123') "}
+login
+{"status":"incorrect","last_qry":"SELECT * from users where username = 'admin' and password = md5('Admin123') "}
+login
+{"status":"success"}
+1
+1
+1
+1
+logout
+
+
+
+login
+{"status":"success"}
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+logout
+
+
