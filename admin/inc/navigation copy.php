@@ -25,8 +25,8 @@
                   <ul class="nav nav-pills nav-sidebar flex-column text-sm nav-compact nav-flat nav-child-indent nav-collapse-hide-child" data-widget="treeview" role="menu" data-accordion="false">
                     
                     <!-- Overview -->
-                    <li  class="nav-link nav-home">
-                      <a href="./">
+                    <li style="cursor:pointer;font-size:15px;margin-left: 2px;"  class="nav-item dropdown">
+                      <a href="./" class="nav-link nav-home">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                           Overview
@@ -34,20 +34,29 @@
                       </a>
                     </li> 
 
+                    <?php if($_settings->userdata('type') == 3): ?>
+                      <li class="nav-item dropdown">
+                      <a href="<?php echo base_url ?>admin/?page=employees/records&id=<?php echo $_settings->userdata('id') ?>" class="nav-link nav-records">
+                        <i class="nav-icon fas fa-id-card"></i>
+                        <p>
+                          My Records
+                        </p>
+                      </a>
+                      </li>
+                    <?php else: ?>
+
                     <!-- Employees Management -->
-                    <li class="nav-link employee" data-toggle="collapse" data-target="#employeesdropdown">
-                    <a>
-                      <i class="nav-icon fas fa-user-friends"></i>
+                    <li style="cursor:pointer;font-size:15px;margin-left: 15px;" class="nav-link" data-toggle="collapse" data-target="#empdrop">
+                        <i class="nav-icon fas fa-user-friends"></i>
                         <p>
                           Employees
                         </p>
-                    </a>
                     </li>
 
-                    <div id="employeesdropdown" class="collapse">
+                    <div style="cursor: pointer;font-size:15px;margin-left: 12px;" id="empdrop" class="collapse">
                       
                      <!-- Employees Management -->
-                      <li class="nav-item dropdown">
+                      <li style="cursor: pointer;font-size:15px;margin-left: 12px;" class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=employees" class="nav-link nav-employees">
                         <i class="nav-icon fas fa-user-friends"></i>
                         <p>
@@ -57,7 +66,7 @@
                       </li>
 
                        <!-- Employees Management -->
-                       <li class="nav-item dropdown">
+                       <li style="cursor: pointer;font-size:15px;margin-left: 12px;" class="nav-item dropdown">
                       <a  class="nav-link">
                         <i class="nav-icon fas fa-user-friends"></i>
                         <p>
@@ -67,18 +76,21 @@
                       </li>
                     </div>
 
+                    <?php endif; ?>
 
+                  
+                    <?php if($_settings->userdata('type') != 3): ?>
+                    <?php if($_settings->userdata('type') == 1): ?>
+                    
                   <!-- Department Management -->
-                  <li class="nav-link" data-toggle="collapse" data-target="#maintenance_departmentdropdown">
-                   <a>
-                   <i class="nav-icon fas fa-building"></i>
-                   <p>Department</p>
-                   </a>  
+                  <li style="cursor:pointer;font-size:15px;margin-left: 15px;" class="nav-link" data-toggle="collapse" data-target="#depdrop">
+                        <i class="nav-icon fas fa-building"></i>
+                        <p>Department</p>
                   </li>
 
-                  <div id="maintenance_departmentdropdown" class="collapse">
+                  <div style="cursor: pointer;font-size:15px;margin-left: 12px;" id="depdrop" class="collapse">
                      <!-- Department Management -->
-                     <li class="nav-item dropdown">
+                     <li style="cursor: pointer;font-size:15px;margin-left: 12px;"  class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=maintenance/department" class="nav-link nav-maintenance_department">
                         <i class="nav-icon fas fa-building"></i>
                         <p>
@@ -91,16 +103,14 @@
 
 
                    <!-- Designation Management -->
-                   <li class="nav-link" data-toggle="collapse" data-target="#maintenance_designationdropdown">
-                    <a>  
-                    <i class="nav-icon fas fa-th-list"></i>
-                    <p>Designation</p>
-                    </a>  
+                   <li style="cursor:pointer;font-size:15px;margin-left: 15px;" class="nav-link" data-toggle="collapse" data-target="#decdrop">
+                        <i class="nav-icon fas fa-th-list"></i>
+                        <p>Designation</p>
                   </li>
 
-                  <div id="maintenance_designationdropdown" class="collapse">
+                  <div style="cursor: pointer;font-size:15px;margin-left: 12px;" id="decdrop" class="collapse">
                      <!-- Designation Management -->
-                     <li class="nav-item dropdown">
+                     <li style="cursor: pointer;font-size:15px;margin-left: 12px;" class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=maintenance/designation" class="nav-link nav-maintenance_designation">
                         <i class="nav-icon fas fa-th-list"></i>
                         <p>
@@ -109,50 +119,54 @@
                       </a>
                     </li>
                  </div>
+                   
+                  <!-- Attendance Management -->
+                  <?php if(true): ?>
 
 
-
-                 <li class="nav-link" data-toggle="collapse" data-target="#AttendSalarydropdown">
-                  <a>    
-                    <i class="nav-icon fas fa-user-friends"></i>
-                    <p>Attendance & Salary</p>
-                  </a>   
+                 <li style="cursor:pointer;font-size:15px;margin-left: 15px;" class="nav-link" data-toggle="collapse" data-target="#attsaldrop">
+                        <i class="nav-icon fas fa-user-friends"></i>
+                        <p>Attendance & Salary</p>
                   </li>
 
-
-                 <div id="AttendSalarydropdown" class="collapse">
-
-
+                 
+                <div style="cursor: pointer;font-size:15px;margin-left: 12px;" id="attsaldrop" class="collapse">
+                  
                   <!-- Attendance -->
-                    <li class="nav-item dropdown">
-                      <a href="<?php echo base_url ?>admin/?page=maintenance/attendance" class="nav-link nav-maintenance_attendance">
-                      <i class="nav-icon fas fa-calendar"></i>
-                        <p>List of Attendance</p>
+                    <li style="cursor: pointer;font-size:15px;margin-left: 12px;" class="nav-item dropdown">
+                      <a href="<?php echo base_url ?>admin/?page=Attendance" class="nav-link nav-Attendance">
+                      <i class="nav-icon fas fa-id-badge"></i>
+                        <p>
+                        List of Attendance
+                        </p>
                       </a>
                     </li>
 
                      <!-- Salary -->
-                     <li class="nav-item dropdown">
-                      <a href="<?php echo base_url ?>admin/?page=maintenance/salary" class="nav-link nav-maintenance_salary">
-                      <i class="nav-icon fas fa-money-bill-wave"></i>
-                        <p>Salary</p>
+                     <li style="cursor: pointer;font-size:15px;margin-left: 12px;" class="nav-item dropdown">
+                      <a href="<?php echo base_url ?>admin/?page=Attendance" class="nav-link nav-Attendance">
+                      <i class="nav-icon fas fa-id-badge"></i>
+                        <p>
+                        Salary
+                        </p>
                       </a>
                     </li>
 
-                 </div>
+                </div>
+                   
+                  <?php endif; ?>
 
+                  <?php endif; ?>
 
-                 <li class="nav-link" data-toggle="collapse" data-target="#leavedropdown">
-                   <a>
+                  <li style="cursor:pointer;font-size:15px;margin-left: 15px;" class="nav-link" data-toggle="collapse" data-target="#levedrop">
                         <i class="nav-icon fas fa-list"></i>
                         <p>Leave</p>
-                  </a>
                   </li>
 
-                   <div id="leavedropdown" class="collapse">
+                   <div style="cursor: pointer;font-size:15px;margin-left: 12px;" id="levedrop" class="collapse">
                       <!-- Leave Type Management -->
-                      <li  class="nav-item dropdown">
-                      <a href="<?php echo base_url ?>admin/?page=leavemanagement/leave_type" class="nav-link nav-leavemanagement_leave_type">
+                      <li style="cursor: pointer;font-size:15px;margin-left: 12px;" class="nav-item dropdown">
+                      <a href="<?php echo base_url ?>admin/?page=maintenance/leave_type" class="nav-link nav-maintenance_leave_type">
                         <i class="nav-icon fas fa-list"></i>
                         <p>
                           Leave Type Management
@@ -161,8 +175,8 @@
                       </li>
 
                       <!-- Leave history Reports -->
-                      <li class="nav-item dropdown">
-                      <a href="<?php echo base_url ?>admin/?page=leavemanagement/leavereport" class="nav-link nav-leavemanagement_leavereport">
+                      <li style="cursor: pointer;font-size:15px;margin-left: 12px;"  class="nav-item dropdown">
+                      <a href="<?php echo base_url ?>admin/?page=reports" class="nav-link nav-reports">
                         <i class="nav-icon fas fa-file"></i>
                         <p>
                          Leave history Reports
@@ -171,8 +185,8 @@
                       </li>
 
                       <!-- Leave Application -->
-                      <li class="nav-item dropdown">
-                      <a href="<?php echo base_url ?>admin/?page=leavemanagement/leave_applications" class="nav-link nav-leavemanagement_leave_applications">
+                      <li style="cursor: pointer;font-size:15px;margin-left: 12px;" class="nav-item dropdown">
+                      <a href="<?php echo base_url ?>admin/?page=leave_applications" class="nav-link nav-leave_applications">
                         <i class="nav-icon fas fa-file-alt"></i>
                         <p>
                           Application Management
@@ -182,16 +196,25 @@
 
                   </div>
 
+                  <?php if($_settings->userdata('type') == 1): ?>
                   <!-- System Settings -->
-                  <li>
+                  <li style="cursor:pointer;font-size:15px;margin-left: 2px;" class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=system_info" class="nav-link nav-system_info">
                         <i class="nav-icon fas fa-cogs"></i>
-                        <p>Settings</p>
+                        <p>
+                         Settings
+                        </p>
                       </a>
                   </li>
+                  <?php endif; ?>
+                    
+                  <?php endif; ?>
 
+                </ul>
 
-                  </ul>
+                  
+                
+                
                 </nav>
                 <!-- /.sidebar-menu -->
               </div>
@@ -212,48 +235,20 @@
         <!-- /.sidebar -->
       </aside>
       <script>
+
+
         
     $(document).ready(function(){
-
       var page = '<?php echo isset($_GET['page']) ? $_GET['page'] : 'home' ?>';
       var s = '<?php echo isset($_GET['s']) ? $_GET['s'] : '' ?>';
       page = page.split('/');
       page = page.join('_');
 
-      
-
       if($('.nav-link.nav-'+page).length > 0){
-        $('.nav-link.nav-'+page).addClass('active');
-      
-        console.log(page);
-
-        pageid = '#'+page+'dropdown'
-
-        if(page ==  "maintenance_salary" || page == "maintenance_attendance")
-        {
-            pageid = "#AttendSalarydropdown";
-        }
-
-        if(page == "leavemanagement_leave_type" || page == "leavemanagement_leavereport" || page == "leavemanagement_leave_applications")
-        {
-          pageid = "#leavedropdown";
-        }
-        
-        console.log(pageid);
-
-        //Remove defult class
-        $(pageid).removeClass("collapse");
-        //Add select class
-        $(pageid).toggleClass("visable");
-      
-
-
+             $('.nav-link.nav-'+page).addClass('active')
         if($('.nav-link.nav-'+page).hasClass('tree-item') == true){
-
-          $('.nav-link.nav-'+page).closest('.nav-treeview').siblings('a').addClass('active')
+            $('.nav-link.nav-'+page).closest('.nav-treeview').siblings('a').addClass('active')
           $('.nav-link.nav-'+page).closest('.nav-treeview').parent().addClass('menu-open')
-          
-          
         }
         if($('.nav-link.nav-'+page).hasClass('nav-is-tree') == true){
           $('.nav-link.nav-'+page).parent().addClass('menu-open')

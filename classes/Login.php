@@ -64,27 +64,25 @@ class Login extends DBConnection {
 
 $action = !isset($_GET['f']) ? 'none' : strtolower($_GET['f']);
 
-DBConnection::debuglog($action);
+
 
 $auth = new Login();
-
 switch ($action) {
 	case 'login':
 		echo $auth->login();
-		DBConnection::debuglog($auth->login());
 		break;
 	case 'login_user':
 		echo $auth->login_user();
-		DBConnection::debuglog($auth->login_user());
 		break;
 	case 'logout':
 		echo $auth->logout();
-		DBConnection::debuglog($auth->logout());
 		break;
 	default:
 		echo $auth->index();
 		break;
 }
+
+
 
 ?>
 

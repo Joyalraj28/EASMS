@@ -62,7 +62,7 @@
               <span class="fas fa-user"></span>
             </div>
           </div>
-          <input type="text" class="form-control" name="username" placeholder="Username">
+          <input type="text" class="form-control" name="username" placeholder="Email">
         </div>
 
 
