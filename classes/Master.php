@@ -4,7 +4,7 @@ Class Master extends DBConnection {
 	private $settings;
 	public function __construct(){
 		global $_settings;
-		$this->settings = $_settings;
+		$this->settings = $_settings; 
 		$this->permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		parent::__construct();
 	}
@@ -25,17 +25,25 @@ Class Master extends DBConnection {
 	}
 
 
+	//Save department
 	function save_department(){
 		extract($_POST);
+
+
+
 		$data = "";
 		foreach($_POST as $k =>$v){
 			if(!in_array($k,array('id'))){
 				$v = addslashes($v);
 				if(!empty($data)) $data .=",";
 				$data .= " `{$k}`='{$v}' ";
+				DBConnection::debugtaglog($k,$v);
 			}
 		}
-		$check = $this->conn->query("SELECT * FROM `department_list` where `name` = '{$name}' ".(!empty($id) ? " and id != {$id} " : "")." ")->num_rows;
+
+		
+
+		$check = $this->conn->query("SELECT * FROM `department` where `Name` = '{$name}' ".(!empty($id) ? " and DepartmentID != {$id} " : "")." ")->num_rows;
 		if($this->capture_err())
 			return $this->capture_err();
 		if($check > 0){
@@ -45,10 +53,10 @@ Class Master extends DBConnection {
 			exit;
 		}
 		if(empty($id)){
-			$sql = "INSERT INTO `department_list` set {$data} ";
+			$sql = "INSERT INTO `department` set {$data} ";
 			$save = $this->conn->query($sql);
 		}else{
-			$sql = "UPDATE `department_list` set {$data} where id = '{$id}' ";
+			$sql = "UPDATE `department` set {$data} where DepartmentID = '{$id}' ";
 			$save = $this->conn->query($sql);
 		}
 		if($save){
@@ -80,6 +88,7 @@ Class Master extends DBConnection {
 	}
 
 
+	//designation management
 	function save_designation(){
 		extract($_POST);
 		$data = "";
@@ -90,7 +99,7 @@ Class Master extends DBConnection {
 				$data .= " `{$k}`='{$v}' ";
 			}
 		}
-		$check = $this->conn->query("SELECT * FROM `designation_list` where `name` = '{$name}' ".(!empty($id) ? " and id != {$id} " : "")." ")->num_rows;
+		$check = $this->conn->query("SELECT * FROM `designation` where `Name` = '{$name}' ".(!empty($id) ? " and DesignationID != {$id} " : "")." ")->num_rows;
 		if($this->capture_err())
 			return $this->capture_err();
 		if($check > 0){
@@ -100,10 +109,10 @@ Class Master extends DBConnection {
 			exit;
 		}
 		if(empty($id)){
-			$sql = "INSERT INTO `designation_list` set {$data} ";
+			$sql = "INSERT INTO `designation` set {$data} ";
 			$save = $this->conn->query($sql);
 		}else{
-			$sql = "UPDATE `designation_list` set {$data} where id = '{$id}' ";
+			$sql = "UPDATE `designation` set {$data} where DesignationID = '{$id}' ";
 			$save = $this->conn->query($sql);
 		}
 		if($save){
@@ -134,18 +143,28 @@ Class Master extends DBConnection {
 
 	}
 
-
+    //Leave type
 	function save_leave_type(){
 		extract($_POST);
+
+		
+
 		$data = "";
 		foreach($_POST as $k =>$v){
 			if(!in_array($k,array('id'))){
 				$v = addslashes($v);
 				if(!empty($data)) $data .=",";
 				$data .= " `{$k}`='{$v}' ";
+				
 			}
+			
 		}
-		$check = $this->conn->query("SELECT * FROM `leave_types` where `name` = '{$name}' ".(!empty($id) ? " and id != {$id} " : "")." ")->num_rows;
+
+		$DefaultCredit = $_POST['DefaultCredit'];
+
+		DBConnection::debuglog($data);
+
+		$check = $this->conn->query("SELECT * FROM `Leavetype` where `Description` = '{$Description}' ".(!empty($id) ? " and LeaveID != {$id} " : "")." ")->num_rows;
 		if($this->capture_err())
 			return $this->capture_err();
 		if($check > 0){
@@ -155,13 +174,17 @@ Class Master extends DBConnection {
 			exit;
 		}
 		if(empty($id)){
-			$sql = "INSERT INTO `leave_types` set {$data} ";
+			$sql = "INSERT INTO `Leavetype` set {$data} ";
 			$save = $this->conn->query($sql);
 		}else{
-			$sql = "UPDATE `leave_types` set {$data} where id = '{$id}' ";
+			$sql = "UPDATE `Leavetype` set {$data} where LeaveID = '{$id}' ";
 			$save = $this->conn->query($sql);
 		}
 		if($save){
+
+			//Update Leave DefaultCredit for all employee
+			$this->conn->query("UPDATE `leavetypeids` SET `DefultCredit`='$DefaultCredit'");
+
 			$resp['status'] = 'success';
 			if(empty($id))
 				$this->settings->set_flashdata('success',"New Leave Type successfully saved.");
@@ -244,91 +267,206 @@ Class Master extends DBConnection {
 		return json_encode($resp);
 	}
 
+	//Save employee
 	function save_employee(){
-		foreach($_POST as $k =>$v){
-			$_POST[$k] = addslashes($v);
-		}
+		
 		extract($_POST);
-		$chk = $this->conn->query("SELECT * FROM `employee_meta` where meta_field ='employee_id' and  meta_value = '{$employee_id}' ".($id>0? " and user_id!= '{$id}' " : ""))->num_rows;
-		$this->capture_err();
-		if($chk > 0){
-			$resp['status'] = 'failed';
-			$resp['msg'] = "Employee ID already exist in the database. Please review and try again.";
-			return json_encode($resp);
-			exit;
+
+
+		$data = "";
+		foreach($_POST as $k =>$v){
+			if(!in_array($k,array('id'))){
+				$v = addslashes($v);
+				if(!empty($data)) $data .=",";
+				$data .= " `{$k}`='{$v}' ";
+				DBConnection::debugtaglog($k,$v);
+			}
 		}
-		$chk2 = $this->conn->query("SELECT * FROM `users` where username ='{$username}' ".($id>0? " and id!= '{$id}' " : ""))->num_rows;
+
+	
+		DBConnection::debuglog($id);
+		if(empty($id))
+		{
+        //Check Email
+		$chk2 = $this->conn->query("SELECT * FROM `employee` where Email ='{$email}'")->num_rows;
 		$this->capture_err();
 		if($chk2 > 0){
 			$resp['status'] = 'failed';
-			$resp['msg'] = "Username is not available. Please review and try again.";
+			$resp['msg'] = "Email is not available. Please review and try again.";
 			return json_encode($resp);
 			exit;
 		}
-		$data = "";
-		foreach($_POST as $k =>$v){
-			if(in_array($k,array('firstname','lastname','middlename','username','type'))){
-				if(!empty($data)) $data.=" , ";
-				$data .= " `{$k}` = '{$v}' ";
-			}
+	   }
+	
+		$imageData = 'null';
+
+		//Dir not found
+		$dir = 'uploads/';
+		if(!is_dir(base_app.$dir))
+		{
+			mkdir(base_app.$dir);
 		}
-		if(empty($id))
-		$data .= ", `password` = md5('{$employee_id}') ";
-		if(empty($id))
-			$sql1 = "INSERT INTO `users` set {$data} ";
-		else
-			$sql1 = "UPDATE `users` set {$data}' where id = '{$id}' ";
-		
-		$save1 = $this->conn->query($sql1);
-		$this->capture_err();
-		if(!$save1){
-			$resp['status'] = 'failed';
-			$resp['error_sql'] = $sql1;
-		}
-		$user_id = empty($id) ? $this->conn->insert_id : $id ;
-		$this->conn->query("DELETE FROM `employee_meta` where user_id = '{$user_id}' and meta_field not in ('leave_type_ids','leave_type_credits') ");
-		$this->capture_err();
-		$data = "";
-		foreach($_POST as $k =>$v){
-			if(!in_array($k,array('id','avatar'))){
-				if(!empty($data)) $data .=",";
-				$v = addslashes($v);
-				$data .= " ('{$user_id}','{$k}','{$v}') ";
-			}
-		}
-		if(!isset($approver)){
-			$data .= ", ('{$user_id}','approver','off') ";
-		}
-		
-		$sql = "INSERT INTO `employee_meta` (`user_id`,`meta_field`,`meta_value`) VALUES {$data} ";
-		$save = $this->conn->query($sql);
-		$this->capture_err();
-		if($save){
-			$resp['status'] = 'success';
-			$resp['id'] = $user_id;
-			if(empty($id))
-				$this->settings->set_flashdata('success',"New Driver successfully saved.");
-			else
-				$this->settings->set_flashdata('success',"Driver Details successfully updated.");
-			$dir = 'uploads/';
-			if(!is_dir(base_app.$dir))
-				mkdir(base_app.$dir);
+
+
+			$Fullname =  ($_POST['firstname']." ".$_POST['lastname']);
+			$gender =  $_POST['gender'];
+			$dob  = $_POST['dob'];
+			$status =  $_POST['status'];
+			$address = $_POST['address'];
+			$netsalary = $_POST['netsalary'];
+			$Email = $_POST['email'];
+			$password = $_POST['password'];
+			$designation_id  = $_POST['designation_id'];
+			$currentempid = $this->settings->userdata('EmployeeID');
+
+
+			//Upload image
 			if(isset($_FILES['img'])){
-				if(!empty($_FILES['img']['tmp_name']) && isset($_SESSION['userdata']) && isset($_SESSION['system_info'])){
-					$fname = $dir.$user_id."_user.".(pathinfo($_FILES['img']['name'], PATHINFO_EXTENSION));
-					$move =  move_uploaded_file($_FILES['img']['tmp_name'],base_app.$fname);
-					if($move){
-						$this->conn->query("UPDATE `users` set `avatar` = '{$fname}' where id ='{$user_id}' ");
-						if(!empty($avatar) && is_file(base_app.$avatar))
-							unlink(base_app.$avatar);
+			if(!empty($_FILES['img']['tmp_name']) && isset($_SESSION['userdata']) && isset($_SESSION['system_info'])){
+						$fname = $dir.$Fullname."_emp.".(pathinfo($_FILES['img']['name'], PATHINFO_EXTENSION));
+						$move =  move_uploaded_file($_FILES['img']['tmp_name'],base_app.$fname);
+						if($move){
+							$imageData = "'".$fname."'";
+							if(!empty($avatar) && is_file(base_app.$avatar))
+								unlink(base_app.$avatar);
+						}
 					}
-				}
 			}
-		}else{
-			$resp['status'] = 'failed';
-			$resp['err'] = $this->conn->error."[{$sql}]";
+
+		
+
+       try {
+
+		if(!empty($id))
+		{
+
+			$query = $this->conn->query("UPDATE `employee` SET `Avatar`=$imageData,`Fullname`='$Fullname',`Gender`='$gender',`DOB`='$dob',`Status`='$status',`Address`='$address',`NetSalary`='$netsalary',`Email`='$Email',`Password`='$password',`DesignationID_FK`='$designation_id',`Admin_ID_FK`='$currentempid' WHERE `EmployeeID`='$id'");
+			
+			DBConnection::debuglog("UPDATE `employee` SET `Avatar`=$imageData,`Fullname`='$Fullname',`Gender`='$gender',`DOB`='$dob',`Status`='$status',`Address`='$address',`NetSalary`='$netsalary',`Email`='$Email',`Password`='$password',`DesignationID_FK`='$designation_id',`Admin_ID_FK`='$currentempid' WHERE `EmployeeID`='$id'");
+
+			if($query) {
+
+				$empdata = $this->conn->query("SELECT * FROM `employee` WHERE Email = '$email'")->fetch_assoc();
+	  
+				$empid= $empdata['EmployeeID'];
+	  
+				$this->AddUpdateEmployeeON($phoneno1,$phonenoOld1,$phoneno2,$phonenoOld2,$phoneno3,$phonenoOld3,empty($empid),$empid);
+
+				
+	  
+				 DBConnection::debuglog("Employee update successfully");
+				 $resp['status'] = 'success';
+				 $resp['id'] = $id;
+				 $resp['msg'] =  "Employee inserted successfully";
+	  
+	  
+			} 
+			   
+
+		
+
 		}
-		return json_encode($resp);
+
+		else{
+          // Prepare the query
+          $query = $this->conn->prepare("INSERT INTO `employee`(`Avatar`, `Fullname`, `Gender`, `DOB`, `Status`, `Address`, `NetSalary`, `Email`, `Password`, `DesignationID_FK`, `Admin_ID_FK`) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
+
+       		// Bind parameters
+      		$query->bind_param("ssssisdssii",
+        	$imageData,
+        	$Fullname,
+        	$gender,
+        	$dob,
+        	$status,
+        	$address,
+        	$netsalary,
+        	$Email,
+        	$password,
+        	$designation_id,
+        	$currentempid
+       		);
+
+         // Execute the query
+          $query->execute();
+
+	
+         // Check if the query was successful
+		 // then add phone no
+         if($query->affected_rows > 0) {
+
+		  $empdata = $this->conn->query("SELECT * FROM `employee` WHERE Email = '$email'")->fetch_assoc();
+
+          $empid= $empdata['EmployeeID'];
+
+		  //Insert phone no
+		  $this->AddUpdateEmployeeON($phoneno1,$phonenoOld1,$phoneno2,$phonenoOld2,$phoneno3,$phonenoOld3,empty($empid),$empid);
+
+           DBConnection::debuglog("Employee inserted successfully");
+		   $resp['status'] = 'success';
+		   $resp['id'] = $id;
+	       $resp['msg'] =  "Employee inserted successfully";
+
+
+           } else {
+			$resp['status'] = 'failed';
+			$resp['msg'] = "Failed to insert employee";
+           DBConnection::debuglog("Failed to insert employee");
+           }
+		 }
+
+
+          } catch (Exception $e) 
+		  {
+             // Handle exceptions
+             DBConnection::debuglog($e->getMessage());
+          }
+
+	       return json_encode($resp);
+      }
+
+
+	function AddUpdateEmployeeON($phoneno1,$phonenoOld1,$phoneno2,$phonenoOld2,$phoneno3,$phonenoOld3,$isempty,$empid)
+	{
+		if($isempty)
+		{
+			//Phone no 1
+			if(!empty($phoneno1) && isset($phoneno1))
+			{
+			 $this->conn->query("UPDATE `employeephoneno` SET `PhoneNo`='$phoneno1' WHERE `PhoneNo`='$phonenoOld1'");
+			}
+
+			//Phone no 2
+			if(!empty($phoneno2) && isset($phoneno2))
+			{
+				$this->conn->query("UPDATE `employeephoneno` SET `PhoneNo`='$phoneno2' WHERE `PhoneNo`='$phonenoOld2'");
+			}
+
+			//Phone no 3
+			if(!empty($phoneno3) && isset($phoneno3))
+			{
+				$this->conn->query("UPDATE `employeephoneno` SET `PhoneNo`='$phoneno3' WHERE `PhoneNo`='$phonenoOld3'");
+			}
+	    }
+		else
+		{
+ 			//Phone no 1
+ 			if(!empty($phoneno1) && isset($phoneno1))
+ 			{
+ 			$this->conn->query("INSERT INTO `employeephoneno`(`PhoneNo`, `EmployeeID_FK`) VALUES ('$phoneno1','$empid')");
+ 			}
+		
+ 			//Phone no 2
+ 			if(!empty($phoneno2) && isset($phoneno2))
+ 			{
+ 			 $this->conn->query("INSERT INTO `employeephoneno`(`PhoneNo`, `EmployeeID_FK`) VALUES ('$phoneno2','$empid')");
+ 			}
+		
+ 			//Phone no 3
+ 			if(!empty($phoneno3) && isset($phoneno3))
+ 			{
+ 			$this->conn->query("INSERT INTO `employeephoneno`(`PhoneNo`, `EmployeeID_FK`) VALUES ('$phoneno3','$empid')");
+ 			}
+		}
 	}
 
 	function reset_password(){
@@ -361,25 +499,37 @@ Class Master extends DBConnection {
 
 	function save_emp_leave_type(){
 		extract($_POST);
-		
-		$leave_type_ids = array();
-		$leave_type_credits = array();
+
+
+		$insertstr = array();
 
 		if(isset($leave_type_id) && count($leave_type_id) > 0){
-			$leave_type_ids = $leave_type_id;
+	
+
+		    $count =count($leave_type_id)-1;
+
 			foreach($leave_type_id as $k=> $v){
-				$leave_type_credits[$v] = $leave_credit[$k];
+				array_push($insertstr,"(",$user_id.','.$v.','.$leave_credit[$k].','.$leave_default_credit[$k].')'.($count == $k ? '' : ','));
 			}
 		}
 
-		$this->conn->query("DELETE FROM `employee_meta` where (meta_field = 'leave_type_ids' or meta_field = 'leave_type_credits') and user_id = '{$user_id}' ");
+       DBConnection::debuglog("DELETE  FROM `leavetypeids` WHERE EmployeeID_FK = '{$user_id}'");
 
-		$leave_type_ids = implode(',',$leave_type_ids);
-		$leave_type_credits = json_encode($leave_type_credits);
-		$data = "('{$user_id}','leave_type_ids','{$leave_type_ids}')";
-		$data .= ",('{$user_id}','leave_type_credits','{$leave_type_credits}')";
-		$save = $this->conn->query("INSERT INTO `employee_meta` (`user_id`,`meta_field`,`meta_value`) Values {$data}");
+		// $resp['status']='fail';
+		// return json_encode($resp);
+
+
+		
+		$this->conn->query("DELETE  FROM `leavetypeids` WHERE EmployeeID_FK = '{$user_id}' ");
+
+		
+		$save = $this->conn->query("INSERT INTO `leavetypeids` VALUES ".implode($insertstr));
+		
+
+		
+		
 		$this->capture_err();
+		
 		$resp['status'] = 'success';
 		$this->settings->set_flashdata("success"," Leave Type Credits successfully updated.");
 		return json_encode($resp);
@@ -395,7 +545,15 @@ Class Master extends DBConnection {
 				$data .= " `{$k}`='{$v}' ";
 			}
 		}
-		$meta_qry = $this->conn->query("SELECT * FROM employee_meta where user_id = '{$user_id}' ");
+
+
+		DBConnection::debuglog($data);
+
+		$resp['status'] = 'failed';
+		$resp['msg'] = "Currently testing";
+		return json_encode($resp);
+
+		$meta_qry = $this->conn->query("SELECT * FROM employee where EmployeeID = '{$user_id}' ");
 		while($row = $meta_qry->fetch_assoc()){
 			$meta[$row['meta_field']] = $row['meta_value'];
 		}
@@ -404,7 +562,11 @@ Class Master extends DBConnection {
 		foreach($leave_type_credits as $k=> $v){
 			$ltc[$k] = $v;
 		}
-		$used = $this->conn->query("SELECT COALESCE(sum(`leave_days`),0) as total FROM leave_applications where user_id = '{$user_id}' and `leave_type_id` = '{$leave_type_id}' and date_format(date_start,'%Y') = '".date('Y')."' and date_format(date_end,'%Y') = '".date('Y')."' and status = 1 ")->fetch_array()['total'];
+
+		
+
+
+		$used = $this->conn->query("SELECT COALESCE(sum(`leave_days`),0) as total FROM leaveapplication where ApplyEmpID_FK = '{$user_id}' and `leave_type_id` = '{$leave_type_id}' and date_format(date_start,'%Y') = '".date('Y')."' and date_format(date_end,'%Y') = '".date('Y')."' and status = 1 ")->fetch_array()['total'];
 		$allowed = (isset($ltc[$leave_type_id])) ? $ltc[$leave_type_id] : 0;
 		$available =  $allowed - $used;
 		if(!isset($ltc[$leave_type_id])){

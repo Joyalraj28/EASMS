@@ -10,26 +10,31 @@ $link .= "://";
 $link .= $_SERVER['HTTP_HOST']; 
 $link .= $_SERVER['REQUEST_URI'];
 
+DBConnection::debugtaglog("SESSION",strpos($link, 'forgotpassword.php').'=>'.$link);
+DBConnection::debugtaglog("USER",isset($_SESSION['userdata']) ? "T":"F");
 
 
-if(!isset($_SESSION['userdata']) && strpos($link, 'forgotpassword.php'))
+if(strpos($link, 'forgotpassword.php'))
 {
-    redirect('admin/test.php');
+    redirect('admin/forgotpassword.php');
 }
 
 if(!isset($_SESSION['userdata']) && !strpos($link, 'login.php') && !strpos($link, 'forgotpassword.php'))
 {
+    
 	redirect('admin/login.php');
 }
 if(isset($_SESSION['userdata']) && strpos($link, 'login.php') && !strpos($link, 'forgotpassword.php'))
 {
+    
 	redirect('admin/index.php');
 }
-$module = array('','admin','faculty','student');
-if(isset($_SESSION['userdata']) && (strpos($link, 'index.php') || strpos($link, 'admin/')) && $_SESSION['userdata']['login_type'] !=  1){
+// $module = array('','admin','faculty','student');
+if(isset($_SESSION['userdata']) && (strpos($link, 'index.php') || strpos($link, 'admin/')) && ($_SESSION['userdata']['login_type'] !=  1 && $_SESSION['userdata']['login_type'] !=  2 && $_SESSION['userdata']['login_type'] !=  3)){
     
-    DBConnection::debuglog("Access Denied!");
-    echo "<script>alert('Access Denied!');location.replace('".base_url.$module[$_SESSION['userdata']['login_type']]."');</script>";
-    exit;
-}
+    
+    DBConnection::consolelog($_SESSION['userdata']['login_type']);
 
+    echo "<script>alert('Access Denied!');</script>";
+    //exit;
+}

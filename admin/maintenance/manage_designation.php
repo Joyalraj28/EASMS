@@ -1,7 +1,7 @@
 <?php
 if(isset($_GET['id']) && $_GET['id'] > 0){
 	require_once('../../config.php');
-    $qry = $conn->query("SELECT * from `designation_list` where id = '{$_GET['id']}' ");
+    $qry = $conn->query("SELECT * from `designation` where DesignationID = '{$_GET['id']}' ");
     if($qry->num_rows > 0){
         foreach($qry->fetch_assoc() as $k => $v){
             $$k=$v;
@@ -11,14 +11,14 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 ?>
 <div class="container-fluid">
 	<form action="" id="designation-form">
-		<input type="hidden" name ="id" value="<?php echo isset($id) ? $id : '' ?>">
+		<input type="hidden" name ="id" value="<?php echo isset($DesignationID) ? $DesignationID : '' ?>">
 		<div class="form-group">
 			<label for="name" class="control-label">Designation</label>
-			<input name="name" id="name" type="text" class="form-control form  rounded-0" value="<?php echo isset($name) ? $name : ''; ?>" required/>
+			<input name="name" id="name" type="text" class="form-control form  rounded-0" value="<?php echo isset($Name) ? $Name : ''; ?>" required/>
 		</div>
 		<div class="form-group">
 			<label for="description" class="control-label">Description</label>
-			<textarea name="description" id="description" cols="30" rows="3" style="resize:none !important" class="form-control form no-resize rounded-0" required><?php echo isset($description) ? $description : ''; ?></textarea>
+			<textarea name="description" id="description" cols="30" rows="3" style="resize:none !important" class="form-control form no-resize rounded-0" required><?php echo isset($Description) ? $Description : ''; ?></textarea>
 		</div>
 	</form>
 </div>

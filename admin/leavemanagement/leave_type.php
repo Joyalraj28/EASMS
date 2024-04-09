@@ -6,11 +6,9 @@
 <div class="card card-outline card-primary">
 	<div class="card-header">
 		<h3 class="card-title">List of Leave Types</h3>
-		<?php if($_settings->userdata('type') == 1): ?>
 		<div class="card-tools">
 			<a href="javascript:void(0)" class="btn btn-flat btn-primary" id="create_new"><span class="fas fa-plus"></span>  Create New</a>
 		</div>
-		<?php endif; ?>
 	</div>
 	<div class="card-body">
 		<div class="container-fluid">
@@ -30,33 +28,33 @@
 				<tbody>
 					<?php 
 					$i = 1;
-						$qry = $conn->query("SELECT * from `leave_types` order by unix_timestamp(date_updated) desc, unix_timestamp(date_created) desc ");
+						$qry = $conn->query("SELECT * from `leavetype` order by unix_timestamp(UpdateDate) desc, unix_timestamp(CreateDate) desc ");
 						while($row = $qry->fetch_assoc()):
-                            $row['description'] = strip_tags(stripslashes(html_entity_decode($row['description'])));
+                            $row['description'] = strip_tags(stripslashes(html_entity_decode($row['Description'])));
 					?>
 						<tr title="<?php echo $row['description'] ?>">
 							<td class="text-center"><?php echo $i++; ?></td>
-							<td><?php echo '['.$row['code'].'] - '. $row['name'] ?></td>
+							<td><?php echo '['.$row['ShortName'].'] - '. $row['Description'] ?></td>
 							<td ><p class="truncate m-0"><?php echo $row['description'] ?></p></td>
-							<td class='text-right'><?php echo number_format($row['default_credit']) ?></td>
+							<td class='text-right'><?php echo number_format($row['DefaultCredit']) ?></td>
 							<td class='text-center'>
-								<?php if($row['status'] == 1): ?>
+								<?php if($row['Status'] == 1): ?>
 									<span class="badge badge-success">Active</span>
 								<?php else: ?>
 									<span class="badge badge-secondary">Inactive</span>
 								<?php endif; ?>
 							</td>
-							<td><?php echo ($row['date_updated'] != null) ? date('Y-m-d H:i',strtotime($row['date_updated'])) : date('Y-m-d H:i',strtotime($row['date_created'])); ?></td>
+							<td><?php echo ($row['UpdateDate'] != null) ? date('Y-m-d H:i',strtotime($row['UpdateDate'])) : date('Y-m-d H:i',strtotime($row['CreateDate'])); ?></td>
 							<td align="center">
 								 <button type="button" class="btn btn-flat btn-default btn-sm dropdown-toggle dropdown-icon" data-toggle="dropdown">
 				                  		Action
 				                    <span class="sr-only">Toggle Dropdown</span>
 				                  </button>
 				                  <div class="dropdown-menu" role="menu">
-				                    <a class="dropdown-item edit_data" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>"><span class="fa fa-edit text-primary"></span> Edit</a>
-				                    <div class="dropdown-divider"></div>
-				                    <a class="dropdown-item delete_data" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>"><span class="fa fa-trash text-danger"></span> Delete</a>
-				                  </div>
+				                    <a class="dropdown-item edit_data" href="javascript:void(0)" data-id="<?php echo $row['LeaveID'] ?>"><span class="fa fa-edit text-primary"></span> Edit</a>
+				                    <!-- <div class="dropdown-divider"></div>
+				                    <a class="dropdown-item delete_data" href="javascript:void(0)" data-id="<?php echo $row['LeaveID'] ?>"><span class="fa fa-trash text-danger"></span> Delete</a>
+				                  </div> -->
 							</td>
 						</tr>
 					<?php endwhile; ?>

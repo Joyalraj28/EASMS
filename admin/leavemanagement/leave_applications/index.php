@@ -4,14 +4,14 @@
 </script>
 <?php endif;?>
 <?php 
-$meta_qry=$conn->query("SELECT * FROM employee_meta where user_id = '{$_settings->userdata('id')}' and meta_field = 'approver' ");
-$is_approver = $meta_qry->num_rows > 0 && $meta_qry->fetch_array()['meta_value'] == 'on' ? true : false;
+// $meta_qry=$conn->query("SELECT * FROM employee where EmployeeID = '{$_settings->userdata('id')}' and meta_field = 'approver' ");
+// $is_approver = $meta_qry->num_rows > 0 && $meta_qry->fetch_array()['meta_value'] == 'on' ? true : false;
 ?>
 <div class="card card-outline card-primary">
 	<div class="card-header">
 		<h3 class="card-title">List of Applications</h3>
 		<div class="card-tools">
-			<a href="?page=leave_applications/manage_application" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Create New</a>
+			<a href="?page=leavemanagement/leave_applications/manage_application" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Create New</a>
 		</div>
 	</div>
 	<div class="card-body">
@@ -39,9 +39,7 @@ $is_approver = $meta_qry->num_rows > 0 && $meta_qry->fetch_array()['meta_value']
 				<thead>
 					<tr>
 						<th>#</th>
-						<?php if($_settings->userdata('type') != 3): ?>
 						<th>Employee</th>
-						<?php endif; ?>
 						<th>Leave Type</th>
 						<th>Days</th>
 						<th>Status</th>
@@ -52,29 +50,37 @@ $is_approver = $meta_qry->num_rows > 0 && $meta_qry->fetch_array()['meta_value']
 					<?php 
 					$i = 1;
 						$where = '';
-						if($_settings->userdata('type') == 3)
-						$where = " and u.id = '{$_settings->userdata('id')}' ";
-						$qry = $conn->query("SELECT l.*,concat(u.lastname,', ',u.firstname,' ',u.middlename) as `name`,lt.code,lt.name as lname from `leave_applications` l inner join `users` u on l.user_id=u.id inner join `leave_types` lt on lt.id = l.leave_type_id where (date_format(l.date_start,'%Y') = '".date("Y")."' or date_format(l.date_end,'%Y') = '".date("Y")."') {$where} order by FIELD(l.status,0,1,2,3), unix_timestamp(l.date_created) desc ");
-						while($row = $qry->fetch_assoc()):
-							$lt_qry = $conn->query("SELECT meta_value FROM `employee_meta` where user_id = '{$row['user_id']}' and meta_field = 'employee_id' ");
-							$row['employee_id'] = ($lt_qry->num_rows > 0) ? $lt_qry->fetch_array()['meta_value'] : "N/A";
+						// if($_settings->userdata('type') == 3)
+						$where = " and emp.EmployeeID = '{$_settings->userdata('EmployeeID')}' ";
+
+
+						$qry = $conn->query("SELECT l.*,emp.Fullname as `name`,lt.ShortName,
+											lt.Description as lname from leaveapplication l inner join employee emp 
+											on l.ApplyEmpID_FK=emp.EmployeeID inner join `leavetype` lt on lt.LeaveID = l.LeaveTypeID_FK 
+											where (date_format(l.StartDate,'%Y') = '".date("Y")."' 
+											or date_format(l.StartDate,'%Y') = '".date("Y")."') {$where} ");
+
+
+						if (isset($yourVariable) && is_array($yourVariable)):
+						foreach($row = $qry->fetch_array() as $k => $v):
+						
 					?>
 						<tr>
 							<td class="text-center"><?php echo $i++; ?></td>
 							<?php if($_settings->userdata('type') != 3): ?>
 							<th>
-								<small><b>ID: </b><?php echo $row['employee_id'] ?></small><br>
-								<small><b>Name: </b><?php echo $row['name'] ?></small>
+								<small><b>ID: </b><?php echo  DBConnection::Iset($row['EmployeeID'],'') ?></small><br>
+								<small><b>Name: </b><?php echo DBConnection::Iset($row['Name'],'') ?></small>
 							</th>
-							<?php endif; ?>
-							<td><?php echo $row['code'] . ' - '. $row['lname'] ?></td>
+							<!-- <?php endif; ?> -->
+							<td><?php echo DBConnection::Iset($row['Shortname'],'') . ' - '. DBConnection::Iset($row['lname'],'') ?></td>
 							<td><?php echo $row['leave_days'] ?></td>
 							<td class="text-center">
-								<?php if($row['status'] == 1): ?>
+								<?php if(DBConnection::Iset($row['status'],null) == 1): ?>
 									<span class="badge badge-success">Approved</span>
-								<?php elseif($row['status'] == 2): ?>
+								<?php elseif(DBConnection::Iset($row['status'],null)  == 2): ?>
 									<span class="badge badge-danger">Denied</span>
-								<?php elseif($row['status'] == 3): ?>
+								<?php elseif(DBConnection::Iset($row['status'],null)  == 3): ?>
 									<span class="badge badge-danger">Cancelled</span>
 								<?php else: ?>
 									<span class="badge badge-primary">Pending</span>
@@ -100,7 +106,9 @@ $is_approver = $meta_qry->num_rows > 0 && $meta_qry->fetch_array()['meta_value']
 				                  </div>
 							</td>
 						</tr>
-					<?php endwhile; ?>
+					
+					<?php endforeach; ?>
+					<?php endif; ?>
 				</tbody>
 			</table>
 		</div>

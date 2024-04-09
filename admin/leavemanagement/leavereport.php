@@ -4,8 +4,8 @@
 </script>
 <?php endif;?>
 <?php 
-$date_start = isset($_GET['date_start']) ? $_GET['date_start'] : date("Y-m-d",strtotime(date('Y-m-d').' -3 days'));
-$date_end = isset($_GET['date_end']) ? $_GET['date_end'] : date("Y-m-d");
+$StartDate = isset($_GET['StartDate']) ? $_GET['StartDate'] : date("Y-m-d",strtotime(date('Y-m-d').' -3 days'));
+$EndDate = isset($_GET['EndDate']) ? $_GET['EndDate'] : date("Y-m-d");
 ?>
 <div class="card card-outline card-primary">
 	<div class="card-header">
@@ -19,14 +19,14 @@ $date_end = isset($_GET['date_end']) ? $_GET['date_end'] : date("Y-m-d");
         <div class="row">
             <div class="col-4">
                 <div class="form-group">
-                    <label for="date_start" class="control-label">Date Start</label>
-                    <input type="date" class="form-control" id="date_start" value="<?php echo date("Y-m-d",strtotime($date_start)) ?>">
+                    <label for="StartDate" class="control-label">Date Start</label>
+                    <input type="date" class="form-control" id="StartDate" value="<?php echo date("Y-m-d",strtotime($StartDate)) ?>">
                 </div>
             </div>
             <div class="col-4">
             <div class="form-group">
-                    <label for="date_end" class="control-label">Date End</label>
-                    <input type="date" class="form-control" id="date_end" value="<?php echo date("Y-m-d",strtotime($date_end)) ?>">
+                    <label for="EndDate" class="control-label">Date End</label>
+                    <input type="date" class="form-control" id="EndDate" value="<?php echo date("Y-m-d",strtotime($EndDate)) ?>">
                 </div>
             </div>
             <div class="col-2 row align-items-end pb-1">
@@ -61,40 +61,48 @@ $date_end = isset($_GET['date_end']) ? $_GET['date_end'] : date("Y-m-d");
 				<tbody>
 					<?php 
 					$i = 1;
-                    $sql = "SELECT l.*,concat(u.lastname,', ',u.firstname,' ',u.middlename) as `name`,lt.code,lt.name as lname from `leave_applications` l inner join `users` u on l.user_id=u.id inner join `leave_types` lt on lt.id = l.leave_type_id where ((date(l.date_start) BETWEEN '$date_start'  and '$date_end') OR (date(l.date_end) BETWEEN '$date_start'  and '$date_end') ) order by unix_timestamp(l.date_start) asc,unix_timestamp(l.date_end) asc";
+                    $sql = "SELECT  l.*,emp.EmployeeID,emp.Fullname as name,
+lt.Shortname, lt.Description as lname 
+from `leaveapplication` l 
+inner join `employee` emp on l.ApplyEmpID_FK=emp.EmployeeID inner join 
+`leavetype` lt on lt.LeaveID = l.LeaveTypeID_FK where ((date(l.StartDate) BETWEEN 
+'$StartDate' and '$EndDate') OR (date(l.EndDate) BETWEEN '$StartDate'  and '$EndDate') ) 
+order by unix_timestamp(l.StartDate) asc,unix_timestamp(l.EndDate) asc";
+
+
 						$qry = $conn->query($sql);
 						while($row = $qry->fetch_assoc()):
-                            $lt_qry = $conn->query("SELECT meta_value FROM `employee_meta` where user_id = '{$row['user_id']}' and meta_field = 'employee_id' ");
-							$row['employee_id'] = ($lt_qry->num_rows > 0) ? $lt_qry->fetch_array()['meta_value'] : "N/A";
+                            // $lt_qry = $conn->query("SELECT meta_value FROM `employee_meta` where user_id = '{$row['user_id']}' and meta_field = 'employee_id' ");
+							//$row['employee_id'] = ($lt_qry->num_rows > 0) ? $lt_qry->fetch_array()['meta_value'] : "N/A";
 					?>
 						<tr>
 							<td class="text-center"><?php echo $i++; ?></td>
 							<td>
-                                <small><b>ID: </b><?php echo $row['employee_id'] ?></small><br>
-                                <small><b>Name: </b><?php echo $row['name'] ?></small>
+                                <small><b>ID: </b><?php echo $row['EmployeeID'] ?></small><br>
+                                <small><b>Name: </b><?php echo $row['Description'] ?></small>
                             </td>
-							<td><?php echo $row['code'] ?> - <?php echo $row['lname'] ?></td>
+							<td><?php echo $row['Shortname'] ?> - <?php echo $row['lname'] ?></td>
 							<td>
                             <?php
-                                if($row['date_start'] == $row['date_end']){
-                                    echo date("Y-m-d", strtotime($row['date_start']));
+                                if($row['StartDate'] == $row['EndDate']){
+                                    echo date("Y-m-d", strtotime($row['StartDate']));
                                 }else{
-                                    echo date("Y-m-d", strtotime($row['date_start'])).' - '.date("Y-m-d", strtotime($row['date_end']));
+                                    echo date("Y-m-d", strtotime($row['StartDate'])).' - '.date("Y-m-d", strtotime($row['EndDate']));
                                 }
                             ?>
                             </td>
 							<td class="text-center">
-                            <?php if($row['status'] == 1): ?>
+                            <?php if($row['Status'] == 1): ?>
                                 <span class="badge badge-success mx-2">Approved</span>
-                            <?php elseif($row['status'] == 2): ?>
+                            <?php elseif($row['Status'] == 2): ?>
                                 <span class="badge badge-danger mx-2">Denied</span>
-                            <?php elseif($row['status'] == 3): ?>
+                            <?php elseif($row['Status'] == 3): ?>
                                 <span class="badge badge-danger mx-2">Cancelled</span>
                             <?php else: ?>
                                 <span class="badge badge-primary mx-2">Pending</span>
                             <?php endif; ?>
                             </td>
-							<td><small><?php echo $row['reason'] ?></small></td>
+							<td><small><?php echo $row['Reason'] ?></small></td>
 						</tr>
 					<?php endwhile; ?>
 					<?php if($qry->num_rows <=0 ): ?>
@@ -111,7 +119,7 @@ $date_end = isset($_GET['date_end']) ? $_GET['date_end'] : date("Y-m-d");
 <script>
 	$(document).ready(function(){
         $('#filter').click(function(){
-            location.replace("./?page=reports&date_start="+($('#date_start').val())+"&date_end="+($('#date_end').val()));
+            location.replace("./?page=reports&date_start="+($('#StartDate').val())+"&date_end="+($('#EndDate').val()));
         })
 
         $('#print').click(function(){
@@ -122,10 +130,10 @@ $date_end = isset($_GET['date_end']) ? $_GET['date_end'] : date("Y-m-d");
             _el.append(_h)
             _el.append('<style>html, body, .wrapper {min-height: unset !important;}</style>')
             var rdate = "";
-            if('<?php echo $date_start ?>' == '<?php echo $date_end ?>')
-                rdate = "<?php echo date("M d, Y",strtotime($date_start)) ?>";
+            if('<?php echo $StartDate ?>' == '<?php echo $EndDate ?>')
+                rdate = "<?php echo date("M d, Y",strtotime($StartDate)) ?>";
             else
-                rdate = "<?php echo date("M d, Y",strtotime($date_start)) ?> - <?php echo date("M d, Y",strtotime($date_end)) ?>";
+                rdate = "<?php echo date("M d, Y",strtotime($StartDate)) ?> - <?php echo date("M d, Y",strtotime($EndDate)) ?>";
             _p.prepend('<div class="d-flex mb-3 w-100 align-items-center justify-content-center">'+
             '<img class="mx-4" src="<?php echo validate_image($_settings->info('logo')) ?>" width="50px" height="50px"/>'+
             '<div class="px-2">'+

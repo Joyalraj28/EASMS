@@ -1,15 +1,12 @@
 <?php 
 require_once('../../config.php');
-$meta_qry = $conn->query("SELECT * FROM employee_meta where user_id = '{$_GET['id']}' ");
-while($row = $meta_qry->fetch_assoc()){
-    ${$row['meta_field']} = $row['meta_value'];
-}
-$leave_type_credits = isset($leave_type_credits) ? json_decode($leave_type_credits) : array();
-$ltc = array();
-foreach($leave_type_credits as $k=> $v){
-    $ltc[$k] = $v;
-}
-$leave_type_ids = isset($leave_type_ids) ? explode(',',$leave_type_ids) : array();
+$meta_qry = $conn->query("SELECT * FROM employee where EmployeeID = '{$_GET['id']}' ");
+$row = $meta_qry->fetch_assoc();
+
+
+$Empleave_type_credits = $conn->query("SELECT `leavetypeid` as LeaveID, `leavecredit`, `DefultCredit` FROM `leavetypeids` WHERE `EmployeeID_FK` ='{$_GET['id']}'")->fetch_assoc();
+
+$Empleave_type_credits = isset($Empleave_type_credits) ? $Empleave_type_credits: array();
 ?>
 <div class="container-fluid">
     <form id="manage_emp_leave">
@@ -18,6 +15,7 @@ $leave_type_ids = isset($leave_type_ids) ? explode(',',$leave_type_ids) : array(
             <colgroup>
                 <col width="10%">
                 <col width="70%">
+                <col width="20%">
                 <col width="20%">
             </colgroup>
             <thead>
@@ -35,20 +33,26 @@ $leave_type_ids = isset($leave_type_ids) ? explode(',',$leave_type_ids) : array(
             </thead>
             <tbody>
                 <?php 
-                $lt = $conn->query("SELECT * FROM `leave_types` where `status` = '1' order by code asc ");
+                $lt = $conn->query("CALL `Pro_EmployeeLeavecredits`({$_GET['id']})");
+                
                 while($row=$lt->fetch_assoc()):
+
+                   echo array_search($row['LeaveID'],$Empleave_type_credits); 
                 ?>
                 <tr>
                     <td class="text-center">
                         <div class="icheck-primary d-inline">
-                            <input type="checkbox" class="check_item" id="select_<?php echo $row['id'] ?>" name="leave_type_id[]" value="<?php echo $row['id'] ?>" <?php echo in_array($row['id'],$leave_type_ids)? 'checked' : '' ?>>
-                            <label for="select_<?php echo $row['id'] ?>">
+                            <input type="checkbox" class="check_item" id="select_<?php echo $row['LeaveID'] ?>" name="leave_type_id[]" value="<?php echo $row['LeaveID'] ?>" <?php echo isset($row['leavetypeid']) ? 'checked' : '' ?>>
+                            <label for="select_<?php echo $row['LeaveID'] ?>">
                             </label>
                         </div>
                     </td>
-                    <td><?php echo $row['code']." - ".$row['name'] ?></td>
+                    <td><?php echo $row['ShortName']." - ".$row['Description'] ?></td>
                     <td>
-                        <input type="number" step="any" name="leave_credit[]" value="<?php echo (isset($ltc[$row['id']])) ? $ltc[$row['id']] : $row['default_credit'] ?>" class="form-control rounded-0">
+                        <input type="number" step="any" name="leave_credit[]" value="<?php echo isset($row['leavetypeid']) ? $row['leavecredit'] : $row['DefaultCredit'] ?>" max='<?php echo isset($row['LeaveID']) ? $row['DefaultCredit'] : 0 ?>' class="form-control rounded-0">
+                    </td>
+                    <td>
+                        <input type='hidden'  name="leave_default_credit[]" value="<?php echo isset($row['LeaveID']) ? $row['DefaultCredit'] : 0 ?>" class="form-control rounded-0">
                     </td>
                 </tr>
                 <?php endwhile; ?>

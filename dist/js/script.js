@@ -76,6 +76,8 @@ $(document).ready(function(){
 					if(resp.status == 'success'){
 						location.replace(_base_url_+'faculty');
 					}else if(resp.status == 'incorrect'){
+
+						console.log("Invalid");
 						var _frm = $('#flogin-frm')
 						var _msg = "<div class='alert alert-danger text-white err_msg'><i class='fa fa-exclamation-triangle'></i> Invaild email or password</div>"
 						_frm.prepend(_msg)

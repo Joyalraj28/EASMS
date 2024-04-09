@@ -35,6 +35,32 @@ class DBConnection{
         fclose($myfile);
     }
 
+    public static function debugtaglog($head,$message)
+    {
+        $myfile = fopen("../Debug/Log.txt", "a") or die("Unable to open file!");
+        fwrite($myfile, "<".$head.">\n".$message."\n<\\".$head.">\n");
+        fclose($myfile);
+    }
+
+    public static function consolelog($obj)
+    {
+      echo "<script>console.log($obj);</script>";
+    }
+
+
+
+    public static function Iset($value,$NA)
+    {
+        if(isset($value))
+        {
+            return $value;
+        }
+        else
+        {
+            return $NA;
+        }
+    }
+
     public function __destruct(){
         $this->conn->close();
     }

@@ -24,6 +24,8 @@
                 <nav class="mt-3">
                   <ul class="nav nav-pills nav-sidebar flex-column text-sm nav-compact nav-flat nav-child-indent nav-collapse-hide-child" data-widget="treeview" role="menu" data-accordion="false">
                     
+                    <?php $_settings->userdata("login_type") ?>
+
                     <!-- Overview -->
                     <li  class="nav-link nav-home">
                       <a href="./">

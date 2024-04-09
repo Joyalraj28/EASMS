@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en" class="" style="height: auto;">
  <?php require_once('inc/header.php') ?>
- 
  <style>
 
    .page-header{
@@ -49,10 +48,10 @@
       <form id="login-frm" action="" method="post">
       <div class="input-group mb-3">
       <select name="Usertype" class="form-control">
-        <option selected value="">Select</option>
-        <option value="Admin">Admin</option>
-        <option value="Accountant">Accountant</option>
-        <option value="Employee">Employee</option>
+        <option selected disabled value="">Select</option>
+        <option value="1">Admin</option>
+        <option value="2">Accountant</option>
+        <option value="3">Employee</option>
       </select>
         </div>
 
@@ -62,7 +61,7 @@
               <span class="fas fa-user"></span>
             </div>
           </div>
-          <input type="text" class="form-control" name="username" placeholder="Email">
+          <input type="text" class="form-control" name="email" placeholder="Email">
         </div>
 
 

@@ -15,7 +15,7 @@
                 <span class="info-box-text">Total Attendance</span>
                 <span class="info-box-number text-right">
                   <?php 
-                    $pending = $conn->query("SELECT * FROM `leave_applications` where date_format(date_start,'%Y') = '".date('Y')."' and date_format(date_end,'%Y') = '".date('Y')."' and status = 0 ")->num_rows;
+                    $pending = $conn->query("SELECT Count(*) FROM `leaveapplication`")->num_rows;
                     echo number_format($pending);
                   ?>
                 </span>
@@ -34,7 +34,7 @@
                 <span class="info-box-text">Pending Applications</span>
                 <span class="info-box-number text-right">
                   <?php 
-                    $pending = $conn->query("SELECT * FROM `leave_applications` where date_format(date_start,'%Y') = '".date('Y')."' and date_format(date_end,'%Y') = '".date('Y')."' and status = 0 ")->num_rows;
+                    $pending = $conn->query("SELECT Count(*) FROM `leaveapplication`")->num_rows;
                     echo number_format($pending);
                   ?>
                 </span>
@@ -54,7 +54,7 @@
                 <span class="info-box-text">Total Departments</span>
                 <span class="info-box-number text-right">
                   <?php 
-                    $department = $conn->query("SELECT id FROM `department_list` ")->num_rows;
+                    $department = $conn->query("SELECT Count(*) FROM `department`")->num_rows;
                     echo number_format($department);
                   ?>
                 </span>
@@ -77,7 +77,7 @@
                 <span class="info-box-text">Total Designations</span>
                 <span class="info-box-number text-right">
                 <?php 
-                    $designation = $conn->query("SELECT id FROM `designation_list`")->num_rows;
+                    $designation = $conn->query("SELECT Count(*) FROM `designation`")->num_rows;
                     echo number_format($designation);
                   ?>
                 </span>
@@ -96,7 +96,7 @@
                 <span class="info-box-text">Total Type of Leave</span>
                 <span class="info-box-number text-right">
                 <?php 
-                    $leave_types = $conn->query("SELECT id FROM `leave_types` where status = 1 ")->num_rows;
+                    $leave_types = $conn->query("SELECT Count(*) FROM `leavetype`")->num_rows;
                     echo number_format($leave_types);
                   ?>
                 </span>
@@ -116,7 +116,7 @@
           <span class="info-box-text">Pending Applications</span>
           <span class="info-box-number text-right">
             <?php 
-              $pending = $conn->query("SELECT * FROM `leave_applications` where date_format(date_start,'%Y') = '".date('Y')."' and date_format(date_end,'%Y') = '".date('Y')."' and status = 0 and user_id = '{$_settings->userdata('id')}' ")->num_rows;
+              $pending = $conn->query("SELECT Count(*) FROM `leaveapplication`")->num_rows;
               echo number_format($pending);
             ?>
             <?php ?>
@@ -134,7 +134,7 @@
           <span class="info-box-text">Upcoming Leave</span>
           <span class="info-box-number text-right">
             <?php 
-              $upcoming = $conn->query("SELECT * FROM `leave_applications` where date(date_start) > '".date('Y-m-d')."' and status = 1 and user_id = '{$_settings->userdata('id')}' ")->num_rows;
+              $upcoming = $conn->query("SELECT Count(*) FROM `leave_applications`")->num_rows;
               echo number_format($upcoming);
             ?>
             <?php ?>

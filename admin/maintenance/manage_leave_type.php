@@ -1,7 +1,7 @@
 <?php
 if(isset($_GET['id']) && $_GET['id'] > 0){
 	require_once('../../config.php');
-    $qry = $conn->query("SELECT * from `leave_types` where id = '{$_GET['id']}' ");
+    $qry = $conn->query("SELECT * from `leavetype` where LeaveID = '{$_GET['id']}' ");
     if($qry->num_rows > 0){
         foreach($qry->fetch_assoc() as $k => $v){
             $$k=$v;
@@ -11,22 +11,26 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 ?>
 <div class="container-fluid">
 	<form action="" id="leave_type-form">
-		<input type="hidden" name ="id" value="<?php echo isset($id) ? $id : '' ?>">
+		<input type="hidden" name ="id" value="<?php echo isset($LeaveID) ? $LeaveID : '' ?>">
 		<div class="form-group">
-			<label for="code" class="control-label">Code</label>
-			<input name="code" id="code" type="text" class="form-control form  rounded-0" value="<?php echo isset($code) ? $code : ''; ?>" required/>
+			<label for="Shortname" class="control-label">Shortname</label>
+			<input name="Shortname" id="Shortname" type="text" class="form-control form  rounded-0" value="<?php echo isset($ShortName) ? $ShortName : ''; ?>" required/>
 		</div>
 		<div class="form-group">
-			<label for="name" class="control-label">Name</label>
-			<input name="name" id="name" type="text" class="form-control form  rounded-0" value="<?php echo isset($name) ? $name : ''; ?>" required/>
+			<label for="Description" class="control-label">Description</label>
+			<textarea name="Description" id="Description" cols="30" rows="3" style="resize:none !important" class="form-control form no-resize rounded-0" required><?php echo isset($Description) ? $Description : ''; ?></textarea>
 		</div>
 		<div class="form-group">
-			<label for="description" class="control-label">Description</label>
-			<textarea name="description" id="description" cols="30" rows="3" style="resize:none !important" class="form-control form no-resize rounded-0" required><?php echo isset($description) ? $description : ''; ?></textarea>
+			<label for="TypeOfLeave" class="control-label">Leave type</label>
+			<select name="TypeOfLeave" id="TypeOfLeave" class="custom-select rounded-0" required>
+				<option value="1" <?php echo isset($TypeOfLeave) && $TypeOfLeave == 1 ? "selected" : '' ?>>Annual Leave</option>
+				<option value="2" <?php echo isset($TypeOfLeave) && $TypeOfLeave == 2 ? "selected" : '' ?>>Casual Leave</option>
+				<option value="3" <?php echo isset($TypeOfLeave) && $TypeOfLeave == 3 ? "selected" : '' ?>>Short Leave</option>
+			</select>
 		</div>
 		<div class="form-group">
-			<label for="default_credit" class="control-label">Default Credits</label>
-			<input name="default_credit" id="default_credit" step="any" type="number" class="form-control form text-right col-5 rounded-0" value="<?php echo isset($default_credit) ? $default_credit : ''; ?>" required/>
+			<label for="DefaultCredit" class="control-label">Default Credits</label>
+			<input name="DefaultCredit" id="DefaultCredit" step="any" type="number" class="form-control form text-right col-5 rounded-0" value="<?php echo isset($DefaultCredit) ? $DefaultCredit : ''; ?>" max='17' required/>
 		</div>
 		<div class="form-group">
 			<label for="status" class="control-label">Status</label>
@@ -40,6 +44,29 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 <script>
   
 	$(document).ready(function(){
+
+
+
+		$("#TypeOfLeave").change(function() {
+
+			if($(this).val()==1)
+			{
+			$("#DefaultCredit").attr('max',14)
+			}
+			else if($(this).val()==2)
+			{
+				$("#DefaultCredit").attr('max',7)
+			}
+			else
+			{
+				$("#DefaultCredit").attr('max',2)
+			}
+
+
+		});
+
+		
+
 		$('#leave_type-form').submit(function(e){
 			e.preventDefault();
 var _this = $(this)

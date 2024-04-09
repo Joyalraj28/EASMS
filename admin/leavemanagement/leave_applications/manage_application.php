@@ -1,16 +1,20 @@
 <?php
 if(isset($_GET['id']) && $_GET['id'] > 0){
-    $qry = $conn->query("SELECT * from `leave_applications` where id = '{$_GET['id']}' ");
+    $qry = $conn->query("SELECT * from `leaveapplication` where id = '{$_GET['id']}' ");
     if($qry->num_rows > 0){
         foreach($qry->fetch_assoc() as $k => $v){
             $$k=$v;
         }
     }
+	
 }
-if($_settings->userdata('type') == 3){
-	$meta_qry = $conn->query("SELECT * FROM employee_meta where meta_field = 'leave_type_ids' and user_id = '{$_settings->userdata('id')}' ");
-	$leave_type_ids = $meta_qry->num_rows > 0 ? $meta_qry->fetch_array()['meta_value'] : '';
-}
+
+	$meta_qry = $conn->query("SELECT * FROM employee Where EmployeeID = '{$_settings->userdata('EmployeeID')}' ");
+	$leave_type_ids = $conn->query("SELECT * FROM `leavetypeids` WHERE EmployeeID_FK = '{$_settings->userdata('EmployeeID')}' ")->fetch_array();
+	
+	
+	
+
 ?>
 
 <style>
@@ -26,44 +30,61 @@ if($_settings->userdata('type') == 3){
 </style>
 <div class="card card-outline card-info">
 	<div class="card-header">
-		<h3 class="card-title"><?php echo isset($id) ? "Update ": "Create New " ?> driver</h3>
+		<h3 class="card-title"><?php echo isset($id) ? "Update ": "Create New " ?> Leave Application</h3>
 	</div>
 	<div class="card-body">
 		<form action="" id="leave_application-form">
 			<input type="hidden" name ="id" value="<?php echo isset($id) ? $id : '' ?>">
 			<div class="row">
 				<div class="col-6">
-					<?php if($_settings->userdata('type') != 3): ?>
+					<?php //if($_settings->userdata('type') != 3): ?>
 					<div class="form-group">
 						<label for="user_id" class="control-label">Employee</label>
-						<select name="user_id" id="user_id" class="form-control select2bs4 select2 rounded-0" data-placeholder="Please Select Employee here" reqiured>
-							<option value="" disabled <?php echo !isset($user_id) ? 'selected' : '' ?>></option>
-							<?php 
-							
-							$emp_qry = $conn->query("SELECT u.*,concat(u.lastname,' ',u.firstname,' ',u.middlename) as `name`,m.meta_value FROM `users` u inner join `employee_meta` m on u.id = m.user_id where m.meta_field='employee_id'");
-							while($row = $emp_qry->fetch_assoc()):
-							?>
-								<option value="<?php echo $row['id'] ?>" <?php echo (isset($user_id) && $user_id == $row['id']) ? 'selected' : '' ?>><?php echo "[".$row['meta_value']."] ".$row['name'] ?></option>
-							<?php endwhile; ?>
-						</select>
+						<input name="user_id" id="user_id" class="form-control form" data-placeholder="Please Select Employee here"  value="<?php echo $_settings->userdata('Fullname') ?>" reqiured readonly></select>
 					</div>
-					<?php else: ?>
-					<input type="hidden" name="user_id" value="<?php echo $_settings->userdata('id') ?>">
-					<?php endif; ?>
+					<?php //else: ?>
+					<input type="hidden" name="user_id" value="<?php echo $_settings->userdata('EmployeeID') ?>">
+					<?php //endif; ?>
 					<div class="form-group">
 						<label for="leave_type_id" class="control-label">Leave Type</label>
 						<select name="leave_type_id" id="leave_type_id" class="form-control select2bs4 select2 rounded-0" data-placeholder="Please Select Leave  Type here" reqiured>
-							<option value="" disabled <?php echo !isset($leave_type_id) ? 'selected' : '' ?>></option>
+							<option value="" disabled <?php echo !isset($LeaveID) ? 'selected' : '' ?>></option>
 							<?php 
 							$where = '';
-							if(isset($leave_type_ids) && !empty($leave_type_ids))
-							$where = " and id in ({$leave_type_ids}) ";
-							$lt = $conn->query("SELECT * FROM `leave_types` where status = 1 {$where} order by `code` asc");
-							while($row = $lt->fetch_assoc()):
+							
+							$leave_type_ids = $conn->query("SELECT 
+							empleave.EmployeeID_FK,
+							empleave.leavetypeid,
+							empleave.leavecredit, 
+							empleave.DefultCredit,
+							l.ShortName,
+							l.Description 
+							FROM `leavetypeids` empleave 
+							LEFT JOIN leavetype l
+							ON empleave.leavetypeid = l.LeaveID WHERE empleave.EmployeeID_FK = {$_settings->userdata('EmployeeID')}");
+						
+							// if(isset($leave_type_ids) && !empty($leave_type_ids))
+							// {
+							// 	$leaveIDrow = $leave_type_ids->fetch_assoc()['leavetypeid'];
+							// 	if(isset($leaveIDrow) && !empty($leaveIDrow))
+							// 	{
+							// 		$where = "and id in (".implode(',',$leaveIDrow).")";
+							// 	}
+							// }
+							// $lt = $conn->query("SELECT * FROM `leavetype` where Status = 1 {$where} order by `ShortName` asc");
+							
+							if(isset($leave_type_ids) && !empty($leave_type_ids)):
+							while($row = $leave_type_ids->fetch_assoc()):
 							?>
-								<option value="<?php echo $row['id'] ?>" <?php echo (isset($leave_type_id) && $leave_type_id == $row['id']) ? 'selected' : '' ?>><?php echo $row['code'] ?></option>
+							    
+								<option value="<?php echo $row['leavetypeid'] ?>" <?php echo (isset($LeaveID) && $LeaveID == $row['leavetypeid']) ? 'selected' : '' ?>><?php echo $row['ShortName'] ?></option>
 							<?php endwhile; ?>
+							<?php endif; ?>
+
+
 						</select>
+
+
 					</div>
 					<div class="form-group">
 						<label for="type" class="control-label">Day Type</label>
@@ -81,8 +102,8 @@ if($_settings->userdata('type') == 3){
 						<input type="date" id="date_end" class="form-control form" required name="date_end" value="<?php echo isset($date_end) ? date("Y-m-d",strtotime($date_end)) : '' ?>">
 					</div>
 					<div class="form-group">
-						<label for="leave_days" class="control-label">Days</label>
-						<input type="number" id="leave_days" class="form-control form" name="leave_days" value="<?php echo isset($leave_days) ? $leave_days : 0 ?>" readonly>
+						<label id='leave_days_label' for="leave_days" class="control-label">Days</label>
+						<input type="number" id="leave_days" class="form-control form" name="leave_days" value="<?php echo isset($leave_days) ? $leave_days : 0 ?>" readonly min='1' max=''>
 					</div>
 					<div class="form-group">
 							<label for="reason">Reason</label>
@@ -113,14 +134,27 @@ if($_settings->userdata('type') == 3){
 
 	function calc_days(){
 		var days = 0;
+
+		//By defult
+		$("#leave_days_label").html('Days')
+		$("#leave_days").prop("readonly", true)
+		$("#leave_days").prop("max", '')
+
 		if($('#date_start').val() != ''){
 			var start = new Date($('#date_start').val());
 			var end = new Date($('#date_end').val());
 			var diffDate = (end - start) / (1000 * 60 * 60 * 24);
 			days = Math.round(diffDate);
+
 		}
 		if($('#type').val() == 2)
-			$('#leave_days').val('.5')
+		{
+			$('#leave_days').val('4')
+			$("#leave_days_label").html('Hours')
+			$("#leave_days").prop("readonly", false)
+			$("#leave_days").prop("max", '4')
+		}
+		    
 		else
 			$('#leave_days').val(days +1)
 
@@ -131,7 +165,7 @@ if($_settings->userdata('type') == 3){
 		$('#type').change(function(){
 			if($(this).val() == 2){
 			console.log($(this).val())
-				$('#leave_days').val('.5')
+				$('#leave_days').val('4')
 				$('#date_end').attr('required',false)
 				$('#date_end').val($('#date_start').val())
 				$('#date_end').closest('.form-group').hide('fast')

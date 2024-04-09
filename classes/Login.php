@@ -19,18 +19,43 @@ class Login extends DBConnection {
 	{
 		extract($_POST);
        
-		$qry = $this->conn->query("SELECT * from users where username = '$username' and password = md5('$password') ");
-		if($qry->num_rows > 0){
-			foreach($qry->fetch_array() as $k => $v){
+		//$qry = $this->conn->query("SELECT * from users where username = '$username' and password = md5('$password') ");
+		
+		//$qry = $this->conn->query("SELECT * FROM `employee` WHERE `Email` = '$email' AND `Password` = '$password'");
+		$qry =$this->conn->query("SELECT 
+		    emp.*,
+			IF(ad.EmployeeID  IS NOT null,1,
+			IF(acc.EmployeeID IS NOT null,2,3)) as login_type
+			FROM employee emp 
+			LEFT JOIN admin ad ON  emp.EmployeeID = ad.EmployeeID
+	        LEFT JOIN accountant acc ON emp.EmployeeID = acc.EmployeeID WHERE emp.Email = '$email' AND emp.Password = '$password'");
+
+		$IsCorrectUser = false;
+		$userID = 0;
+
+
+		if($qry->num_rows > 0 && $Usertype == 1 || $Usertype == 2 || $Usertype == 3){
+			foreach($qry->fetch_array() as $k => $v)
+			{
 				if(!is_numeric($k) && $k != 'password'){
 					$this->settings->set_userdata($k,$v);
 				}
 
 			}
-			$this->settings->set_userdata('login_type',1);
+		
+			
+        if($this->settings->userdata('Status') && $this->settings->userdata('login_type') !=  $Usertype)
+		{
+			$this->settings->sess_des();
+			return json_encode(array('status'=>'incorrect','Authentication failed'));
+		}
+	
+		else{
+	   // $this->settings->set_userdata('login_type',1);
 		return json_encode(array('status'=>'success'));
+		}
 		}else{
-		return json_encode(array('status'=>'incorrect','last_qry'=>"SELECT * from users where username = '$username' and password = md5('$password') "));
+		return json_encode(array('status'=>'incorrect','last_qry'=>"SELECT * from employee where Email = '$email' and password = '$password'"));
 		}
 	}
 	public function logout(){
@@ -81,6 +106,8 @@ switch ($action) {
 		echo $auth->index();
 		break;
 }
+
+
 
 
 

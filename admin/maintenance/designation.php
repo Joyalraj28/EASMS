@@ -6,11 +6,9 @@
 <div class="card card-outline card-primary">
 	<div class="card-header">
 		<h3 class="card-title">List of Designation</h3>
-		<?php if($_settings->userdata('type') == 1): ?>
 		<div class="card-tools">
 			<a href="javascript:void(0)" class="btn btn-flat btn-primary" id="create_new"><span class="fas fa-plus"></span>  Create New</a>
 		</div>
-		<?php endif; ?>
 	</div>
 	<div class="card-body">
 		<div class="container-fluid">
@@ -21,31 +19,31 @@
 						<th>#</th>
 						<th>Designation</th>
 						<th>Description</th>
-						<th>Date Updated</th>
+						<th>Updated Date</th>
 						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>
 					<?php 
 					$i = 1;
-						$qry = $conn->query("SELECT * from `designation_list` order by unix_timestamp(date_updated) desc, unix_timestamp(date_created) desc ");
+						$qry = $conn->query("SELECT * from `Designation` order by unix_timestamp(Updatedate) desc, unix_timestamp(CreateDate) desc ");
 						while($row = $qry->fetch_assoc()):
-                            $row['description'] = strip_tags(stripslashes(html_entity_decode($row['description'])));
+                            $row['description'] = strip_tags(stripslashes(html_entity_decode($row['Description'])));
 					?>
 						<tr title="<?php echo $row['description'] ?>">
 							<td class="text-center"><?php echo $i++; ?></td>
-							<td><?php echo $row['name'] ?></td>
+							<td><?php echo $row['Name'] ?></td>
 							<td ><p class="truncate m-0"><?php echo $row['description'] ?></p></td>
-							<td><?php echo ($row['date_updated'] != null) ? date('Y-m-d H:i',strtotime($row['date_updated'])) : date('Y-m-d H:i',strtotime($row['date_created'])); ?></td>
+							<td><?php echo ($row['UpdateDate'] != null) ? date('Y-m-d H:i',strtotime($row['UpdateDate'])) : date('Y-m-d H:i',strtotime($row['CreateDate'])); ?></td>
 							<td align="center">
 								 <button type="button" class="btn btn-flat btn-default btn-sm dropdown-toggle dropdown-icon" data-toggle="dropdown">
 				                  		Action
 				                    <span class="sr-only">Toggle Dropdown</span>
 				                  </button>
 				                  <div class="dropdown-menu" role="menu">
-				                    <a class="dropdown-item edit_data" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>"><span class="fa fa-edit text-primary"></span> Edit</a>
+				                    <a class="dropdown-item edit_data" href="javascript:void(0)" data-id="<?php echo $row['DesignationID'] ?>"><span class="fa fa-edit text-primary"></span> Edit</a>
 				                    <div class="dropdown-divider"></div>
-				                    <a class="dropdown-item delete_data" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>"><span class="fa fa-trash text-danger"></span> Delete</a>
+				                    <a class="dropdown-item delete_data" href="javascript:void(0)" data-id="<?php echo $row['DesignationID'] ?>"><span class="fa fa-trash text-danger"></span> Delete</a>
 				                  </div>
 							</td>
 						</tr>

@@ -78,6 +78,14 @@ class SystemSettings extends DBConnection{
 			$_SESSION['userdata'][$field]= $value;
 		}
 	}
+
+    function ClearUserdata()
+	{
+		if(isset($_SESSION['userdata'])){
+		$_SESSION['userdata'] = [];
+		}
+	}
+
 	function userdata($field = ''){
 		if(!empty($field)){
 			if(isset($_SESSION['userdata'][$field]))

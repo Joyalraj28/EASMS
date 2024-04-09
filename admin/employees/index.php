@@ -37,34 +37,40 @@
 						<th>#</th>
 						<th>Avatar</th>
 						<th>Employee ID</th>
-						<th>Name</th>
+						<th>FullName</th>
 						<th>Details</th>
 						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>
-					<?php 
+					<?php
+					//Start
 					$i = 1;
-					$department_qry = $conn->query("SELECT id,name FROM department_list");
-					$dept_arr = array_column($department_qry->fetch_all(MYSQLI_ASSOC),'name','id');
-					$designation_qry = $conn->query("SELECT id,name FROM designation_list");
-					$desg_arr = array_column($designation_qry->fetch_all(MYSQLI_ASSOC),'name','id');
-						$qry = $conn->query("SELECT *,concat(firstname,' ',lastname) as name from `users` where `type` = '3'  order by concat(firstname,' ',lastname) asc ");
-						while($row = $qry->fetch_assoc()):
-							$meta_qry = $conn->query("SELECT * FROM employee_meta where user_id = '{$row['id']}' ");
-							while($mrow = $meta_qry->fetch_assoc()){
-								$row[$mrow['meta_field']] = $mrow['meta_value'];
-							}
-					?>
-						<tr>
+                    $qry = $conn->query("SELECT emp.*,
+					dep.Name AS Departmentname,des.Name AS Designationname 
+					FROM employee emp  
+					LEFT JOIN designation des ON emp.DesignationID_FK = des.DesignationID
+					LEFT JOIN department dep ON des.DepartmentID_FK = dep.DepartmentID;");
+
+                    while($row = $qry->fetch_assoc())
+                   {
+
+							echo "<tr>"
+
+				    ?>
+						
 							<td class="text-center"><?php echo $i++; ?></td>
-							<td class="text-center"><img src="<?php echo validate_image($row['avatar']) ?>" class="img-avatar img-thumbnail p-0 border-2" alt="user_avatar"></td>
-							<td><?php echo ($row['employee_id']) ?></td>
-							<td><?php echo ucwords($row['name']) ?></td>
+							<td class="text-center"><img src="<?php echo validate_image($row['Avatar']);?>" class="img-avatar img-thumbnail p-0 border-2" alt="user_avatar"></td>
+							
+							<?php
+							
+								echo "<td>".$row['EmployeeID']."</td>".
+								"<td>".$row['Fullname']."</td>"
+							?>
 							<td >
 								<p class="m-0 ">
-									<b>Department: </b><?php echo isset($dept_arr[$row['department_id']]) ? $dept_arr[$row['department_id']] : 'N/A' ?><br>
-									<b>Designation: </b><?php echo isset($desg_arr[$row['designation_id']]) ? $desg_arr[$row['designation_id']] : 'N/A' ?><br>
+									<b>Department: </b><?php echo isset($row['Departmentname']) ? $row['Departmentname'] : 'N/A' ?><br>
+									<b>Designation: </b><?php echo isset($row['Designationname']) ? $row['Designationname'] : 'N/A' ?><br>
 								</p>
 							</td>
 							<td align="center">
@@ -73,17 +79,20 @@
 				                    <span class="sr-only">Toggle Dropdown</span>
 				                  </button>
 				                  <div class="dropdown-menu" role="menu">
-								  	<a class="dropdown-item" href="?page=employees/records&id=<?php echo $row['id'] ?>"><span class="fa fa-eye text-secodary"></span> View</a>
+								  	<a class="dropdown-item" href="?page=employees/records&id=<?php echo $row['EmployeeID'] ?>"><span class="fa fa-eye text-secodary"></span> View</a>
 				                    <div class="dropdown-divider"></div>
-				                    <a class="dropdown-item" href="?page=employees/manage_employee&id=<?php echo $row['id'] ?>"><span class="fa fa-edit text-primary"></span> Edit</a>
+				                    <a class="dropdown-item" href="?page=employees/manage_employee&id=<?php echo $row['EmployeeID'] ?>"><span class="fa fa-edit text-primary"></span> Edit</a>
 				                    <div class="dropdown-divider"></div>
-									<a class="dropdown-item reset_password" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>"><span class="fa fa-key text-primary"></span> Reset Passwowrd</a>
+									<a class="dropdown-item reset_password" href="javascript:void(0)" data-id="<?php echo $row['EmployeeID'] ?>"><span class="fa fa-key text-primary"></span> Reset Passwowrd</a>
 				                    <div class="dropdown-divider"></div>
-				                    <a class="dropdown-item delete_data" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>"><span class="fa fa-trash text-danger"></span> Delete</a>
+				                    <a class="dropdown-item delete_data" href="javascript:void(0)" data-id="<?php echo $row['EmployeeID'] ?>"><span class="fa fa-trash text-danger"></span> Delete</a>
 				                  </div>
 							</td>
-						</tr>
-					<?php endwhile; ?>
+						
+					<?php 
+					
+				   }
+					echo "</tr>" ?>
 				</tbody>
 			</table>
 		</div>
