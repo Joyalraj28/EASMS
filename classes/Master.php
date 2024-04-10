@@ -547,6 +547,9 @@ Class Master extends DBConnection {
 		}
 
 
+		
+
+
 		DBConnection::debuglog($data);
 
 		$resp['status'] = 'failed';
@@ -566,7 +569,7 @@ Class Master extends DBConnection {
 		
 
 
-		$used = $this->conn->query("SELECT COALESCE(sum(`leave_days`),0) as total FROM leaveapplication where ApplyEmpID_FK = '{$user_id}' and `leave_type_id` = '{$leave_type_id}' and date_format(date_start,'%Y') = '".date('Y')."' and date_format(date_end,'%Y') = '".date('Y')."' and status = 1 ")->fetch_array()['total'];
+		$used = $this->conn->query("SELECT COALESCE(SUM(DATEDIFF(EndDate,StartDate)),0) as total FROM leaveapplication where ApplyEmpID_FK = '{$user_id}' and `LeaveTypeID_FK` = '{$leave_type_id}' and date_format(StartDate,'%Y') = '".date('Y')."' and date_format(EndDate,'%Y') = '".date('Y')."' and status = 1 ")->fetch_array()['total'];
 		$allowed = (isset($ltc[$leave_type_id])) ? $ltc[$leave_type_id] : 0;
 		$available =  $allowed - $used;
 		if(!isset($ltc[$leave_type_id])){
@@ -581,7 +584,7 @@ Class Master extends DBConnection {
 			return json_encode($resp);
 			exit;
 		}
-		$check = $this->conn->query("SELECT * FROM `leave_applications` where (('{$date_start}' BETWEEN date(date_start) and date(date_end)) OR ('{$date_end}' BETWEEN date(date_start) and date(date_end))) and user_id = '{$user_id}' and status in (0,1) ".(!empty($id) ? " and id != {$id} " : "")." ")->num_rows;
+		$check = $this->conn->query("SELECT * FROM `leaveapplication` where (('{$date_start}' BETWEEN date(StartDate) and date(EndDate)) OR ('{$date_end}' BETWEEN date(StartDate) and date(EndDate))) and ApplyEmpID_FK = '{$user_id}' and status in (0,1) ".(!empty($id) ? " and id != {$id} " : "")." ")->num_rows;
 		if($this->capture_err())
 			return $this->capture_err();
 		if($check > 0){

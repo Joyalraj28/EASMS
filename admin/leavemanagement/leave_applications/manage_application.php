@@ -40,14 +40,14 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 					<?php //if($_settings->userdata('type') != 3): ?>
 					<div class="form-group">
 						<label for="user_id" class="control-label">Employee</label>
-						<input name="user_id" id="user_id" class="form-control form" data-placeholder="Please Select Employee here"  value="<?php echo $_settings->userdata('Fullname') ?>" reqiured readonly></select>
+						<input class="form-control form" data-placeholder="Please Select Employee here"  value="<?php echo $_settings->userdata('Fullname') ?>" readonly></select>
 					</div>
 					<?php //else: ?>
-					<input type="hidden" name="user_id" value="<?php echo $_settings->userdata('EmployeeID') ?>">
+					<input type="hidden" name="ApplyEmpID_FK" value="<?php echo $_settings->userdata('EmployeeID') ?>">
 					<?php //endif; ?>
 					<div class="form-group">
-						<label for="leave_type_id" class="control-label">Leave Type</label>
-						<select name="leave_type_id" id="leave_type_id" class="form-control select2bs4 select2 rounded-0" data-placeholder="Please Select Leave  Type here" reqiured>
+						<label for="LeaveTypeID_FK" class="control-label">Leave Type</label>
+						<select name="LeaveTypeID_FK" id="leave_type_id" class="form-control select2bs4 select2 rounded-0" data-placeholder="Please Select Leave  Type here" reqiured>
 							<option value="" disabled <?php echo !isset($LeaveID) ? 'selected' : '' ?>></option>
 							<?php 
 							$where = '';
@@ -94,12 +94,12 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="date_start" class="control-label">Date Start</label>
-						<input type="date" id="date_start" class="form-control form" required name="date_start" value="<?php echo isset($date_start) ? date("Y-m-d",strtotime($date_start)) : '' ?>">
+						<label for="StartDate" class="control-label">Date Start</label>
+						<input type="datetime-local" id="StartDate" class="form-control form" required name="date_start" value="<?php echo isset($date_start) ? date("Y-m-d",strtotime($date_start)) : '' ?>">
 					</div>
 					<div class="form-group">
-						<label for="date_end" class="control-label">Date End</label>
-						<input type="date" id="date_end" class="form-control form" required name="date_end" value="<?php echo isset($date_end) ? date("Y-m-d",strtotime($date_end)) : '' ?>">
+						<label for="EndDate" class="control-label">Date End</label>
+						<input type="datetime-local" id="EndDate" class="form-control form" required name="date_end" value="<?php echo isset($date_end) ? date("Y-m-d",strtotime($date_end)) : '' ?>">
 					</div>
 					<div class="form-group">
 						<label id='leave_days_label' for="leave_days" class="control-label">Days</label>
@@ -107,7 +107,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 					</div>
 					<div class="form-group">
 							<label for="reason">Reason</label>
-							<textarea rows="3" name="reason" id="reason" class="form-control rounded-0" style="resize:none !important" required><?php echo isset($reason) ? $reason: '' ?></textarea>
+							<textarea rows="3" name="Reason" id="reason" class="form-control rounded-0" style="resize:none !important" required><?php echo isset($reason) ? $reason: '' ?></textarea>
 						</div>
 				</div>
 			</div>
