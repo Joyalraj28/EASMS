@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2024 at 06:59 PM
+-- Generation Time: Apr 10, 2024 at 07:18 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -27,12 +27,11 @@ DELIMITER $$
 --
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Pro_EmployeeAttendanceDateFormat` (`empid` INT)   BEGIN
 SELECT 
-AttendanceID,
-AttendanceDate, 
-CONVERT(Signin, Date) AS SigninDate, 
-CONVERT(Lunch,Date) AS LunchDate, 
-CONVERT(Lunchout,Date) AS LunchoutDate,     									 
-CONVERT(Signout,Date) AS SignoutDate FROM attendance WHERE EmployeeID_FK = empid;
+emp.Avatar,
+emp.Fullname,
+des.Name as designationname
+FROM employee emp 
+LEFT JOIN designation des ON emp.DesignationID_FK = des.DesignationID AND emp.EmployeeID=empid;
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Pro_EmployeeLeavecredits` (IN `empid` INT)   BEGIN
