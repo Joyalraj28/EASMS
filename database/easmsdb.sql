@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2024 at 07:18 PM
+-- Generation Time: Apr 14, 2024 at 08:09 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -25,15 +25,6 @@ DELIMITER $$
 --
 -- Procedures
 --
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Pro_EmployeeAttendanceDateFormat` (`empid` INT)   BEGIN
-SELECT 
-emp.Avatar,
-emp.Fullname,
-des.Name as designationname
-FROM employee emp 
-LEFT JOIN designation des ON emp.DesignationID_FK = des.DesignationID AND emp.EmployeeID=empid;
-END$$
-
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Pro_EmployeeLeavecredits` (IN `empid` INT)   BEGIN
 CREATE TEMPORARY TABLE IF NOT EXISTS levid AS SELECT * FROM leavetypeids WHERE EmployeeID_FK = empid;
 SELECT *
@@ -42,6 +33,39 @@ LEFT JOIN  levid
     ON lev.LeaveID = levid.leavetypeid
 ORDER BY lev.ShortName ASC;
 END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Pro_EmployeeLeavecreditsApplication` (IN `empid` INT)   SELECT 
+lev.*,
+leavetypeids.EmployeeID_FK, 
+leavetypeids.leavetypeid, 
+leavetypeids.leavecredit
+FROM `leavetype` lev 
+LEFT JOIN  leavetypeids 
+ON lev.LeaveID = leavetypeids.leavetypeid
+WHERE leavetypeids.EmployeeID_FK = empid
+ORDER BY lev.ShortName ASC$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Pro_GetEmployeeDesignation` (IN `empid` INT)   SELECT 
+emp.Avatar,
+emp.EmployeeID,
+emp.Fullname,
+des.Name as DesignationName
+FROM employee emp 
+LEFT JOIN designation des 
+ON emp.DesignationID_FK = des.DesignationID
+WHERE emp.EmployeeID = empid$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Pro_GetEmployeeForAttendance` (IN `empid` INT)   SELECT 
+emp.EmployeeID,
+emp.Fullname,
+des.Name as DesignationName,
+att.*
+FROM attendance att LEFT JOIN 
+employee emp 
+ON att.EmployeeID_FK = emp.EmployeeID 
+LEFT JOIN designation des 
+ON emp.DesignationID_FK = des.DesignationID
+WHERE emp.EmployeeID = empid$$
 
 DELIMITER ;
 
@@ -95,7 +119,7 @@ INSERT INTO `admin` (`EmployeeID`, `PriorityLevel`, `ManageEmployee`, `ManageLea
 
 CREATE TABLE `attendance` (
   `AttendanceID` int(11) NOT NULL,
-  `AttendanceDate` datetime DEFAULT NULL,
+  `AttendanceDate` date DEFAULT NULL,
   `Signin` datetime DEFAULT NULL,
   `Lunch` datetime DEFAULT NULL,
   `Lunchout` datetime DEFAULT NULL,
@@ -109,7 +133,8 @@ CREATE TABLE `attendance` (
 --
 
 INSERT INTO `attendance` (`AttendanceID`, `AttendanceDate`, `Signin`, `Lunch`, `Lunchout`, `Signout`, `LeaveApplicationID_FK`, `EmployeeID_FK`) VALUES
-(1, '2024-04-10 08:00:00', '2024-04-10 08:00:00', NULL, NULL, NULL, NULL, 1);
+(19, '2024-04-14', '2024-04-14 18:07:33', '2024-04-14 18:15:03', '2024-04-14 18:20:13', '2024-04-14 18:25:42', NULL, 1),
+(20, '2024-04-14', '2024-04-14 18:29:18', NULL, NULL, NULL, NULL, 2);
 
 -- --------------------------------------------------------
 
@@ -134,7 +159,8 @@ INSERT INTO `department` (`DepartmentID`, `Name`, `Description`, `CreateDate`, `
 (1, 'Development', 'This development', '2024-04-02 10:38:17', '2024-04-02 10:38:17', 1),
 (2, 'Accounting', 'this accounting ', '2024-04-02 10:39:28', '2024-04-02 10:39:28', 1),
 (3, 'Admin', 'Admin team', '2024-04-02 10:40:31', '2024-04-02 10:40:31', NULL),
-(4, 'Testing', 'Testing department', NULL, NULL, NULL);
+(4, 'Testing', 'Testing department', NULL, NULL, NULL),
+(5, 'Support', 'Support Team', '2024-04-14 21:23:53', '2024-04-14 21:24:04', NULL);
 
 -- --------------------------------------------------------
 
@@ -190,7 +216,7 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`EmployeeID`, `Avatar`, `Fullname`, `Gender`, `DOB`, `Status`, `Address`, `NetSalary`, `Email`, `Password`, `DesignationID_FK`, `Admin_ID_FK`) VALUES
-(1, NULL, 'John', 'Male', '1999-03-18', b'1', 'Jaffna', 99.99, 'John@gmail.com', '123', 3, NULL),
+(1, 'uploads/John Leo_emp.jpg', 'John Leo', 'Male', '1999-03-18', b'1', 'Jaffna', 99.99, 'John@gmail.com', '123', 3, 1),
 (2, NULL, 'Raj Leo', 'Male', '1999-03-18', b'1', 'Jaffna', 99.99, 'raj@gmail.com', '123', 2, 1),
 (3, NULL, 'Joyal', 'Male', '1999-03-18', b'1', 'Jaffna', 99.99, 'singarasajoyalraj@gmail.com', '123', 1, 1),
 (7, NULL, 'test test', 'Male', '2024-04-02', b'1', 'Jaffna', 1.00, 'aaaa', '11', 1, 1),
@@ -236,7 +262,9 @@ INSERT INTO `employeephoneno` (`id`, `PhoneNo`, `EmployeeID_FK`) VALUES
 (22, 761936168, 22),
 (23, 761936262, 22),
 (24, 761932168, 22),
-(25, 123439489, 12);
+(25, 123439489, 12),
+(26, 890943917, 1),
+(27, 890943917, 1);
 
 -- --------------------------------------------------------
 
@@ -282,7 +310,8 @@ INSERT INTO `leavetype` (`LeaveID`, `ShortName`, `Description`, `DefaultCredit`,
 (1, 'test', 'test', 17, '2024-04-03 16:20:30', '2024-04-09 19:55:31', b'1', 1, 1),
 (2, 'test3', 'to', 20, '2024-04-03 17:06:05', '2024-04-03 17:08:25', b'1', NULL, 0),
 (3, 'test3', 'ttt', 20, '2024-04-03 17:06:22', '2024-04-03 17:06:22', b'1', NULL, 0),
-(4, 'PL', 'Personal leave', 7, '2024-04-09 18:54:22', '2024-04-09 18:56:09', b'1', NULL, 2);
+(4, 'PL', 'Personal leave', 7, '2024-04-09 18:54:22', '2024-04-09 18:56:09', b'1', NULL, 2),
+(5, 'HI', 'Helth issue', 14, '2024-04-14 22:34:26', NULL, b'1', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -302,10 +331,12 @@ CREATE TABLE `leavetypeids` (
 --
 
 INSERT INTO `leavetypeids` (`EmployeeID_FK`, `leavetypeid`, `leavecredit`, `DefultCredit`) VALUES
-(11, 4, 7, 7),
-(12, 4, 7, 7),
-(12, 1, 16, 17),
-(3, 4, 7, 7);
+(11, 4, 7, 14),
+(12, 4, 7, 14),
+(12, 1, 16, 14),
+(3, 4, 7, 14),
+(1, 4, 5, 14),
+(1, 1, 17, 14);
 
 -- --------------------------------------------------------
 
@@ -416,13 +447,13 @@ ALTER TABLE `system_info`
 -- AUTO_INCREMENT for table `attendance`
 --
 ALTER TABLE `attendance`
-  MODIFY `AttendanceID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `AttendanceID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `department`
 --
 ALTER TABLE `department`
-  MODIFY `DepartmentID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `DepartmentID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `designation`
@@ -440,13 +471,13 @@ ALTER TABLE `employee`
 -- AUTO_INCREMENT for table `employeephoneno`
 --
 ALTER TABLE `employeephoneno`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `leavetype`
 --
 ALTER TABLE `leavetype`
-  MODIFY `LeaveID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `LeaveID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `system_info`

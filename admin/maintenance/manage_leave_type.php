@@ -30,7 +30,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 		</div>
 		<div class="form-group">
 			<label for="DefaultCredit" class="control-label">Default Credits</label>
-			<input name="DefaultCredit" id="DefaultCredit" step="any" type="number" class="form-control form text-right col-5 rounded-0" value="<?php echo isset($DefaultCredit) ? $DefaultCredit : ''; ?>" max='17' required/>
+			<input name="DefaultCredit" id="DefaultCredit" step="any" type="number" class="form-control form text-right col-5 rounded-0" value="<?php echo isset($DefaultCredit) ? $DefaultCredit : ''; ?>" max='14' required/>
 		</div>
 		<div class="form-group">
 			<label for="status" class="control-label">Status</label>

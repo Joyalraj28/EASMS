@@ -24,7 +24,18 @@ class DBConnection{
         }    
         
     }
-
+    public function Reload()
+    {
+        // // Close connection
+        // $this->conn->close();  
+        $this->conn = new mysqli($this->host, $this->username, $this->password, $this->database);
+            
+            if (!$this->conn) {
+                echo 'Cannot connect to database server';
+                exit;
+            }            
+        
+    }
 
     public static function debuglog($message)
     {

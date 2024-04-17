@@ -10,7 +10,8 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 }
 
 	$meta_qry = $conn->query("SELECT * FROM employee Where EmployeeID = '{$_settings->userdata('EmployeeID')}' ");
-	$leave_type_ids = $conn->query("SELECT * FROM `leavetypeids` WHERE EmployeeID_FK = '{$_settings->userdata('EmployeeID')}' ")->fetch_array();
+	$leave_type_ids = $conn->query("Call Pro_EmployeeLeavecreditsApplication('{$_settings->userdata('EmployeeID')}')");
+	
 	
 	
 	
@@ -50,18 +51,18 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 						<select name="LeaveTypeID_FK" id="leave_type_id" class="form-control select2bs4 select2 rounded-0" data-placeholder="Please Select Leave  Type here" reqiured>
 							<option value="" disabled <?php echo !isset($LeaveID) ? 'selected' : '' ?>></option>
 							<?php 
-							$where = '';
+							// $where = '';
 							
-							$leave_type_ids = $conn->query("SELECT 
-							empleave.EmployeeID_FK,
-							empleave.leavetypeid,
-							empleave.leavecredit, 
-							empleave.DefultCredit,
-							l.ShortName,
-							l.Description 
-							FROM `leavetypeids` empleave 
-							LEFT JOIN leavetype l
-							ON empleave.leavetypeid = l.LeaveID WHERE empleave.EmployeeID_FK = {$_settings->userdata('EmployeeID')}");
+							// $leave_type_ids = $conn->query("SELECT 
+							// empleave.EmployeeID_FK,
+							// empleave.leavetypeid,
+							// empleave.leavecredit, 
+							// empleave.DefultCredit,
+							// l.ShortName,
+							// l.Description 
+							// FROM `leavetypeids` empleave 
+							// LEFT JOIN leavetype l
+							// ON empleave.leavetypeid = l.LeaveID WHERE empleave.EmployeeID_FK = {$_settings->userdata('EmployeeID')}");
 						
 							// if(isset($leave_type_ids) && !empty($leave_type_ids))
 							// {
@@ -73,34 +74,48 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 							// }
 							// $lt = $conn->query("SELECT * FROM `leavetype` where Status = 1 {$where} order by `ShortName` asc");
 							
-							if(isset($leave_type_ids) && !empty($leave_type_ids)):
-							while($row = $leave_type_ids->fetch_assoc()):
-							?>
-							    
-								<option value="<?php echo $row['leavetypeid'] ?>" <?php echo (isset($LeaveID) && $LeaveID == $row['leavetypeid']) ? 'selected' : '' ?>><?php echo $row['ShortName'] ?></option>
-							<?php endwhile; ?>
-							<?php endif; ?>
 
+							if(isset($leave_type_ids) && !empty($leave_type_ids)):
+								
+								var_dump($leave_type_ids);
+
+								
+
+								while($row = $leave_type_ids->fetch_assoc()):
+								?>
+									<label id='DefaultCredit'><?php echo $row['DefaultCredit'] ?></label>
+									<option value="<?php echo $row['leavetypeid'].':'.$row['DefaultCredit'] ?>" <?php echo (isset($LeaveID) && $LeaveID == $row['leavetypeid']) ? 'selected' : '' ?>><?php echo $row['ShortName'] ?></option>
+								<?php endwhile; ?>
+								<?php endif; ?>
 
 						</select>
 
 
 					</div>
+					
 					<div class="form-group">
+						<label for="StartDate" class="control-label">Date Start</label>
+						<input type="date" id="StartDate" class="form-control form" required name="date_start" value="<?php echo isset($date_start) ? date("Y-m-d",strtotime($date_start)) : '' ?>">
+					</div>
+					<div class="form-group">
+						<label for="EndDate" class="control-label">Date End</label>
+						<input type="date" id="EndDate" class="form-control form" required name="date_end" value="<?php echo isset($date_end) ? date("Y-m-d",strtotime($date_end)) : '' ?>">
+					</div>
+
+					<!-- <div class="form-group">
 						<label for="type" class="control-label">Day Type</label>
 						<select id="type" name="type" class="form-control rounded-0">
 							<option value="1" <?php echo (isset($type) && $type ==1)?'selected' : '' ?>>Whole Day</option>
 							<option value="2" <?php echo (isset($type) && $type ==2)?'selected' : '' ?>>Half Day</option>
 						</select>
-					</div>
+					</div> -->
+
+
 					<div class="form-group">
-						<label for="StartDate" class="control-label">Date Start</label>
-						<input type="datetime-local" id="StartDate" class="form-control form" required name="date_start" value="<?php echo isset($date_start) ? date("Y-m-d",strtotime($date_start)) : '' ?>">
+						<label id='leave_days_label' for="leave_days" class="control-label">Maxium Days</label>
+						<input type="number" id="Max_leave_days" class="form-control form" name="Max_leave_days" value="0" readonly>
 					</div>
-					<div class="form-group">
-						<label for="EndDate" class="control-label">Date End</label>
-						<input type="datetime-local" id="EndDate" class="form-control form" required name="date_end" value="<?php echo isset($date_end) ? date("Y-m-d",strtotime($date_end)) : '' ?>">
-					</div>
+
 					<div class="form-group">
 						<label id='leave_days_label' for="leave_days" class="control-label">Days</label>
 						<input type="number" id="leave_days" class="form-control form" name="leave_days" value="<?php echo isset($leave_days) ? $leave_days : 0 ?>" readonly min='1' max=''>
@@ -108,7 +123,9 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 					<div class="form-group">
 							<label for="reason">Reason</label>
 							<textarea rows="3" name="Reason" id="reason" class="form-control rounded-0" style="resize:none !important" required><?php echo isset($reason) ? $reason: '' ?></textarea>
-						</div>
+					</div>
+
+					
 				</div>
 			</div>
 			
@@ -132,53 +149,19 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 	    }
 	}
 
-	function calc_days(){
-		var days = 0;
-
-		//By defult
-		$("#leave_days_label").html('Days')
-		$("#leave_days").prop("readonly", true)
-		$("#leave_days").prop("max", '')
-
-		if($('#date_start').val() != ''){
-			var start = new Date($('#date_start').val());
-			var end = new Date($('#date_end').val());
-			var diffDate = (end - start) / (1000 * 60 * 60 * 24);
-			days = Math.round(diffDate);
-
-		}
-		if($('#type').val() == 2)
-		{
-			$('#leave_days').val('4')
-			$("#leave_days_label").html('Hours')
-			$("#leave_days").prop("readonly", false)
-			$("#leave_days").prop("max", '4')
-		}
-		    
-		else
-			$('#leave_days').val(days +1)
-
-	}
+	
 	$(document).ready(function(){
 		$('.select2').select2();
 		$('.select2-selection').addClass('form-control rounded-0')
-		$('#type').change(function(){
-			if($(this).val() == 2){
-			console.log($(this).val())
-				$('#leave_days').val('4')
-				$('#date_end').attr('required',false)
-				$('#date_end').val($('#date_start').val())
-				$('#date_end').closest('.form-group').hide('fast')
-			}else{
-				$('#date_end').attr('reqiured',true)
-				$('#date_end').closest('.form-group').show('fast')
-				$('#leave_days').val(1)
-			}
-			calc_days()
-		})
-		$('#date_start, #date_end').change(function(){
-			calc_days()
-		})
+
+
+        $("#leave_type_id").change(function(){
+			$('#Max_leave_days').val($("#leave_type_id").val().split(':')[1])
+		});
+		
+
+
+
 		$('#leave_application-form').submit(function(e){
 			e.preventDefault();
 var _this = $(this)
