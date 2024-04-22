@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2024 at 08:09 PM
+-- Generation Time: Apr 22, 2024 at 05:08 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -307,6 +307,7 @@ CREATE TABLE `leavetype` (
 --
 
 INSERT INTO `leavetype` (`LeaveID`, `ShortName`, `Description`, `DefaultCredit`, `CreateDate`, `UpdateDate`, `Status`, `Admin_ID_FK`, `TypeOfLeave`) VALUES
+(-1, 'Casual leave', 'Casual leave', 2, '2024-04-18 00:45:18', NULL, b'1', 1, 2),
 (1, 'test', 'test', 17, '2024-04-03 16:20:30', '2024-04-09 19:55:31', b'1', 1, 1),
 (2, 'test3', 'to', 20, '2024-04-03 17:06:05', '2024-04-03 17:08:25', b'1', NULL, 0),
 (3, 'test3', 'ttt', 20, '2024-04-03 17:06:22', '2024-04-03 17:06:22', b'1', NULL, 0),
