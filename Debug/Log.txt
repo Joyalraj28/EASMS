@@ -1,4 +1,54 @@
- `user_id`='3' , `leave_type_id`='4' , `type`='1' , `date_start`='2024-04-09' , `date_end`='2024-04-09' , `leave_days`='1' , `reason`='Personal issue' 
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+
+
+1
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+1
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+F
+<\USER>
+<IMG>
+
+<\IMG>
 <SESSION>
 =>http://localhost/EASMS/admin/login.php
 <\SESSION>
@@ -16,7 +66,286 @@ T
 <\IMG>
 
 <SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/designation
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+1
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+1
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+1
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+1
+SELECT * FROM `leaveapplication` WHERE `StartDate` ='2024-04-24' and `EndDate`='2024-04-30' and `LeaveTypeID_FK` =4 and ApplyEmpID_FK` =3
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+F
+<\USER>
+<IMG>
+
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+1
+7
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+7
+7
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+1
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
 <\SESSION>
 <USER>
 T
@@ -43,44 +372,89 @@ T
 
 <\IMG>
 <SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-
-<\IMG>
- `user_id`='3' , `type`='1' , `date_start`='2024-04-10T20:00' , `date_end`='2024-04-11T22:34' , `leave_days`='2' , `reason`='test' 
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-
-<\IMG>
- `user_id`='3' , `leave_type_id`='4' , `type`='1' , `date_start`='2024-04-09T22:38' , `date_end`='2024-04-10T22:38' , `leave_days`='2' , `reason`='test' 
- `user_id`='3' , `leave_type_id`='4' , `type`='1' , `date_start`='2024-04-09T22:38' , `date_end`='2024-04-10T22:38' , `leave_days`='2' , `reason`='test' 
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+=>http://localhost/EASMS/admin/login.php
 <\SESSION>
 <USER>
 F
 <\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
 <IMG>
-
+uploads/John Leo_emp.jpg
 <\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leavereport
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+SELECT l.*,emp.Fullname as `name`,lt.ShortName,
+						lt.Description as lname from leaveapplication l inner join employee emp 
+						on l.ApplyEmpID_FK=emp.EmployeeID inner join `leavetype` lt on lt.LeaveID = l.LeaveTypeID_FK 
+						where (date_format(l.StartDate,'%Y') = '2024' 
+						or date_format(l.StartDate,'%Y') = '2024')  and emp.EmployeeID = '1'  
 <SESSION>
 =>http://localhost/EASMS/admin/login.php
 <\SESSION>
@@ -88,7 +462,312 @@ F
 F
 <\USER>
 <SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+SELECT l.*,emp.Fullname as `name`,lt.ShortName,
+						lt.Description as lname from leaveapplication l inner join employee emp 
+						on l.ApplyEmpID_FK=emp.EmployeeID inner join `leavetype` lt on lt.LeaveID = l.LeaveTypeID_FK 
+						where (date_format(l.StartDate,'%Y') = '2024' 
+						or date_format(l.StartDate,'%Y') = '2024')  and emp.EmployeeID = '3'  
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/records&id=22
+<\SESSION>
+<USER>
+F
+<\USER>
+<IMG>
+
+<\IMG>
+<Recordlog>
+22
+<\Recordlog>
+Ram Raja
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leavereport
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
 <\SESSION>
 <USER>
 F
@@ -109,9 +788,1284 @@ F
 T
 <\USER>
 <IMG>
-
+uploads/John Leo_emp.jpg
 <\IMG>
 
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leave_applications/manage_application&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leave_applications/manage_application&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/records&id=22
+<\SESSION>
+<USER>
+F
+<\USER>
+<IMG>
+
+<\IMG>
+<Recordlog>
+22
+<\Recordlog>
+Ram Raja
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/department
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/designation
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/records&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=Attendance/.
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=Attendance/.
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=Attendance/.
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=Attendance/.
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=Attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=Attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=Attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=Attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=Attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=Attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=Attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=Attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=Attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
 <SESSION>
 =>http://localhost/EASMS/admin/?page=employees
 <\SESSION>
@@ -119,10 +2073,835 @@ T
 T
 <\USER>
 <IMG>
-
+uploads/John Leo_emp.jpg
 <\IMG>
 <SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/department
+=>http://localhost/EASMS/admin/?page=employees/manage_employee&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=user
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
 <\SESSION>
 <USER>
 T
@@ -130,36 +2909,7 @@ T
 <IMG>
 
 <\IMG>
-<name>
-Support
-<\name>
-<description>
-Support
-<\description>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/department
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
 
-<\IMG>
-<name>
-Support
-<\name>
-<description>
-Support Team
-<\description>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/department
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-
-<\IMG>
 <SESSION>
 =>http://localhost/EASMS/admin/?page=maintenance/attendance
 <\SESSION>
@@ -169,6 +2919,18 @@ T
 <IMG>
 
 <\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<Recordlog>
+2
+<\Recordlog>
 <SESSION>
 =>http://localhost/EASMS/admin/?page=maintenance/salary
 <\SESSION>
@@ -179,6 +2941,136 @@ T
 
 <\IMG>
 <SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<Recordlog>
+3
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<Recordlog>
+3
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=8
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<Recordlog>
+8
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+F
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
 =>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
 <\SESSION>
 <USER>
@@ -188,288 +3080,7 @@ T
 
 <\IMG>
 <SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leavereport
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-
-<\IMG>
-<SESSION>
 =>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=employees
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=employees/records&id=1
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-
-<\IMG>
-<Recordlog>
-1
-<\Recordlog>
-John
-<SESSION>
-=>http://localhost/EASMS/admin/?page=employees/manage_employee&id=1
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=employees/records&id=1
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-
-<\IMG>
-<Recordlog>
-1
-<\Recordlog>
-John
-<SESSION>
-=>http://localhost/EASMS/admin/?page=employees/manage_employee&id=1
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=employees/records&id=1
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-
-<\IMG>
-<Recordlog>
-1
-<\Recordlog>
-John
-<SESSION>
-=>http://localhost/EASMS/admin/?page=employees/manage_employee&id=1
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-
-<\IMG>
-<type>
-3
-<\type>
-<employeetype>
-1
-<\employeetype>
-<gender>
-Male
-<\gender>
-<firstname>
-John
-<\firstname>
-<lastname>
-Leo
-<\lastname>
-<dob>
-1999-03-18
-<\dob>
-<phonenoOld1>
-
-<\phonenoOld1>
-<phoneno1>
-890943917
-<\phoneno1>
-<phonenoOld2>
-
-<\phonenoOld2>
-<phoneno2>
-
-<\phoneno2>
-<phonenoOld3>
-
-<\phonenoOld3>
-<phoneno3>
-
-<\phoneno3>
-<address>
-Jaffna
-<\address>
-<status>
-1
-<\status>
-<department_id>
-1
-<\department_id>
-<designation_id>
-3
-<\designation_id>
-<netsalary>
-99.99
-<\netsalary>
-<email>
-John@gmail.com
-<\email>
-<password>
-123
-<\password>
-<avatar>
-
-<\avatar>
-1
-UPDATE `employee` SET `Avatar`=null,`Fullname`='John Leo',`Gender`='Male',`DOB`='1999-03-18',`Status`='1',`Address`='Jaffna',`NetSalary`='99.99',`Email`='John@gmail.com',`Password`='123',`DesignationID_FK`='3',`Admin_ID_FK`='1' WHERE `EmployeeID`='1'
-Employee update successfully
-<SESSION>
-=>http://localhost/EASMS/admin/?page=employees/records&id=1
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-
-<\IMG>
-<Recordlog>
-1
-<\Recordlog>
-John Leo
-<SESSION>
-=>http://localhost/EASMS/admin/?page=employees/manage_employee&id=1
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-
-<\IMG>
-<type>
-3
-<\type>
-<employeetype>
-1
-<\employeetype>
-<gender>
-Male
-<\gender>
-<firstname>
-John
-<\firstname>
-<lastname>
-Leo
-<\lastname>
-<dob>
-1999-03-18
-<\dob>
-<phonenoOld1>
-890943917
-<\phonenoOld1>
-<phoneno1>
-890943917
-<\phoneno1>
-<phonenoOld2>
-
-<\phonenoOld2>
-<phoneno2>
-
-<\phoneno2>
-<phonenoOld3>
-
-<\phonenoOld3>
-<phoneno3>
-
-<\phoneno3>
-<address>
-Jaffna
-<\address>
-<status>
-1
-<\status>
-<department_id>
-1
-<\department_id>
-<designation_id>
-3
-<\designation_id>
-<netsalary>
-99.99
-<\netsalary>
-<email>
-John@gmail.com
-<\email>
-<password>
-123
-<\password>
-<avatar>
-
-<\avatar>
-1
-UPDATE `employee` SET `Avatar`='uploads/John Leo_emp.jpg',`Fullname`='John Leo',`Gender`='Male',`DOB`='1999-03-18',`Status`='1',`Address`='Jaffna',`NetSalary`='99.99',`Email`='John@gmail.com',`Password`='123',`DesignationID_FK`='3',`Admin_ID_FK`='1' WHERE `EmployeeID`='1'
-Employee update successfully
-<SESSION>
-=>http://localhost/EASMS/admin/?page=employees/records&id=1
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-
-<\IMG>
-<Recordlog>
-1
-<\Recordlog>
-John Leo
-<SESSION>
-=>http://localhost/EASMS/admin/?page=employees/manage_employee&id=1
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=employees
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=employees
 <\SESSION>
 <USER>
 T
@@ -503,7 +3114,7 @@ T
 uploads/John Leo_emp.jpg
 <\IMG>
 <SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+=>http://localhost/EASMS/admin/?page=leavemanagement/leavereport
 <\SESSION>
 <USER>
 T
@@ -512,7 +3123,7 @@ T
 uploads/John Leo_emp.jpg
 <\IMG>
 <SESSION>
-=>http://localhost/EASMS/admin/
+=>http://localhost/EASMS/admin/?page=leavemanagement/leavereport
 <\SESSION>
 <USER>
 T
@@ -520,7 +3131,143 @@ T
 <IMG>
 uploads/John Leo_emp.jpg
 <\IMG>
-
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leavereport
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leavereport
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+ `Shortname`='SL' , `Description`='Short leave' , `TypeOfLeave`='3' , `DefaultCredit`='2' , `status`='1' 
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+ `Shortname`='test' , `Description`='tt' , `TypeOfLeave`='1' , `DefaultCredit`='20' , `status`='1' 
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leavereport
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
 <SESSION>
 =>http://localhost/EASMS/admin/?page=employees
 <\SESSION>
@@ -557,74 +3304,6 @@ uploads/John Leo_emp.jpg
 1
 <\Recordlog>
 John Leo
-DELETE  FROM `leavetypeids` WHERE EmployeeID_FK = '1'
-<SESSION>
-=>http://localhost/EASMS/admin/?page=employees/records&id=1
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<Recordlog>
-1
-<\Recordlog>
-John Leo
-DELETE  FROM `leavetypeids` WHERE EmployeeID_FK = '1'
-<SESSION>
-=>http://localhost/EASMS/admin/?page=employees/records&id=1
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<Recordlog>
-1
-<\Recordlog>
-John Leo
-<SESSION>
-=>http://localhost/EASMS/admin/?page=employees
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=employees/records&id=1
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<Recordlog>
-1
-<\Recordlog>
-John Leo
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
 <SESSION>
 =>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
 <\SESSION>
@@ -635,47 +3314,7 @@ T
 uploads/John Leo_emp.jpg
 <\IMG>
 <SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
- `Shortname`='HI' , `Description`='Helth issue' , `TypeOfLeave`='1' , `DefaultCredit`='14' , `status`='0' 
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
- `Shortname`='HI' , `Description`='Helth issue' , `TypeOfLeave`='1' , `DefaultCredit`='14' , `status`='0' 
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
- `Shortname`='HI' , `Description`='Helth issue' , `TypeOfLeave`='1' , `DefaultCredit`='14' , `status`='0' 
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
- `Shortname`='HI' , `Description`='Helth issue' , `TypeOfLeave`='1' , `DefaultCredit`='14' , `status`='0' 
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+=>http://localhost/EASMS/admin/?page=leavemanagement/leavereport
 <\SESSION>
 <USER>
 T
@@ -757,69 +3396,6 @@ uploads/John Leo_emp.jpg
 <\IMG>
 <SESSION>
 =>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=employees/records&id=22
 <\SESSION>
 <USER>
 F
@@ -827,10 +3403,6 @@ F
 <IMG>
 
 <\IMG>
-<Recordlog>
-22
-<\Recordlog>
-Ram Raja
 <SESSION>
 =>http://localhost/EASMS/admin/login.php
 <\SESSION>
@@ -848,6 +3420,513 @@ uploads/John Leo_emp.jpg
 <\IMG>
 
 <SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leavereport
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=7
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=7
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=7
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=7
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=8
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=8
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=8
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=8
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=8
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=8
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=8
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=4
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
 =>http://localhost/EASMS/admin/?page=employees
 <\SESSION>
 <USER>
@@ -866,161 +3945,7 @@ T
 uploads/John Leo_emp.jpg
 <\IMG>
 <SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/attendance
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leavereport
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=employees/records&id=22
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
 <\SESSION>
 <USER>
 T
@@ -1029,269 +3954,5 @@ T
 uploads/John Leo_emp.jpg
 <\IMG>
 <Recordlog>
-22
+1
 <\Recordlog>
-Ram Raja
-<SESSION>
-=>http://localhost/EASMS/admin/
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leavereport
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
-<\SESSION>
-<USER>
-T
-<\USER>
-<IMG>
-uploads/John Leo_emp.jpg
-<\IMG>

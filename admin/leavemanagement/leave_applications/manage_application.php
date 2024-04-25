@@ -1,6 +1,11 @@
 <?php
+
+
+
 if(isset($_GET['id']) && $_GET['id'] > 0){
-    $qry = $conn->query("SELECT * from `leaveapplication` where id = '{$_GET['id']}' ");
+    $qry = $conn->query("SELECT *,DATEDIFF(EndDate,StartDate) as leave_days
+	
+	 from `leaveapplication` where LeaveApplicationID = '{$_GET['id']}' ");
     if($qry->num_rows > 0){
         foreach($qry->fetch_assoc() as $k => $v){
             $$k=$v;
@@ -9,13 +14,23 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 	
 }
 
-	$meta_qry = $conn->query("SELECT * FROM employee Where EmployeeID = '{$_settings->userdata('EmployeeID')}' ");
-	$leave_type_ids = $conn->query("Call Pro_EmployeeLeavecreditsApplication('{$_settings->userdata('EmployeeID')}')");
-	
-	
-	
-	
 
+
+  //echo $LeaveTypeID_FK;
+	$id = isset($_GET['id'])? $_GET['id']:'';
+    $empid = isset($ApplyEmpID_FK)  ?  $ApplyEmpID_FK : $_settings->userdata('EmployeeID');
+
+	//$emp_arry = array();
+	if(isset($empid))
+	{
+		$emp_qry = $conn->query("SELECT * FROM `employee` WHERE `EmployeeID` = '{$empid}' ");
+		if($emp_qry->num_rows > 0){
+			
+			$emp_arry =	$emp_qry->fetch_array();
+		}
+	}
+	$leave_type_ids = $conn->query("Call Pro_EmployeeLeavecreditsApplication('{$empid}')");
+	
 ?>
 
 <style>
@@ -41,50 +56,23 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 					<?php //if($_settings->userdata('type') != 3): ?>
 					<div class="form-group">
 						<label for="user_id" class="control-label">Employee</label>
-						<input class="form-control form" data-placeholder="Please Select Employee here"  value="<?php echo $_settings->userdata('Fullname') ?>" readonly></select>
+						<input class="form-control form" data-placeholder="Please Select Employee here"  value="<?php echo isset($id) ? $emp_arry['Fullname'] : $_settings->userdata('Fullname') ?>" readonly></select>
 					</div>
 					<?php //else: ?>
-					<input type="hidden" name="ApplyEmpID_FK" value="<?php echo $_settings->userdata('EmployeeID') ?>">
+					<input type="hidden" name="ApplyEmpID_FK" value="<?php echo $empid ?>">
 					<?php //endif; ?>
 					<div class="form-group">
 						<label for="LeaveTypeID_FK" class="control-label">Leave Type</label>
 						<select name="LeaveTypeID_FK" id="leave_type_id" class="form-control select2bs4 select2 rounded-0" data-placeholder="Please Select Leave  Type here" reqiured>
-							<option value="" disabled <?php echo !isset($LeaveID) ? 'selected' : '' ?>></option>
+							<!-- <option value="" disabled <?php echo !isset($LeaveTypeID_FK) ? 'selected' : '' ?>></option> -->
 							<?php 
-							// $where = '';
-							
-							// $leave_type_ids = $conn->query("SELECT 
-							// empleave.EmployeeID_FK,
-							// empleave.leavetypeid,
-							// empleave.leavecredit, 
-							// empleave.DefultCredit,
-							// l.ShortName,
-							// l.Description 
-							// FROM `leavetypeids` empleave 
-							// LEFT JOIN leavetype l
-							// ON empleave.leavetypeid = l.LeaveID WHERE empleave.EmployeeID_FK = {$_settings->userdata('EmployeeID')}");
 						
-							// if(isset($leave_type_ids) && !empty($leave_type_ids))
-							// {
-							// 	$leaveIDrow = $leave_type_ids->fetch_assoc()['leavetypeid'];
-							// 	if(isset($leaveIDrow) && !empty($leaveIDrow))
-							// 	{
-							// 		$where = "and id in (".implode(',',$leaveIDrow).")";
-							// 	}
-							// }
-							// $lt = $conn->query("SELECT * FROM `leavetype` where Status = 1 {$where} order by `ShortName` asc");
-							
 
 							if(isset($leave_type_ids) && !empty($leave_type_ids)):
 								
-								var_dump($leave_type_ids);
-
-								
-
 								while($row = $leave_type_ids->fetch_assoc()):
 								?>
-									<label id='DefaultCredit'><?php echo $row['DefaultCredit'] ?></label>
-									<option value="<?php echo $row['leavetypeid'].':'.$row['DefaultCredit'] ?>" <?php echo (isset($LeaveID) && $LeaveID == $row['leavetypeid']) ? 'selected' : '' ?>><?php echo $row['ShortName'] ?></option>
+									<option value="<?php echo $row['leavetypeid'].':'.$row['leavecredit'].':',$row['TypeOfLeave'] ?>" <?php echo (isset($LeaveTypeID_FK) && $LeaveTypeID_FK == $row['leavetypeid']) ? 'selected' : '' ?>><?php echo $row['ShortName'] ?></option>
 								<?php endwhile; ?>
 								<?php endif; ?>
 
@@ -95,11 +83,11 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 					
 					<div class="form-group">
 						<label for="StartDate" class="control-label">Date Start</label>
-						<input type="date" id="StartDate" class="form-control form" required name="date_start" value="<?php echo isset($date_start) ? date("Y-m-d",strtotime($date_start)) : '' ?>">
+						<input type="date" id="StartDate" class="form-control form" required name="StartDate" value="<?php echo isset($StartDate) ? date("Y-m-d",strtotime($StartDate)) : '' ?>" min='<?php echo date("Y-m-d") ?>'>
 					</div>
 					<div class="form-group">
-						<label for="EndDate" class="control-label">Date End</label>
-						<input type="date" id="EndDate" class="form-control form" required name="date_end" value="<?php echo isset($date_end) ? date("Y-m-d",strtotime($date_end)) : '' ?>">
+						<label type='hidden' id='EndDatelable' for="EndDate" class="control-label">Date End</label>
+						<input type="date" id="EndDate" class="form-control form" required name="EndDate" value="<?php echo isset($EndDate) ? date("Y-m-d",strtotime($EndDate)) : '' ?>">
 					</div>
 
 					<!-- <div class="form-group">
@@ -111,18 +99,16 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 					</div> -->
 
 
+					
+					<!-- hidden -->
 					<div class="form-group">
-						<label id='leave_days_label' for="leave_days" class="control-label">Maxium Days</label>
-						<input type="number" id="Max_leave_days" class="form-control form" name="Max_leave_days" value="0" readonly>
-					</div>
-
-					<div class="form-group">
-						<label id='leave_days_label' for="leave_days" class="control-label">Days</label>
+					    <!-- <input type="numbers" id="Max_leave_days" class="form-control form" name="Max_leave_days" value="0" readonly>	 -->
+					    <label id='leave_days_label' for="leave_days" class="control-label">Days</label>
 						<input type="number" id="leave_days" class="form-control form" name="leave_days" value="<?php echo isset($leave_days) ? $leave_days : 0 ?>" readonly min='1' max=''>
 					</div>
 					<div class="form-group">
 							<label for="reason">Reason</label>
-							<textarea rows="3" name="Reason" id="reason" class="form-control rounded-0" style="resize:none !important" required><?php echo isset($reason) ? $reason: '' ?></textarea>
+							<textarea rows="3" name="Reason" id="reason" class="form-control rounded-0" style="resize:none !important" required><?php echo isset($Reason) ? $Reason: '' ?></textarea>
 					</div>
 
 					
@@ -133,7 +119,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 	</div>
 	<div class="card-footer">
 		<button class="btn btn-flat btn-primary" form="leave_application-form">Save</button>
-		<a class="btn btn-flat btn-default" href="?page=leave_applications">Cancel</a>
+		<a class="btn btn-flat btn-default" href="?page=leavemanagement/leave_applications/">Cancel</a>
 	</div>
 </div>
 <script>
@@ -149,22 +135,121 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 	    }
 	}
 
-	
+	//Set max leave type credit
 	$(document).ready(function(){
 		$('.select2').select2();
 		$('.select2-selection').addClass('form-control rounded-0')
 
+		ChangeLeaveType();
+
+		function ChangeLeaveType()
+		{
+			var leavecredit = new Number($("#leave_type_id").val().split(':')[1]);
+
+			var leaveid = new Number($("#leave_type_id").val().split(':')[0]);
+
+			var leavetype = new Number($("#leave_type_id").val().split(':')[2]);
+
+			var currentdate = new Date();
+
+            var Avaliabledate = currentdate.getFullYear()+'-'+currentdate.getMonth()+'-'+ (currentdate.getDate() + leavecredit);
+
+			$('#StartDate').attr('type','date');
+
+			$('#EndDatelable').css('visibility','visible');
+			$('#EndDate').attr('type','date');
+			$("#leave_days").attr("readonly",true);
+			$('#leave_days_label').html("Days");
+
+			if(leavetype == 3)
+			{
+				$('#StartDate').attr('type','datetime-local');
+				
+				$('#EndDatelable').css('visibility','hidden');
+				$('#EndDate').attr('type','hidden');
+
+				$('#leave_days_label').html("Hours");
+				$("#leave_days").val(2)
+				$("#leave_days").attr("max",2);
+				$("#leave_days").attr("readonly",false);
+			}
+			
+			
+			
+			
+			
+			$('#Max_leave_days').val(leavecredit);
+		}
 
         $("#leave_type_id").change(function(){
-			$('#Max_leave_days').val($("#leave_type_id").val().split(':')[1])
+			
+			ChangeLeaveType();
+			
 		});
+
+
+
+	//Calulate days
+	function calc_days(){
+		var days = 0;
+
+		//By defult
+		// $("#leave_days_label").html('Days')
+		// $("#leave_days").prop("readonly", true)
+		// $("#leave_days").prop("max", '')
+
+
+		// alert($('#StartDate').val() != '' +" > "+$('#EndDate').val() != '')
+		if($('#StartDate').val() != '' && $('#EndDate').val() !=''){
+			var start = new Date($('#StartDate').val());
+			var end = new Date($('#EndDate').val());
+
+			var diffDate = (end - start) / (1000 * 60 * 60 * 24);
+			days = Math.round(diffDate);
+			$('#leave_days').val(days);
 		
 
+		}
+		
+	}
+	
+	
+	// $('#type').change(function(){
+
+	// 		//Is sort leave
+	// 		if($(this).val() == 2){
+	// 		console.log($(this).val())
+	// 			$('#leave_days').val('4')
+	// 			$('#date_end').attr('required',false)
+	// 			$('#date_end').val($('#date_start').val())
+	// 			$('#date_end').closest('.form-group').hide('fast')
+	// 		}
+			
+	// 		//annual leave or casual leave
+	// 		else{
+	// 			$('#date_end').attr('reqiured',true)
+	// 			$('#date_end').closest('.form-group').show('fast')
+	// 			$('#leave_days').val(1)
+	// 		}
+	// 		calc_days()
+	// 	})
 
 
+		$('#StartDate, #EndDate').change(function(){
+
+			var leavetype = new Number($("#leave_type_id").val().split(':')[2]);
+
+			if(leavetype != 3)
+			{
+				calc_days();
+			}
+		})
+
+
+
+		//Submit form
 		$('#leave_application-form').submit(function(e){
 			e.preventDefault();
-var _this = $(this)
             var _this = $(this)
 			 $('.err-msg').remove();
 			start_loader();
@@ -184,7 +269,7 @@ var _this = $(this)
 				},
 				success:function(resp){
 					if(typeof resp =='object' && resp.status == 'success'){
-						location.href = "./?page=leave_applications";
+						location.href = "./?page=leavemanagement/leave_applications/";
 					}else if(resp.status == 'failed' && !!resp.msg){
                         var el = $('<div>')
                             el.addClass("alert alert-danger err-msg").text(resp.msg)

@@ -58,7 +58,10 @@ class DBConnection{
       echo "<script>console.log($obj);</script>";
     }
 
-
+    public static function alert($obj)
+    {
+      echo "<script>alert($obj);</script>";
+    }
 
     public static function Iset($value,$NA)
     {

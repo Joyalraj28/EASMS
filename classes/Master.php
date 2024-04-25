@@ -538,53 +538,41 @@ Class Master extends DBConnection {
 	function save_application(){
 		extract($_POST);
 		$data = "";
-		foreach($_POST as $k =>$v){
-			if(!in_array($k,array('id'))){
-				$v = addslashes($v);
-				if(!empty($data)) $data .=",";
-				$data .= " `{$k}`='{$v}' ";
-			}
-		}
+		// foreach($_POST as $k =>$v){
+		// 	if(!in_array($k,array('id'))){
+		// 		$v = addslashes($v);
+		// 		if(!empty($data)) $data .=",";
+		// 		$data .= " `{$k}`='{$v}' ";
+		// 	}
+		// }
 
 
-		
+		$empid = $this->settings->userdata('EmployeeID');
 
+		//$this->conn->query("SELECT count(*) FROM `leaveapplication` WHERE `StartDate` ='{$_POST['StartDate']}' and `EndDate`='{$_POST['EndDate']}' and `LeaveTypeID_FK` ={$_POST['LeaveTypeID_FK'][0]} and ApplyEmpID_FK` ={$empid}");
+	
 
-		DBConnection::debuglog($data);
+	
+		//DBConnection::debuglog($Max_leave_days < $leave_days);
+	
+		//Change Leave id
+		$LeaveTypeID = $LeaveTypeID_FK;
 
-		$resp['status'] = 'failed';
-		$resp['msg'] = "Currently testing";
-		return json_encode($resp);
+		$LeaveTypeID_FK = explode(':',$LeaveTypeID)[0];
+		$Max_leave_days = explode(':',$LeaveTypeID)[1];
+		$TypeLeave = explode(':',$LeaveTypeID)[2];
 
-		$meta_qry = $this->conn->query("SELECT * FROM employee where EmployeeID = '{$user_id}' ");
-		while($row = $meta_qry->fetch_assoc()){
-			$meta[$row['meta_field']] = $row['meta_value'];
-		}
-		$leave_type_credits = isset($meta['leave_type_credits']) ? json_decode($meta['leave_type_credits']) : array();
-		$ltc = array();
-		foreach($leave_type_credits as $k=> $v){
-			$ltc[$k] = $v;
-		}
-
-		
-
-
-		$used = $this->conn->query("SELECT COALESCE(SUM(DATEDIFF(EndDate,StartDate)),0) as total FROM leaveapplication where ApplyEmpID_FK = '{$user_id}' and `LeaveTypeID_FK` = '{$leave_type_id}' and date_format(StartDate,'%Y') = '".date('Y')."' and date_format(EndDate,'%Y') = '".date('Y')."' and status = 1 ")->fetch_array()['total'];
-		$allowed = (isset($ltc[$leave_type_id])) ? $ltc[$leave_type_id] : 0;
-		$available =  $allowed - $used;
-		if(!isset($ltc[$leave_type_id])){
+		//Check leave count is grader then $maxleavDay to leavedays
+		//$leave_type_ids = $conn->query("SELECT * FROM `leavetypeids` WHERE `EmployeeID_FK` = '{$empid}' and `leavetypeid` '{$LeaveTypeID_FK}'");
+		if($Max_leave_days < $leave_days && $TypeLeave != 3){
 			$resp['status'] = 'failed';
-			$resp['msg'] = " Selected employee does not have previlege for the selected leave type.";
+			$resp['msg'] = " Days of Leave is greated than available days of selected leave type. Available ({$Max_leave_days}).";
 			return json_encode($resp);
 			exit;
 		}
-		if($leave_days > $available){
-			$resp['status'] = 'failed';
-			$resp['msg'] = " Days of Leave is greated than available days of selected leave type. Available ({$available}).";
-			return json_encode($resp);
-			exit;
-		}
-		$check = $this->conn->query("SELECT * FROM `leaveapplication` where (('{$date_start}' BETWEEN date(StartDate) and date(EndDate)) OR ('{$date_end}' BETWEEN date(StartDate) and date(EndDate))) and ApplyEmpID_FK = '{$user_id}' and status in (0,1) ".(!empty($id) ? " and id != {$id} " : "")." ")->num_rows;
+
+		//Check alredy exit
+		$check = $this->conn->query("SELECT * FROM `leaveapplication` where (('{$StartDate}' BETWEEN date(StartDate) and date(EndDate)) OR ('{$EndDate}' BETWEEN date(StartDate) and date(EndDate))) and ApplyEmpID_FK = '{$empid}' and status in (0,1) ".(!empty($id) ? " and LeaveApplicationID != {$id} " : "")." ")->num_rows;
 		if($this->capture_err())
 			return $this->capture_err();
 		if($check > 0){
@@ -593,13 +581,33 @@ Class Master extends DBConnection {
 			return json_encode($resp);
 			exit;
 		}
+
+		if($TypeLeave == 3)
+		{
+			$EndDate = date('Y-m-d h:i:s A', strtotime($StartDate)+60*60*$leave_days);
+			
+		}
+
+
 		if(empty($id)){
-			$sql = "INSERT INTO `leave_applications` set {$data} ";
+
+			
+
+			$sql = "INSERT INTO `leaveapplication`(`ApplyEmpID_FK`, `LeaveDate`, `Reason`, `StartDate`, `EndDate`, `Status`, `LeaveTypeID_FK`) VALUES
+			 									  ('{$empid}','$StartDate','$Reason','$StartDate','$EndDate','0','$LeaveTypeID_FK')";
 			$save = $this->conn->query($sql);
 		}else{
-			$sql = "UPDATE `leave_applications` set {$data} where id = '{$id}' ";
+			$sql = "UPDATE `leaveapplication` SET `LeaveDate`='$StartDate',`Reason`='$Reason',`StartDate`='$StartDate',`EndDate`='$EndDate',`LeaveTypeID_FK`='$LeaveTypeID_FK' where LeaveApplicationID = '{$id}' ";
 			$save = $this->conn->query($sql);
 		}
+
+			
+		// $resp['status'] = 'failed';
+		// $resp['msg'] = "Currently testing";
+		// return json_encode($resp);
+
+	
+		
 		if($save){
 			$resp['status'] = 'success';
 			if(empty($id))
@@ -637,7 +645,13 @@ Class Master extends DBConnection {
 				$data .= " `{$k}`='{$v}' ";
 			}
 		}
-		$sql = "UPDATE `leave_applications` set {$data} where id = '{$id}' ";
+
+		// $resp['status'] = 'fail';
+		// $resp['msg'] = "UPDATE `leaveapplication` set {$data} where LeaveApplicationID = '{$id}' ";
+
+		// return json_encode($resp);
+
+		$sql = "UPDATE `leaveapplication` set {$data} where LeaveApplicationID = '{$id}' ";
 		$save = $this->conn->query($sql);
 		$this->capture_err();
 		$resp['status'] = 'success';

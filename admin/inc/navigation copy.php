@@ -186,7 +186,7 @@
 
                       <!-- Leave Application -->
                       <li style="cursor: pointer;font-size:15px;margin-left: 12px;" class="nav-item dropdown">
-                      <a href="<?php echo base_url ?>admin/?page=leave_applications" class="nav-link nav-leave_applications">
+                      <a href="<?php echo base_url ?>admin/?page=leavemanagement/leave_applications/" class="nav-link nav-leave_applications">
                         <i class="nav-icon fas fa-file-alt"></i>
                         <p>
                           Application Management

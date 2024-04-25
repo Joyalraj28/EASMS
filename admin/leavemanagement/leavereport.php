@@ -79,7 +79,7 @@ order by unix_timestamp(l.StartDate) asc,unix_timestamp(l.EndDate) asc";
 							<td class="text-center"><?php echo $i++; ?></td>
 							<td>
                                 <small><b>ID: </b><?php echo $row['EmployeeID'] ?></small><br>
-                                <small><b>Name: </b><?php echo $row['Description'] ?></small>
+                                <small><b>Name: </b><?php echo $row['name'] ?></small>
                             </td>
 							<td><?php echo $row['Shortname'] ?> - <?php echo $row['lname'] ?></td>
 							<td>

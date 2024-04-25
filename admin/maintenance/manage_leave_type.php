@@ -29,7 +29,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 			</select>
 		</div>
 		<div class="form-group">
-			<label for="DefaultCredit" class="control-label">Default Credits</label>
+			<label id='DefaultCredit-Lable' for="DefaultCredit" class="control-label"><?php echo isset($TypeOfLeave) && $TypeOfLeave == 3? "Default Credits (Hours)" : "Default Credits (Days)" ?></label>
 			<input name="DefaultCredit" id="DefaultCredit" step="any" type="number" class="form-control form text-right col-5 rounded-0" value="<?php echo isset($DefaultCredit) ? $DefaultCredit : ''; ?>" max='14' required/>
 		</div>
 		<div class="form-group">
@@ -45,23 +45,37 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
   
 	$(document).ready(function(){
 
+		TypeChange();
 
 
-		$("#TypeOfLeave").change(function() {
-
+		function TypeChange()
+		{
+			$("#DefaultCredit").attr("readonly",false);
+			$("#DefaultCredit-Lable").html("Default Credits (Days)");
 			if($(this).val()==1)
 			{
 			$("#DefaultCredit").attr('max',14)
+			$("#DefaultCredit").val("14")
 			}
 			else if($(this).val()==2)
 			{
 				$("#DefaultCredit").attr('max',7)
+				$("#DefaultCredit").val("7")
 			}
-			else
+			else if($(this).val()==3)
 			{
+				$("#DefaultCredit-Lable").html("Default Credits (Hours)");
 				$("#DefaultCredit").attr('max',2)
+				$("#DefaultCredit").val("2")
+				$("#DefaultCredit").attr("readonly",true);
 			}
 
+		}
+
+
+		$("#TypeOfLeave").change(function() {
+
+			TypeChange();
 
 		});
 
