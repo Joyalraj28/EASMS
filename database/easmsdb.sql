@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 22, 2024 at 05:08 PM
+-- Generation Time: Apr 28, 2024 at 06:43 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -121,8 +121,8 @@ CREATE TABLE `attendance` (
   `AttendanceID` int(11) NOT NULL,
   `AttendanceDate` date DEFAULT NULL,
   `Signin` datetime DEFAULT NULL,
-  `Lunch` datetime DEFAULT NULL,
   `Lunchout` datetime DEFAULT NULL,
+  `Lunchin` datetime DEFAULT NULL,
   `Signout` datetime DEFAULT NULL,
   `LeaveApplicationID_FK` int(11) DEFAULT NULL,
   `EmployeeID_FK` int(11) NOT NULL
@@ -132,7 +132,7 @@ CREATE TABLE `attendance` (
 -- Dumping data for table `attendance`
 --
 
-INSERT INTO `attendance` (`AttendanceID`, `AttendanceDate`, `Signin`, `Lunch`, `Lunchout`, `Signout`, `LeaveApplicationID_FK`, `EmployeeID_FK`) VALUES
+INSERT INTO `attendance` (`AttendanceID`, `AttendanceDate`, `Signin`, `Lunchout`, `Lunchin`, `Signout`, `LeaveApplicationID_FK`, `EmployeeID_FK`) VALUES
 (19, '2024-04-14', '2024-04-14 18:07:33', '2024-04-14 18:15:03', '2024-04-14 18:20:13', '2024-04-14 18:25:42', NULL, 1),
 (20, '2024-04-14', '2024-04-14 18:29:18', NULL, NULL, NULL, NULL, 2);
 
