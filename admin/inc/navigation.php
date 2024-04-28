@@ -60,7 +60,7 @@
 
                        <!-- Employees Management -->
                        <li class="nav-item dropdown">
-                      <a  class="nav-link">
+                      <a href="<?php echo base_url ?>admin/?page=maintenance/accessibility" class="nav-link nav-maintenance_accessibility" class="nav-link">
                         <i class="nav-icon fas fa-user-friends"></i>
                         <p>
                         Accessibility

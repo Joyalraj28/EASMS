@@ -3956,3 +3956,4581 @@ uploads/John Leo_emp.jpg
 <Recordlog>
 1
 <\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+F
+<\USER>
+<IMG>
+
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leavereport
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+F
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+F
+<\USER>
+<IMG>
+
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+3
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+F
+<\USER>
+<IMG>
+
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance?id=3?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS//admin/?page=maintenance/view_attendance?id=3?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance?id=3?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance?id=3?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance?id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance?id=3?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance?id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+F
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=2
+<\SESSION>
+<USER>
+F
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1?StartDate=2024-03-31%2018:30:00?EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1&StartDate=2024-03-31%2018:30:00&EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1&StartDate=2024-03-31%2018:30:00&EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1&StartDate=2024-03-31%2018:30:00&EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1&StartDate=2024-03-31%2018:30:00&EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1&StartDate=2024-03-31%2018:30:00&EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1&StartDate=2024-03-31%2018:30:00&EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3&StartDate=2024-03-31%2018:30:00&EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3&StartDate=2024-03-31%2018:30:00&EndDate=2024-04-29%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=3&StartDate=2024-04-30%2018:30:00&EndDate=2024-05-30%2018:30:00
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+F
+<\USER>
+<IMG>
+
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/records&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/designation
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/designation
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/designation
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+F
+<\USER>
+<IMG>
+
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&months=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&months=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=3&months=May&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=3&months=May&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=3&months=May&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=3&month=May&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=3&month=May&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=3&month=May&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=3&month=May&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=3&month=May&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=3&month=May&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=3&month=May&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=3&month=May&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=3&month=May&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=3&month=May&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=3&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=2&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=2&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<type>
+3
+<\type>
+<employeetype>
+1
+<\employeetype>
+<gender>
+Male
+<\gender>
+<firstname>
+John
+<\firstname>
+<lastname>
+Leo
+<\lastname>
+<dob>
+1999-03-18
+<\dob>
+<phonenoOld1>
+890943917
+<\phonenoOld1>
+<phoneno1>
+890943917
+<\phoneno1>
+<phonenoOld2>
+890943917
+<\phonenoOld2>
+<phoneno2>
+890943917
+<\phoneno2>
+<phonenoOld3>
+
+<\phonenoOld3>
+<phoneno3>
+
+<\phoneno3>
+<address>
+Jaffna
+<\address>
+<status>
+1
+<\status>
+<department_id>
+1
+<\department_id>
+<designation_id>
+3
+<\designation_id>
+<netsalary>
+200.00
+<\netsalary>
+<email>
+John@gmail.com
+<\email>
+<password>
+123
+<\password>
+<avatar>
+uploads/John Leo_emp.jpg
+<\avatar>
+1
+UPDATE `employee` SET `Avatar`=null,`Fullname`='John Leo',`Gender`='Male',`DOB`='1999-03-18',`Status`='1',`Address`='Jaffna',`NetSalary`='200.00',`Email`='John@gmail.com',`Password`='123',`DesignationID_FK`='3',`Admin_ID_FK`='1' WHERE `EmployeeID`='1'
+Employee update successfully
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/records&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<type>
+3
+<\type>
+<employeetype>
+1
+<\employeetype>
+<gender>
+Male
+<\gender>
+<firstname>
+John
+<\firstname>
+<lastname>
+Leo
+<\lastname>
+<dob>
+1999-03-18
+<\dob>
+<phonenoOld1>
+890943917
+<\phonenoOld1>
+<phoneno1>
+890943917
+<\phoneno1>
+<phonenoOld2>
+890943917
+<\phonenoOld2>
+<phoneno2>
+890943917
+<\phoneno2>
+<phonenoOld3>
+890943917
+<\phonenoOld3>
+<phoneno3>
+890943917
+<\phoneno3>
+<address>
+Jaffna
+<\address>
+<status>
+1
+<\status>
+<department_id>
+1
+<\department_id>
+<designation_id>
+3
+<\designation_id>
+<netsalary>
+200.99
+<\netsalary>
+<email>
+John@gmail.com
+<\email>
+<password>
+123
+<\password>
+<avatar>
+
+<\avatar>
+1
+UPDATE `employee` SET `Avatar`=null,`Fullname`='John Leo',`Gender`='Male',`DOB`='1999-03-18',`Status`='1',`Address`='Jaffna',`NetSalary`='200.99',`Email`='John@gmail.com',`Password`='123',`DesignationID_FK`='3',`Admin_ID_FK`='1' WHERE `EmployeeID`='1'
+Employee update successfully
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/records&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<type>
+3
+<\type>
+<employeetype>
+1
+<\employeetype>
+<gender>
+Male
+<\gender>
+<firstname>
+John
+<\firstname>
+<lastname>
+Leo
+<\lastname>
+<dob>
+1999-03-18
+<\dob>
+<phonenoOld1>
+890943917
+<\phonenoOld1>
+<phoneno1>
+890943917
+<\phoneno1>
+<phonenoOld2>
+890943917
+<\phonenoOld2>
+<phoneno2>
+890943917
+<\phoneno2>
+<phonenoOld3>
+890943917
+<\phonenoOld3>
+<phoneno3>
+890943917
+<\phoneno3>
+<address>
+Jaffna
+<\address>
+<status>
+1
+<\status>
+<department_id>
+1
+<\department_id>
+<designation_id>
+3
+<\designation_id>
+<netsalary>
+2000.99
+<\netsalary>
+<email>
+John@gmail.com
+<\email>
+<password>
+123
+<\password>
+<avatar>
+
+<\avatar>
+1
+UPDATE `employee` SET `Avatar`=null,`Fullname`='John Leo',`Gender`='Male',`DOB`='1999-03-18',`Status`='1',`Address`='Jaffna',`NetSalary`='2000.99',`Email`='John@gmail.com',`Password`='123',`DesignationID_FK`='3',`Admin_ID_FK`='1' WHERE `EmployeeID`='1'
+Employee update successfully
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/records&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leavereport
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/salary
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_salary&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/SelectSalarysheet&id=1&month=April&year=2024
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/attendance
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_attendance&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/accessibility
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/accessibility
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<type>
+3
+<\type>
+<employeetype>
+1
+<\employeetype>
+<gender>
+Male
+<\gender>
+<firstname>
+John
+<\firstname>
+<lastname>
+Leo
+<\lastname>
+<dob>
+1999-03-18
+<\dob>
+<phonenoOld1>
+890943917
+<\phonenoOld1>
+<phoneno1>
+890943917
+<\phoneno1>
+<phonenoOld2>
+890943917
+<\phonenoOld2>
+<phoneno2>
+890943917
+<\phoneno2>
+<phonenoOld3>
+890943917
+<\phonenoOld3>
+<phoneno3>
+890943915
+<\phoneno3>
+<address>
+Jaffna
+<\address>
+<status>
+1
+<\status>
+<department_id>
+1
+<\department_id>
+<designation_id>
+3
+<\designation_id>
+<netsalary>
+2000.00
+<\netsalary>
+<email>
+John@gmail.com
+<\email>
+<password>
+123
+<\password>
+<avatar>
+
+<\avatar>
+1
+UPDATE `employee` SET `Avatar`=null,`Fullname`='John Leo',`Gender`='Male',`DOB`='1999-03-18',`Status`='1',`Address`='Jaffna',`NetSalary`='2000.00',`Email`='John@gmail.com',`Password`='123',`DesignationID_FK`='3',`Admin_ID_FK`='1' WHERE `EmployeeID`='1'
+Employee update successfully
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/records&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee&id=3
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<type>
+3
+<\type>
+<employeetype>
+1
+<\employeetype>
+<gender>
+Male
+<\gender>
+<firstname>
+John
+<\firstname>
+<lastname>
+Leo
+<\lastname>
+<dob>
+1999-03-18
+<\dob>
+<phonenoOld1>
+890943917
+<\phonenoOld1>
+<phoneno1>
+890943917
+<\phoneno1>
+<phonenoOld2>
+890943917
+<\phonenoOld2>
+<phoneno2>
+890943917
+<\phoneno2>
+<phonenoOld3>
+890943917
+<\phonenoOld3>
+<phoneno3>
+890943915
+<\phoneno3>
+<address>
+Jaffna
+<\address>
+<status>
+1
+<\status>
+<department_id>
+1
+<\department_id>
+<designation_id>
+3
+<\designation_id>
+<netsalary>
+2000.00
+<\netsalary>
+<email>
+John@gmail.com
+<\email>
+<password>
+123
+<\password>
+<avatar>
+
+<\avatar>
+1
+UPDATE `employee` SET `Avatar`=null,`Fullname`='John Leo',`Gender`='Male',`DOB`='1999-03-18',`Status`='1',`Address`='Jaffna',`NetSalary`='2000.00',`Email`='John@gmail.com',`Password`='123',`DesignationID_FK`='3',`Admin_ID_FK`='1' WHERE `EmployeeID`='1'
+Employee update successfully
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/records&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>
+<Recordlog>
+1
+<\Recordlog>
+John Leo
+<SESSION>
+=>http://localhost/EASMS/admin/?page=employees/manage_employee&id=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<IMG>
+uploads/John Leo_emp.jpg
+<\IMG>

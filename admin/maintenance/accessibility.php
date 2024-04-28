@@ -15,7 +15,7 @@
 </style>
 <div class="card card-outline card-primary">
 	<div class="card-header">
-		<h3 class="card-title">List of Employees attendance</h3>
+		<h3 class="card-title">List of Employees</h3>
 		<div class="card-tools">
 			<a href="?page=employees/manage_employee" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Create New</a>
 		</div>
@@ -39,7 +39,7 @@
 						<th>Employee ID</th>
 						<th>FullName</th>
 						<th>Details</th>
-						<th>View attendances</th>
+						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -74,8 +74,7 @@
 								</p>
 							</td>
 							<td align="center">
-                            <a href="?page=maintenance/view_salary&id=<?php echo $row['EmployeeID'] ?>" class="btn btn-flat btn-primary">View attendances</a>
-							<!-- <button type="button" class="btn btn-flat btn-default btn-sm dropdown-toggle dropdown-icon" data-toggle="dropdown">
+								 <button type="button" class="btn btn-flat btn-default btn-sm dropdown-toggle dropdown-icon" data-toggle="dropdown">
 				                  		Action
 				                    <span class="sr-only">Toggle Dropdown</span>
 				                  </button>
@@ -87,7 +86,7 @@
 									<a class="dropdown-item reset_password" href="javascript:void(0)" data-id="<?php echo $row['EmployeeID'] ?>"><span class="fa fa-key text-primary"></span> Reset Passwowrd</a>
 				                    <div class="dropdown-divider"></div>
 				                    <a class="dropdown-item delete_data" href="javascript:void(0)" data-id="<?php echo $row['EmployeeID'] ?>"><span class="fa fa-trash text-danger"></span> Delete</a>
-				                  </div> -->
+				                  </div>
 							</td>
 						
 					<?php 
@@ -102,6 +101,13 @@
 </div>
 <script>
 	$(document).ready(function(){
+		$('.delete_data').click(function(){
+			_conf("Are you sure to delete this Employee permanently?","delete_user",[$(this).attr('data-id')])
+		})
+		$('.reset_password').click(function(){
+			_conf("You're about to reset the password of the user. Are you sure to continue this action?","reset_password",[$(this).attr('data-id')])
+		})
+		$('.table').dataTable();
 	})
 	function delete_user($id){
 		start_loader();

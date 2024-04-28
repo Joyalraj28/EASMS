@@ -85,12 +85,16 @@ $desg_arr = array_column($designation_qry->fetch_all(MYSQLI_ASSOC),'Name','Desig
 							<label for="dob">Date of birth</label>
 							<input type="date" name="dob" id="dob" class="form-control rounded-0" value="<?php echo isset($meta['DOB']) ? date("Y-m-d",strtotime($meta['DOB'])): '' ?>" required>
 						</div>
+
+						
 						<div class="form-group">
 
 						    <?php 
 
+							 if(isset($meta['EmployeeID']))
+							 {
 								$phonenoarry = array();
-                                $phonenodata = $conn->query("SELECT * FROM `employeephoneno` WHERE EmployeeID_FK = {$meta['EmployeeID']} ORDER BY id;");
+                                $phonenodata = $conn->query("SELECT * FROM `employeephoneno` WHERE EmployeeID_FK = {$meta['EmployeeID']} ORDER BY EmployeeID_FK;");
 								
 								if ($phonenodata->num_rows > 0) {
 
@@ -100,6 +104,7 @@ $desg_arr = array_column($designation_qry->fetch_all(MYSQLI_ASSOC),'Name','Desig
 									}
 
 								}
+							}
 
 								
 							?>
@@ -155,7 +160,7 @@ $desg_arr = array_column($designation_qry->fetch_all(MYSQLI_ASSOC),'Name','Desig
 
 						<div class="form-group">
 							<label for="netsalary">Net salary</label>
-							<input placeholder="Net salary" type="Number" name="netsalary" id="netsalary" class="form-control rounded-0" value="<?php echo isset($meta['NetSalary']) ? $meta['NetSalary']: '' ?>" required  autocomplete="off">
+							<input placeholder="Net salary" type="number" name="netsalary" id="netsalary" class="form-control rounded-0" value="<?php echo isset($meta['NetSalary']) ? $meta['NetSalary']: '0' ?>" required  autocomplete="off">
 						</div>
 
 						<div class="form-group">

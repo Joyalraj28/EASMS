@@ -10,14 +10,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
      $StartDate =  isset($_GET['StartDate']) ? $_GET['StartDate'] : '';
      $EndDate = isset($_GET['EndDate']) ? $_GET['EndDate']: "";
 
-    // $name = ucwords($lastname.', '.$firstname.' '.$middlename);
-
-    $where = '';
-    if(isset($_GET['StartDate']) && isset($_GET['EndDate']))
-    {
-        $where = "and AttendanceDate BETWEEN '{$_GET['StartDate']}' and '{$_GET['EndDate']}'" ;
-    }
-
+	
     //employee
 	$meta_qry = $conn->query("SELECT emp.*,
     dep.Name AS Departmentname,des.Name AS Designationname 
@@ -27,10 +20,27 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 	$row = $meta_qry->fetch_assoc();
     
     $employeename = $row['Fullname'];
+	$NetSalary = $row['NetSalary'];
+	
     $id = $row['EmployeeID'];
    
+	$month_name =  isset($_GET['month']) ? $_GET['month'] : '';
+	$year = isset($_GET['year']) ? $_GET['year']: "";
+
+	$monthdate = $conn->query("SELECT
+	STR_TO_DATE(CONCAT('01 ', '".$month_name."', ' ', '".$year."'), '%d %M %Y') AS start_date,
+	LAST_DAY(STR_TO_DATE(CONCAT('01 ', '".$month_name."', ' ', '".$year."'), '%d %M %Y')) AS end_date;")->fetch_assoc();
 
 
+	$start_date = $monthdate['start_date'];
+	$end_date = $monthdate['end_date'];
+
+	$where =  "and AttendanceDate BETWEEN '".$start_date."' and '".$end_date."'" ;
+    
+	$totalhours = $conn->query("SELECT SUM(ROUND((TIMESTAMPDIFF(SECOND, Signin, Lunchin) / 3600.0), 2)+ROUND((TIMESTAMPDIFF(SECOND, Lunchout, Signout) / 3600.0), 2)) AS AllTotalHours FROM `attendance` WHERE `EmployeeID_FK` = {$id} ". $where)->fetch_assoc();
+	$totalhours = $totalhours['AllTotalHours'];
+
+	
 }
 
 ?>
@@ -45,45 +55,36 @@ if(isMobileDevice()):
 </style>
 <?php endif; ?>
 <div class="card">
+               
 <div class="card-header">
-		<h3 id='reporttitle' class="card-title"><?php echo  isset($row['Fullname']) ? 'Attendance for '.$row['Fullname'] : "N/A" ?></h3>
-        <input id="id" type="hidden" value="<?php echo $id; ?>" />
-       
+		<h3 id='reporttitle' class="card-title"><?php echo  isset($row['Fullname']) ? 'Salarysheet for '.$row['Fullname'] : "N/A" ?></h3>
+        
+		<input id="id" type="hidden" value="<?php echo $id; ?>" />
+		
         <div class="w-100 d-flex justify-content-end mb-3">
             <a href="javascript:void(0)" class="btn btn-flat btn-success ml-3" id="print"><span class="fas fa-print"></span>  Print</a>
         </div>
     </div>
     <div class="card-body">
-    <div class="card-tools">
-    <label>Year</label>
-    <select id='year'>
-        <option>All</option>
-        <?php
-            $monthnamequery = $conn->query("SELECT DISTINCT Year(`AttendanceDate`) as years FROM `attendance` ORDER BY AttendanceDate");
-            while($mrow = $monthnamequery->fetch_assoc())
-            {
-                echo '<option>'.$mrow['years'].'</option>';
-            }
-        ?>
+	<div id="print_out">
+	<div class="cloumn">
+                        <div class="col-12">
+                            <div class="d-flex w-max-100">
+                                <label class="float-left w-auto whitespace-nowrap">Employee ID:</label>
+                                <p class="col-md-auto border-bottom"><b><?php echo isset($row['EmployeeID']) ? $row['EmployeeID'] : "N/A" ?></b></p>
+                            </div>
+                            <div class="d-flex w-max-100">
+                                <label class="float-left w-auto whitespace-nowrap">Name:</label>
+                                <p class="col-md-auto border-bottom"><b><?php echo isset($row['Fullname']) ? $row['Fullname'] : "N/A" ?></b></p>
+                            </div>
+                            <div class="d-flex w-max-100">
+                                <label class="float-left w-auto whitespace-nowrap">Total Hours:</label>
+                                <p class="col-md-auto border-bottom"><b><?php echo isset( $totalhours ) ?  $totalhours : "N/A" ?></b></p>
+                            </div>
+                           
+                        </div>
+         </div>
         
-    </select>
-    <label>Month</label>
-    <select id='month'>
-        <option>All</option>
-        <?php
-            $monthnamequery = $conn->query("SELECT DISTINCT MONTHNAME(`AttendanceDate`) as months FROM `attendance` ORDER BY AttendanceDate");
-            while($mrow = $monthnamequery->fetch_assoc())
-            {
-                echo '<option>'.$mrow['months'].'</option>';
-            }
-        ?>
-        
-    </select>
-    <a href="?page=maintenance/view_attendance&id=1" class="btn btn-flat btn-success ml-3" id="Apply"><span class="fas fa-filter"></span>  Apply</a>
-    </div>
-    
-
-        <div id="print_out">
         <div class="container-fluid">
 			<table class="table table-hover table-stripped">
 				<colgroup>
@@ -103,18 +104,23 @@ if(isMobileDevice()):
 						<th>Lunch out</th>
                         <th>Lunch in</th>
                         <th>Sign out</th>
+						<th>Total hours</th>
+						<th>Day Salary</th>
 					</tr>
 				</thead>
 				<tbody>
 					<?php
 					//Start
 					$i = 1;
-                    $qry = $conn->query("SELECT * FROM `attendance` WHERE `EmployeeID_FK` = {$id} ".$where." ORDER by AttendanceDate ASC");
+					$total = 0;
+                    $qry = $conn->query("SELECT *,ROUND((TIMESTAMPDIFF(SECOND, Signin, Lunchin) / 3600.0), 2)+ROUND((TIMESTAMPDIFF(SECOND, Lunchout, Signout) / 3600.0), 2) AS TotalHours FROM `attendance` WHERE `EmployeeID_FK` = {$id} ". $where ."  ORDER by AttendanceDate ASC");
 
                     while($row = $qry->fetch_assoc())
                    {
 
+							 $total +=$row['TotalHours'] * $NetSalary;
 							echo "<tr>"
+
 
 				    ?>
 						
@@ -125,6 +131,8 @@ if(isMobileDevice()):
                             <td class="text-center"><?php echo DBConnection::Iset($row['Lunchout'],"N/A")?></td>
                             <td class="text-center"><?php echo DBConnection::Iset($row['Lunchin'],"N/A")?></td>
                             <td class="text-center"><?php echo DBConnection::Iset($row['Signout'],"N/A")?></td>
+                            <td class="text-center"><?php echo DBConnection::Iset($row['TotalHours'],"N/A")?></td>
+							<td class="text-center"><?php echo DBConnection::Iset(($row['TotalHours'] * $NetSalary),"N/A")?></td>
                     <?php 
 					
 				   }
@@ -132,8 +140,20 @@ if(isMobileDevice()):
                     
                     ?>
 
+				   <tr>
+				   <td></td>
+				   <td></td>
+				   <td></td>
+				   <td></td>
+				   <td></td>
+				   <td></td>
+				   <td></td>
+				   <td class="text-center">Total :</td>
+				   <td class="text-center"><?php echo DBConnection::Iset($total,"0")?></td>
+				   </tr>
                     <?php if($qry->num_rows <=0 ): ?>
                         <tr>
+							
                             <th class="text-center" colspan='6'> No Records.</th>
                         </tr>
 					<?php endif; ?>
