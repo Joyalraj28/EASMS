@@ -2,7 +2,7 @@
 <h1>Overview</h1>
 <hr class="bg-light">
 <?php if($_settings->userdata('type') != 3):
-      DBConnection::debuglog($_settings->userdata('type'));
+      ($_settings->userdata('type'));
   ?>
 <div class="row">
 

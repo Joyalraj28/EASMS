@@ -27,7 +27,6 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
     
     $employeename = $row['Fullname'];
     $id = $row['EmployeeID'];
-    DBConnection::debuglog($employeename);
 
     //employee phone no
     $phonenoarry = array();
@@ -241,7 +240,7 @@ if(isMobileDevice()):
                                     ?>
                                 </td>
                                 <td class="p-1"><?php echo $row['leave_days'] ?></td>
-                                <td class="p-1"><small><i><?php echo $row['reason'] ?></i></small></td>
+                                <td class="p-1"><small><i><?php echo $row['Reason'] ?></i></small></td>
                             </tr>
                             <?php endwhile; ?>
                         </tbody>

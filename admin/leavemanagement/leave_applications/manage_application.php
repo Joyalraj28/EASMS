@@ -17,7 +17,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 
 
   //echo $LeaveTypeID_FK;
-	$id = isset($_GET['id'])? $_GET['id']:'';
+	$id = isset($_GET['id'])? $_GET['id']:null;
     $empid = isset($ApplyEmpID_FK)  ?  $ApplyEmpID_FK : $_settings->userdata('EmployeeID');
 
 	//$emp_arry = array();
@@ -30,6 +30,8 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 		}
 	}
 	$leave_type_ids = $conn->query("Call Pro_EmployeeLeavecreditsApplication('{$empid}')");
+	
+
 	
 ?>
 

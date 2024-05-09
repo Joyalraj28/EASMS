@@ -51,7 +51,7 @@
 					$i = 1;
 						$where = '';
 						// if($_settings->userdata('type') == 3)
-						$where = " and emp.EmployeeID = '{$_settings->userdata('EmployeeID')}' ";
+						$where = (($_settings->userdata('login_type') == 1 && $_settings->userdata('AdminManageLeave')) || ($_settings->userdata('login_type') == 2 && $_settings->userdata('AccManageAttendance'))) ? "" : " and emp.EmployeeID = '{$_settings->userdata('EmployeeID')}' ";
 
 
 						$qry = $conn->query("SELECT l.*,emp.EmployeeID,emp.Fullname,lt.ShortName,lt.TypeOfLeave,
@@ -67,6 +67,7 @@
 						while($row = $qry->fetch_array()):
 						
 					?>
+
 						<tr>
 							<td class="text-center"><?php echo $i++; ?></td>
 							<?php if($_settings->userdata('type') != 3): ?>
@@ -123,8 +124,6 @@
 			_conf("Are you sure to delete this Leave Application permanently?","delete_leave_application",[$(this).attr('data-id')])
 		})
 		$('.view_application').click(function(){
-
-			alert($(this).attr('data-id'));
 			uni_modal("<i class='fa fa-list'></i> Leave Application Details","leavemanagement/leave_applications/view_application.php?id="+$(this).attr('data-id'))
 		})
 		

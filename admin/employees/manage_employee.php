@@ -104,6 +104,7 @@ $desg_arr = array_column($designation_qry->fetch_all(MYSQLI_ASSOC),'Name','Desig
 									}
 
 								}
+							
 							}
 
 								
@@ -113,7 +114,7 @@ $desg_arr = array_column($designation_qry->fetch_all(MYSQLI_ASSOC),'Name','Desig
 							<input type="hidden" name="phonenoOld1" value="<?php echo isset($phonenoarry[0]) ? $phonenoarry[0]: '' ?>">
 							<input placeholder="Phone No 1 (Required)" name="phoneno1" id="phoneno1" class="form-control rounded-0" value="<?php echo isset($phonenoarry[0]) ? $phonenoarry[0]: '' ?>" required>
 							
-							<label for="phoneno1">Phone No 2</label>
+							<label for="phoneno2">Phone No 2</label>
 							<input type="hidden" name="phonenoOld2" value="<?php echo isset($phonenoarry[1]) ? $phonenoarry[1]: '' ?>">
 							<input placeholder="Phone No 2 (Optional)"  name="phoneno2" id="phoneno2" class="form-control rounded-0" value="<?php echo isset($phonenoarry[1]) ? $phonenoarry[1]: '' ?>">
 							
@@ -160,7 +161,7 @@ $desg_arr = array_column($designation_qry->fetch_all(MYSQLI_ASSOC),'Name','Desig
 
 						<div class="form-group">
 							<label for="netsalary">Net salary</label>
-							<input placeholder="Net salary" type="number" name="netsalary" id="netsalary" class="form-control rounded-0" value="<?php echo isset($meta['NetSalary']) ? $meta['NetSalary']: '0' ?>" required  autocomplete="off">
+							<input placeholder="Net salary" type="double" name="netsalary" id="netsalary" class="form-control rounded-0" value="<?php echo isset($meta['NetSalary']) ? $meta['NetSalary']: '0' ?>" required  autocomplete="off">
 						</div>
 
 						<div class="form-group">
@@ -223,6 +224,7 @@ $desg_arr = array_column($designation_qry->fetch_all(MYSQLI_ASSOC),'Name','Desig
 	        	
 	        }
 
+			$('#cimg').attr('src',URL.createObjectURL(input.files[0]))
 	        reader.readAsDataURL(input.files[0]);
 	    }
 	}

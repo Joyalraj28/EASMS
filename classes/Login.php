@@ -18,21 +18,25 @@ class Login extends DBConnection {
 	public function login()
 	{
 		extract($_POST);
-       
-		//$qry = $this->conn->query("SELECT * from users where username = '$username' and password = md5('$password') ");
-		
-		//$qry = $this->conn->query("SELECT * FROM `employee` WHERE `Email` = '$email' AND `Password` = '$password'");
 		$qry =$this->conn->query("SELECT 
-		    emp.*,
-			IF(ad.EmployeeID  IS NOT null,1,
-			IF(acc.EmployeeID IS NOT null,2,3)) as login_type
-			FROM employee emp 
-			LEFT JOIN admin ad ON  emp.EmployeeID = ad.EmployeeID
-	        LEFT JOIN accountant acc ON emp.EmployeeID = acc.EmployeeID WHERE emp.Email = '$email' AND emp.Password = '$password'");
-
-		$IsCorrectUser = false;
-		$userID = 0;
-
+		emp.*,
+		IF(ad.EmployeeID  IS NOT null,1,
+		IF(acc.EmployeeID IS NOT null,2,3)) as login_type,
+		
+		IF(ad.EmployeeID  IS NOT null,ad.PriorityLevel,
+		IF(acc.EmployeeID IS NOT null,acc.PriorityLevel,null)) as PriorityLevel,
+		
+		ad.ManageEmployee as AdminManageEmployee,
+		ad.ManageLeave as AdminManageLeave,
+		ad.ManageSalary as AdminManageSalary,
+		ad.ManageAttendance as AdminManageAttendance,
+		
+		acc.ManageSalary as AccManageSalary,
+		acc.ManageAttendance as AccManageAttendance
+		
+		FROM employee emp 
+		LEFT JOIN admin ad ON  emp.EmployeeID = ad.EmployeeID
+		LEFT JOIN accountant acc ON emp.EmployeeID = acc.EmployeeID WHERE emp.Email = '$email' AND emp.Password = '$password'");
 
 		if($qry->num_rows > 0 && $Usertype == 1 || $Usertype == 2 || $Usertype == 3){
 			foreach($qry->fetch_array() as $k => $v)
@@ -43,7 +47,6 @@ class Login extends DBConnection {
 
 			}
 		
-			
         if($this->settings->userdata('Status') && $this->settings->userdata('login_type') !=  $Usertype)
 		{
 			$this->settings->sess_des();
@@ -51,13 +54,18 @@ class Login extends DBConnection {
 		}
 	
 		else{
-	   // $this->settings->set_userdata('login_type',1);
 		return json_encode(array('status'=>'success'));
 		}
 		}else{
 		return json_encode(array('status'=>'incorrect','last_qry'=>"SELECT * from employee where Email = '$email' and password = '$password'"));
 		}
 	}
+
+
+
+
+
+
 	public function logout(){
 		if($this->settings->sess_des()){
 			redirect('admin/login.php');

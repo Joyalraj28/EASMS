@@ -13,11 +13,7 @@ Class Users extends DBConnection {
 	public function save_users(){
 		extract($_POST);
 		$data = '';
-		$chk = $this->conn->query("SELECT * FROM `users` where username ='{$username}' ".($id>0? " and id!= '{$id}' " : ""))->num_rows;
-		if($chk > 0){
-			return 3;
-			exit;
-		}
+		
 		foreach($_POST as $k => $v){
 			if(!in_array($k,array('id','password'))){
 				if(!empty($data)) $data .=" , ";
@@ -34,39 +30,39 @@ Class Users extends DBConnection {
 				$fname = 'uploads/'.strtotime(date('y-m-d H:i')).'_'.$_FILES['img']['name'];
 				$move = move_uploaded_file($_FILES['img']['tmp_name'],'../'. $fname);
 				if($move){
-					$data .=" , avatar = '{$fname}' ";
+					$imageData = "'".$fname."'";
+
 					if(isset($_SESSION['userdata']['avatar']) && is_file('../'.$_SESSION['userdata']['avatar']) && $_SESSION['userdata']['id'] == $id)
 						unlink('../'.$_SESSION['userdata']['avatar']);
 				}
 		}
-		if(empty($id)){
-			$qry = $this->conn->query("INSERT INTO users set {$data}");
-			if($qry){
-				$this->settings->set_flashdata('success','User Details successfully saved.');
-				return 1;
-			}else{
-				return 2;
-			}
+		if(!empty($id))
+		{
 
-		}else{
-			$qry = $this->conn->query("UPDATE users set $data where id = {$id}");
-			if($qry){
-				$this->settings->set_flashdata('success','User Details successfully updated.');
-				foreach($_POST as $k => $v){
-					if($k != 'id'){
-						if(!empty($data)) $data .=" , ";
-						$this->settings->set_userdata($k,$v);
-					}
-				}
-				if(isset($fname) && isset($move))
-				$this->settings->set_userdata('avatar',$fname);
-
-				return 1;
-			}else{
-				return "UPDATE users set $data where id = {$id}";
-			}
+			$query = $this->conn->query("UPDATE `employee` SET `Avatar`=$imageData,`Fullname`='$Fullname',`Gender`='$gender',`DOB`='$dob',`Status`='$status',`Address`='$address',`NetSalary`='$netsalary',`Email`='$Email',`Password`='$password',`DesignationID_FK`='$designation_id',`Admin_ID_FK`='$currentempid' WHERE `EmployeeID`='$id'");
 			
+			
+			if($query) {
+
+				$empdata = $this->conn->query("SELECT * FROM `employee` WHERE Email = '$email'")->fetch_assoc();
+	  
+				$empid= $empdata['EmployeeID'];
+	  
+				$this->AddUpdateEmployeeON($phoneno1,$phoneno2,$phoneno3,$empid);
+
+				
+				 $resp['status'] = 'success';
+				 $resp['id'] = $id;
+				 $resp['msg'] =  "Employee inserted successfully";
+	  
+	  
+			} 
+			   
+
+		
+
 		}
+
 	}
 	public function delete_users(){
 		extract($_POST);

@@ -31,7 +31,7 @@
    
 
  </style>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="<?php echo "background-image: url(".validate_image($_settings->info('login_bg')).");" ?>">
 
 <!-- <div id="preloader"></div> -->
   <script>
@@ -75,7 +75,7 @@
           </div>
           <!-- /.col -->
           <div class="col text-right">
-            <button type="submit" class="btn btn-primary btn-flat btn-sm">Sign In</button>
+            <button type="submit" class="btn btn-primary btn-flat btn-sm">Reset</button>
           </div>
           <!-- /.col -->
         </div>
@@ -99,7 +99,7 @@
 
 <script>
   $(document).ready(function(){
-    // end_loader();
+     end_loader();
   })
 </script>
 

@@ -1,8 +1,12 @@
 <?php 
-$user = $conn->query("SELECT * FROM users where id ='".$_settings->userdata('id')."'");
+$user = $conn->query("SELECT * FROM Employee where EmployeeID ='".$_settings->userdata('EmployeeID')."'");
 foreach($user->fetch_array() as $k =>$v){
 	$meta[$k] = $v;
 }
+
+$fname = $namearry =explode(" ", $meta['Fullname']); 
+$fname = isset($namearry[0]) ?$namearry[0]:'' ;
+$lname = isset($namearry[1]) ?$namearry[1]:'';
 ?>
 <?php if($_settings->chk_flashdata('success')): ?>
 <script>
@@ -17,20 +21,19 @@ foreach($user->fetch_array() as $k =>$v){
 				<input type="hidden" name="id" value="<?php echo $_settings->userdata('id') ?>">
 				<div class="form-group">
 					<label for="name">First Name</label>
-					<input type="text" name="firstname" id="firstname" class="form-control" value="<?php echo isset($meta['firstname']) ? $meta['firstname']: '' ?>" required>
+					<input type="text" name="firstname" id="firstname" class="form-control" value="<?php echo isset($fname) ? $fname: '' ?>" required>
 				</div>
 				<div class="form-group">
 					<label for="name">Last Name</label>
-					<input type="text" name="lastname" id="lastname" class="form-control" value="<?php echo isset($meta['lastname']) ? $meta['lastname']: '' ?>" required>
+					<input type="text" name="lastname" id="lastname" class="form-control" value="<?php echo isset($lname) ? $lname: '' ?>" required>
 				</div>
 				<div class="form-group">
-					<label for="username">Username</label>
-					<input type="text" name="username" id="username" class="form-control" value="<?php echo isset($meta['username']) ? $meta['username']: '' ?>" required  autocomplete="off">
+					<label for="username">Email</label>
+					<input type="text" name="Email" id="Email" class="form-control" value="<?php echo isset($meta['Email']) ? $meta['Email']: '' ?>" required  autocomplete="off">
 				</div>
 				<div class="form-group">
 					<label for="password">Password</label>
-					<input type="password" name="password" id="password" class="form-control" value="" autocomplete="off">
-					<small><i>Leave this blank if you dont want to change the password.</i></small>
+					<input type="password" name="password" id="password" class="form-control" value="<?php echo isset($meta['Password']) ? $meta['Password']: '' ?>" autocomplete="off">
 				</div>
 				<div class="form-group">
 					<label for="" class="control-label">Avatar</label>

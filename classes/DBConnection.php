@@ -53,6 +53,22 @@ class DBConnection{
         fclose($myfile);
     }
 
+    public static function EmployeeTypeName($EmpTypeID)  {
+
+        if($EmpTypeID == 1)
+        {
+            return "Admin";
+        }
+        else if($EmpTypeID == 2)
+        {
+            return "Accountant";
+        }
+        else
+        {
+            return "Employee";
+        }
+        
+    }
     public static function consolelog($obj)
     {
       echo "<script>console.log($obj);</script>";

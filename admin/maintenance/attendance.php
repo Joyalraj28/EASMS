@@ -16,9 +16,6 @@
 <div class="card card-outline card-primary">
 	<div class="card-header">
 		<h3 class="card-title">List of Employees attendance</h3>
-		<div class="card-tools">
-			<a href="?page=employees/manage_employee" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Create New</a>
-		</div>
 	</div>
 	<div class="card-body">
 		<div class="container-fluid">
@@ -102,13 +99,7 @@
 </div>
 <script>
 	$(document).ready(function(){
-		$('.delete_data').click(function(){
-			_conf("Are you sure to delete this Employee permanently?","delete_user",[$(this).attr('data-id')])
-		})
-		$('.reset_password').click(function(){
-			_conf("You're about to reset the password of the user. Are you sure to continue this action?","reset_password",[$(this).attr('data-id')])
-		})
-		$('.table').dataTable();
+		
 	})
 	function delete_user($id){
 		start_loader();

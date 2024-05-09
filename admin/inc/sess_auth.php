@@ -16,7 +16,7 @@ DBConnection::debugtaglog("USER",isset($_SESSION['userdata']) ? "T":"F");
 
 if(strpos($link, 'forgotpassword.php'))
 {
-    redirect('admin/forgotpassword.php');
+    //redirect('admin/forgotpassword.php');
 }
 
 if(!isset($_SESSION['userdata']) && !strpos($link, 'login.php') && !strpos($link, 'forgotpassword.php'))
@@ -26,15 +26,15 @@ if(!isset($_SESSION['userdata']) && !strpos($link, 'login.php') && !strpos($link
 }
 if(isset($_SESSION['userdata']) && strpos($link, 'login.php') && !strpos($link, 'forgotpassword.php'))
 {
-    
+    echo "<script>alert('".$_SESSION['userdata']['login_type']."');</script>";
 	redirect('admin/index.php');
 }
 // $module = array('','admin','faculty','student');
-if(isset($_SESSION['userdata']) && (strpos($link, 'index.php') || strpos($link, 'admin/')) && ($_SESSION['userdata']['login_type'] !=  1 && $_SESSION['userdata']['login_type'] !=  2 && $_SESSION['userdata']['login_type'] !=  3)){
+if(isset($_SESSION['userdata']) && (strpos($link, 'index.php') || strpos($link, 'admin/')) &&  $_SESSION['userdata']['login_type'] && ($_SESSION['userdata']['login_type'] !=  1 && $_SESSION['userdata']['login_type'] !=  2 && $_SESSION['userdata']['login_type'] !=  3)){
     
     
     DBConnection::consolelog($_SESSION['userdata']['login_type']);
 
-    echo "<script>alert('Access Denied!');</script>";
+    
     //exit;
 }

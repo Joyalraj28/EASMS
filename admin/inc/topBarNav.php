@@ -19,7 +19,7 @@
           <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a href="<?php echo base_url ?>" class="nav-link"><?php echo (!isMobileDevice()) ? $_settings->info('name'):$_settings->info('short_name'); ?> - Admin</a>
+            <a href="<?php echo base_url ?>" class="nav-link"><?php echo ((!isMobileDevice()) ? $_settings->info('name'):$_settings->info('short_name')).' - '.DBConnection::EmployeeTypeName($_settings->userdata('login_type')); ?> </a>
           </li>
         </ul>
         <!-- Right navbar links -->
@@ -49,8 +49,6 @@
           <li class="nav-item">
             <div class="btn-group nav-link">
                   <button type="button" class="btn btn-rounded badge badge-light dropdown-toggle dropdown-icon" data-toggle="dropdown">
-                  <?php DBConnection::debugtaglog("IMG",$_settings->userdata('Avatar')) ?>  
-                  
                   <span><img src="<?php echo validate_image($_settings->userdata('Avatar')) ?>" class="img-circle elevation-10 user-img" alt="User Image"></span>
                    
                     <span class="sr-only">Toggle Dropdown</span>

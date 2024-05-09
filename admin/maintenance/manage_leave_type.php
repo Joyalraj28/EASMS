@@ -9,6 +9,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
     }
 }
 ?>
+
 <div class="container-fluid">
 	<form action="" id="leave_type-form">
 		<input type="hidden" name ="id" value="<?php echo isset($LeaveID) ? $LeaveID : '' ?>">
@@ -34,9 +35,9 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 		</div>
 		<div class="form-group">
 			<label for="status" class="control-label">Status</label>
-			<select name="status" id="status" class="custom-select rounded-0" required>
-				<option value="1" <?php echo isset($status) && $status == 1 ? "selected" : '' ?>>Acitve</option>
-				<option value="0" <?php echo isset($status) && $status == 0 ? "selected" : '' ?>>Inacitve</option>
+			<select name="Status" id="status" class="custom-select rounded-0" required>
+				<option value="1" <?php echo isset($Status) && $Status == 1 ? "selected" : '' ?>>Acitve</option>
+				<option value="0" <?php echo isset($Status) && $Status == 0 ? "selected" : '' ?>>Inacitve</option>
 			</select>
 		</div>
 	</form>
@@ -45,45 +46,13 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
   
 	$(document).ready(function(){
 
+
 		TypeChange();
-
-
-		function TypeChange()
-		{
-			$("#DefaultCredit").attr("readonly",false);
-			$("#DefaultCredit-Lable").html("Default Credits (Days)");
-			if($(this).val()==1)
-			{
-			$("#DefaultCredit").attr('max',14)
-			$("#DefaultCredit").val("14")
-			}
-			else if($(this).val()==2)
-			{
-				$("#DefaultCredit").attr('max',7)
-				$("#DefaultCredit").val("7")
-			}
-			else if($(this).val()==3)
-			{
-				$("#DefaultCredit-Lable").html("Default Credits (Hours)");
-				$("#DefaultCredit").attr('max',2)
-				$("#DefaultCredit").val("2")
-				$("#DefaultCredit").attr("readonly",true);
-			}
-
-		}
-
-
-		$("#TypeOfLeave").change(function() {
-
-			TypeChange();
-
-		});
-
 		
 
 		$('#leave_type-form').submit(function(e){
+			
 			e.preventDefault();
-var _this = $(this)
             var _this = $(this)
 			 $('.err-msg').remove();
 			start_loader();
@@ -97,11 +66,11 @@ var _this = $(this)
                 type: 'POST',
                 dataType: 'json',
 				error:err=>{
-					console.log(err)
 					alert_toast("An error occured",'error');
 					end_loader();
 				},
 				success:function(resp){
+					
 					if(typeof resp =='object' && resp.status == 'success'){
 						location.reload();
 					}else if(resp.status == 'failed' && !!resp.msg){
@@ -120,5 +89,47 @@ var _this = $(this)
 			})
 		})
 
+
+		
+			$("#TypeOfLeave").change(function() {
+				TypeChange();
+
+			});
+
+
+		function TypeChange()
+		{
+			try { 
+    (function($) {
+			$("#DefaultCredit").attr("readonly",false);
+			$("#DefaultCredit-Lable").html("Default Credits (Days)");
+			if($("#TypeOfLeave").val()==1)
+			{
+			$("#DefaultCredit").attr('max',14)
+			$("#DefaultCredit").val("14")
+			}
+			else if($("#TypeOfLeave").val()==2)
+			{
+				$("#DefaultCredit").attr('max',7)
+				$("#DefaultCredit").val("7")
+			}
+			else if($("#TypeOfLeave").val()==3)
+			{
+				$("#DefaultCredit-Lable").html("Default Credits (Hours)");
+				$("#DefaultCredit").attr('max',2)
+				$("#DefaultCredit").val("2")
+				$("#DefaultCredit").attr("readonly",true);
+			}
+		})(jQuery);
+} catch(err) {  
+    alert(err);
+} 
+
+		}
+
 	})
+
+
+	
+		
 </script>

@@ -40,7 +40,8 @@
 							<td class='text-center'>
 								<?php if($row['Status'] == 1): ?>
 									<span class="badge badge-success">Active</span>
-								<?php else: ?>
+							    <?php endif; ?>
+								<?php if($row['Status'] == 0): ?>
 									<span class="badge badge-secondary">Inactive</span>
 								<?php endif; ?>
 							</td>

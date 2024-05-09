@@ -37,6 +37,7 @@
                     </li> 
 
                     <!-- Employees Management -->
+                    <?php if($_settings->userdata('login_type') == 1): ?>
                     <li class="nav-link employee" data-toggle="collapse" data-target="#employeesdropdown">
                     <a>
                       <i class="nav-icon fas fa-user-friends"></i>
@@ -68,17 +69,20 @@
                       </a>
                       </li>
                     </div>
-
+                  <?php endif; ?>
 
                   <!-- Department Management -->
-                  <li class="nav-link" data-toggle="collapse" data-target="#maintenance_departmentdropdown">
+                  <?php if($_settings->userdata('login_type') == 1): ?>
+                   <li class="nav-link" data-toggle="collapse" data-target="#maintenance_departmentdropdown">
                    <a>
                    <i class="nav-icon fas fa-building"></i>
                    <p>Department</p>
                    </a>  
-                  </li>
+                   </li>
+                  <?php endif; ?>
 
-                  <div id="maintenance_departmentdropdown" class="collapse">
+                  <?php if($_settings->userdata('login_type') == 1): ?>
+                    <div id="maintenance_departmentdropdown" class="collapse">
                      <!-- Department Management -->
                      <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=maintenance/department" class="nav-link nav-maintenance_department">
@@ -88,6 +92,7 @@
                         </p>
                       </a>
                     </li>
+                
 
                  </div>
 
@@ -112,7 +117,7 @@
                     </li>
                  </div>
 
-
+                 <?php endif; ?>
 
                  <li class="nav-link" data-toggle="collapse" data-target="#AttendSalarydropdown">
                   <a>    
@@ -151,8 +156,9 @@
                   </a>
                   </li>
 
-                   <div id="leavedropdown" class="collapse">
+                  <div id="leavedropdown" class="collapse">
                       <!-- Leave Type Management -->
+                      <?php if(($_settings->userdata('login_type') == 1 && $_settings->userdata('AdminManageLeave'))): ?>
                       <li  class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=leavemanagement/leave_type" class="nav-link nav-leavemanagement_leave_type">
                         <i class="nav-icon fas fa-list"></i>
@@ -161,8 +167,11 @@
                         </p>
                       </a>
                       </li>
+                      <?php endif; ?>
 
-                      <!-- Leave history Reports -->
+                      <!-- Leave history Reports  -->
+                      <?php if(($_settings->userdata('login_type') == 1 && $_settings->userdata('AdminManageLeave')) 
+                               || ($_settings->userdata('login_type') == 2 && $_settings->userdata('AccManageAttendance'))): ?>
                       <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=leavemanagement/leavereport" class="nav-link nav-leavemanagement_leavereport">
                         <i class="nav-icon fas fa-file"></i>
@@ -171,8 +180,10 @@
                         </p>
                       </a>
                       </li>
+                      <?php endif; ?>
 
                       <!-- Leave Application -->
+                     
                       <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=leavemanagement/leave_applications" class="nav-link nav-leavemanagement_leave_applications">
                         <i class="nav-icon fas fa-file-alt"></i>
@@ -184,14 +195,19 @@
 
                   </div>
 
+
+                  
+
                   <!-- System Settings -->
-                  <li>
+                  <?php if($_settings->userdata('login_type') == 1): ?>
+                   <li>
                       <a href="<?php echo base_url ?>admin/?page=system_info" class="nav-link nav-system_info">
                         <i class="nav-icon fas fa-cogs"></i>
                         <p>Settings</p>
                       </a>
-                  </li>
+                   </li>
 
+                  <?php endif; ?>
 
                   </ul>
                 </nav>

@@ -26,6 +26,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
   
 	$(document).ready(function(){
 		$('#designation-form').submit(function(e){
+			alert("hi");
 			e.preventDefault();
 var _this = $(this)
             var _this = $(this)

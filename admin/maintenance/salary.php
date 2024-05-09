@@ -15,10 +15,7 @@
 </style>
 <div class="card card-outline card-primary">
 	<div class="card-header">
-		<h3 class="card-title">List of Employees attendance</h3>
-		<div class="card-tools">
-			<a href="?page=employees/manage_employee" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Create New</a>
-		</div>
+		<h3 class="card-title">List of Employees Salary sheets</h3>
 	</div>
 	<div class="card-body">
 		<div class="container-fluid">
@@ -74,7 +71,7 @@
 								</p>
 							</td>
 							<td align="center">
-                            <a href="?page=maintenance/view_salary&id=<?php echo $row['EmployeeID'] ?>" class="btn btn-flat btn-primary">View attendances</a>
+                            <a href="?page=maintenance/view_salary&id=<?php echo $row['EmployeeID'] ?>" class="btn btn-flat btn-primary">View Salary Sheets</a>
 							<!-- <button type="button" class="btn btn-flat btn-default btn-sm dropdown-toggle dropdown-icon" data-toggle="dropdown">
 				                  		Action
 				                    <span class="sr-only">Toggle Dropdown</span>
