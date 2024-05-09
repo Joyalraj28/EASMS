@@ -273,7 +273,7 @@ INSERT INTO `employeephoneno` (`id`, `PhoneNo`, `EmployeeID_FK`) VALUES
 --
 
 CREATE TABLE `leaveapplication` (
-  `LeaveAppicationID` int(11) NOT NULL,
+  `LeaveApplicationID` int(11) NOT NULL,
   `ApplyEmpID_FK` int(11) DEFAULT NULL,
   `LeaveDate` datetime DEFAULT NULL,
   `Reason` varchar(50) DEFAULT NULL,
@@ -422,7 +422,7 @@ ALTER TABLE `employeephoneno`
 -- Indexes for table `leaveapplication`
 --
 ALTER TABLE `leaveapplication`
-  ADD PRIMARY KEY (`LeaveAppicationID`),
+  ADD PRIMARY KEY (`LeaveApplicationID`),
   ADD KEY `ApplyEmpID_FK` (`ApplyEmpID_FK`),
   ADD KEY `AprroveEmpID_FK` (`AprroveEmpID_FK`),
   ADD KEY `LeaveApplicationID_FK` (`LeaveTypeID_FK`);
