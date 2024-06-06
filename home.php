@@ -8,14 +8,10 @@
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
             <h1 class="display-4 fw-bolder">Welcome Back !!!</h1>
-            
-            
             <p class="lead fw-normal text-white-50 mb-0 mt-4">
                 <a class="btn btn-default btn-lg bg-lightblue" href='<?php echo base_url.'admin'?>'>Login</a>
                 <a class="btn btn-default btn-lg bg-orange"  data-toggle="modal" data-target="#aboutModal">About</a>
             </p>
-           
-
         </div>
     </div>
 

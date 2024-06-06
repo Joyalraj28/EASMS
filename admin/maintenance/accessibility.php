@@ -73,7 +73,11 @@
 									<b>Designation: </b><?php echo isset($row['Designationname']) ? $row['Designationname'] : 'N/A' ?><br>
 								</p>
 							</td>
-							<td align="center">
+
+							<td>
+							<a class="dropdown-item" href="?page=maintenance/view_accessibility&id=<?php echo $row['EmployeeID'] ?>"><span class="fa fa-eye text-secodary"></span> View</a>
+							</td>
+							<!-- <td align="center">
 								 <button type="button" class="btn btn-flat btn-default btn-sm dropdown-toggle dropdown-icon" data-toggle="dropdown">
 				                  		Action
 				                    <span class="sr-only">Toggle Dropdown</span>
@@ -87,7 +91,7 @@
 				                    <div class="dropdown-divider"></div>
 				                    <a class="dropdown-item delete_data" href="javascript:void(0)" data-id="<?php echo $row['EmployeeID'] ?>"><span class="fa fa-trash text-danger"></span> Delete</a>
 				                  </div>
-							</td>
+							</td> -->
 						
 					<?php 
 					
@@ -108,6 +112,10 @@
 			_conf("You're about to reset the password of the user. Are you sure to continue this action?","reset_password",[$(this).attr('data-id')])
 		})
 		$('.table').dataTable();
+
+		$("#Accessibility").click(function(){
+			
+		})
 	})
 	function delete_user($id){
 		start_loader();
