@@ -120,6 +120,9 @@ if(isMobileDevice()):
 <div class="card">
 <div class="card-header">
 <form id='Savebtn'>
+
+        <input name="login_type" type="hidden" value="<?php echo isset($_GET['login_type']) ?>" />
+        <input name="EmployeeID" type="hidden" value="<?php echo isset($_GET['id']) ?>" />
 		<div class="card-tools">
         <a href="<?php echo base_url ?>classes/Master.php?f=save_employee_accessibility" class="btn btn-flat btn-danger"><span class="fas fa-times"></span> Cancel</a>
 		<button  class="btn btn-flat btn-primary"><span class="fas fa-save"></span> Save</a>
@@ -144,6 +147,7 @@ if(isMobileDevice()):
                                 <label class="float-left w-auto whitespace-nowrap">Employee ID:</label>
                                 <p class="col-md-auto border-bottom border-dark w-100"><b><?php echo isset($row['EmployeeID']) ? $row['EmployeeID'] : "N/A" ?></b></p>
                             </div>
+                            
                             <div class="d-flex w-max-100">
                                 <label class="float-left w-auto whitespace-nowrap">Name:</label>
                                 <p class="col-md-auto border-bottom border-dark w-100"><b><?php echo isset($row['Fullname']) ? $row['Fullname'] : "N/A" ?></b></p>
@@ -151,6 +155,11 @@ if(isMobileDevice()):
                             <div class="d-flex w-max-100">
                                 <label class="float-left w-auto whitespace-nowrap">Email:</label>
                                 <p class="col-md-auto border-bottom border-dark w-100"><b><?php echo isset($row['Email']) ? $row['Email'] : "N/A" ?></b></p>
+                            </div>
+
+                            <div class="d-flex w-max-100">
+                                <label class="float-left w-auto whitespace-nowrap">Employee type</label>
+                                <p class="col-md-auto border-bottom border-dark w-100"><b><?php echo isset($_GET['login_type']) ? $_GET['id'] == '1' ? "Admin" : "Accountant" : "N/A" ?></b></p>
                             </div>
                             </div>
                         </div>
@@ -233,7 +242,7 @@ if(isMobileDevice()):
 			 $('.err-msg').remove();
 			start_loader();
 			$.ajax({
-				url:_base_url_+"/classes/Master.php?f=save_employee_accessibility",
+				url:_base_url_+"classes/Master.php?f=save_employee_accessibility",
 				data: new FormData($(this)[0]),
                 cache: false,
                 contentType: false,
@@ -243,6 +252,8 @@ if(isMobileDevice()):
                 dataType: 'json',
 				error:err=>{
 					alert_toast("An error occured",'error');
+                    console.log("Error")
+                    console.log(err)
 					end_loader();
 				},
 				success:function(resp){

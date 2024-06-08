@@ -28,7 +28,6 @@
 					<col width="10%">
 					<col width="15%">
 					<col width="15%">
-					<col width="15%">
 					<col width="20%">
 					<col width="30%">
 					<col width="10%">
@@ -39,25 +38,21 @@
 						<th>Avatar</th>
 						<th>Employee ID</th>
 						<th>FullName</th>
-						<th>Employee type</th>
 						<th>Details</th>
 						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>
 					<?php
-					//Start
 					$i = 1;
-                    $qry = $conn->query("SELECT emp.*,
-							IF(ad.EmployeeID  IS NOT null,1,
-							IF(acc.EmployeeID IS NOT null,2,3)) as login_type,
-							dep.Name AS Departmentname,des.Name AS Designationname 
-							FROM employee emp  
-    						LEFT JOIN admin ad ON  emp.EmployeeID = ad.EmployeeID
-							LEFT JOIN accountant acc ON emp.EmployeeID = acc.EmployeeID
-							LEFT JOIN designation des ON emp.DesignationID_FK = des.DesignationID
-    						LEFT JOIN department dep ON des.DepartmentID_FK = dep.DepartmentID
-    						where ad.EmployeeID is not null or acc.EmployeeID is not null;");
+                    $qry = $conn->query("SELECT emp.*, 
+					dep.Name AS Departmentname,
+					des.Name AS Designationname 
+					FROM admin ad 
+					INNER JOIN accountant ac 
+					LEFT JOIN employee emp ON ad.EmployeeID = emp.EmployeeID OR ac.EmployeeID = emp.EmployeeID 
+					LEFT JOIN designation des ON emp.DesignationID_FK = des.DesignationID 
+					LEFT JOIN department dep ON des.DepartmentID_FK = dep.DepartmentID;");
 
                     while($row = $qry->fetch_assoc())
                    {
@@ -72,7 +67,7 @@
 							<?php
 							
 								echo "<td>".$row['EmployeeID']."</td>".
-								"<td>".$row['Fullname']."</td>"."<td>".(isset($row['login_type']) ? $row['login_type'] == '1' ? "Admin" : "Accountant" : "N/A".'</td>')
+								"<td>".$row['Fullname']."</td>"
 							?>
 							<td >
 								<p class="m-0 ">
@@ -82,7 +77,7 @@
 							</td>
 
 							<td>
-							<a class="dropdown-item" href="?page=maintenance/view_accessibility&id=<?php echo $row['EmployeeID'] ?>&login_type=<?php echo $row['login_type'] ?>"><span class="fa fa-eye text-secodary"></span> View</a>
+							<a class="dropdown-item" href="?page=maintenance/view_accessibility&id=<?php echo $row['EmployeeID'] ?>"><span class="fa fa-eye text-secodary"></span> View</a>
 							</td>
 							<!-- <td align="center">
 								 <button type="button" class="btn btn-flat btn-default btn-sm dropdown-toggle dropdown-icon" data-toggle="dropdown">
@@ -111,61 +106,4 @@
 	</div>
 </div>
 <script>
-	$(document).ready(function(){
-		$('.delete_data').click(function(){
-			_conf("Are you sure to delete this Employee permanently?","delete_user",[$(this).attr('data-id')])
-		})
-		$('.reset_password').click(function(){
-			_conf("You're about to reset the password of the user. Are you sure to continue this action?","reset_password",[$(this).attr('data-id')])
-		})
-		$('.table').dataTable();
-
-		$("#Accessibility").click(function(){
-			
-		})
-	})
-	function delete_user($id){
-		start_loader();
-		$.ajax({
-			url:_base_url_+"classes/Users.php?f=delete",
-			method:"POST",
-			data:{id: $id},
-			dataType:"json",
-			error:err=>{
-				console.log(err)
-				alert_toast("An error occured.",'error');
-				end_loader();
-			},
-			success:function(resp){
-				if(typeof resp== 'object' && resp.status == 'success'){
-					location.reload();
-				}else{
-					alert_toast("An error occured.",'error');
-					end_loader();
-				}
-			}
-		})
-	}
-	function reset_password($id){
-		start_loader();
-		$.ajax({
-			url:_base_url_+"classes/Master.php?f=reset_password",
-			method:"POST",
-			data:{id: $id},
-			dataType:"json",
-			error:err=>{
-				console.log(err)
-				alert_toast("An error occured.",'error');
-				end_loader();
-			},
-			success:function(resp){
-				if(typeof resp== 'object' && resp.status == 'success'){
-					location.reload();
-				}else{
-					alert_toast("An error occured.",'error');
-					end_loader();
-				}
-			}
-		})
-	}
 </script>

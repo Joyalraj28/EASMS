@@ -605,19 +605,24 @@ Class Master extends DBConnection {
 	function save_employee_accessibility()
 	{
 		extract($_POST);
-		
 
 		$data = "";
 		foreach($_POST as $k =>$v){
-			if(!in_array($k,array('id'))){
+			if(!in_array($k,array('EmployeeID')) && !in_array($k,array('login_type'))){
 				$v = addslashes($v);
 				if(!empty($data)) $data .=",";
 				$data .= " `{$k}`='{$v}' ";
-				DBConnection::debugtaglog($k,$v);
+				
 			}
 		}
+		DBConnection::debuglog($data);
+		DBConnection::debuglog($_POST['EmployeeID']);
+		DBConnection::debuglog($_POST['login_type']);
+
 
 		
+		$resp['status'] = 'success';
+		return json_encode($resp);
 
 	}
 }

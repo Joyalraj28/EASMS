@@ -1,0 +1,13 @@
+save_employee_accessibility
+ `PriorityLevel`='on' , `ManageEmployee`='on' , `ManageLeave`='on' , `ManageSalary`='on' , `ManageAttendance`='on' 
+1
+1
+<SESSION>
+=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
+<\SESSION>
+<USER>
+T
+<\USER>
+<Recordlog>
+1
+<\Recordlog>
