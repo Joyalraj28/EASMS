@@ -605,7 +605,7 @@ Class Master extends DBConnection {
 	function save_employee_accessibility()
 	{
 		extract($_POST);
-
+		DBConnection::consolelog("Test");
 		$data = "";
 		foreach($_POST as $k =>$v){
 			if(!in_array($k,array('EmployeeID')) && !in_array($k,array('login_type'))){
@@ -615,14 +615,24 @@ Class Master extends DBConnection {
 				
 			}
 		}
-		DBConnection::debuglog($data);
-		DBConnection::debuglog($_POST['EmployeeID']);
-		DBConnection::debuglog($_POST['login_type']);
-
-
-		
+	
+		DBConnection::consolelog($data);
 		$resp['status'] = 'success';
 		return json_encode($resp);
+
+		if(isset($_POST['login_type']))
+		{
+			$table = $_POST['login_type'] == 1 ?"Admin":"Accountant";
+			$update = $this->conn->query("UPDATE {$table} set {$data} WHERE EmployeeID = ".$_POST['EmployeeID']);
+			if($update)
+			{
+				$resp['status'] = 'success';
+		        return json_encode($resp);
+			}
+
+		}
+
+		
 
 	}
 }

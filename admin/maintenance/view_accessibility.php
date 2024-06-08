@@ -197,7 +197,7 @@ if(isMobileDevice()):
                            
 
                             foreach($row as $key => $item):
-                            if($key == "EmployeeID")
+                            if($key == "EmployeeID" || $key == "PriorityLevel")
                             {
                                 continue;
                             }

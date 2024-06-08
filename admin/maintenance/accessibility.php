@@ -45,7 +45,12 @@
 				<tbody>
 					<?php
 					$i = 1;
-                    $qry = $conn->query("SELECT emp.*, 
+                    $qry = $conn->query("SELECT 
+					emp.*, 
+					IF(ad.EmployeeID  IS NOT null,1,
+					IF(ac.EmployeeID IS NOT null,2,3)) as login_type,
+					IF(ad.EmployeeID  IS NOT null,ad.PriorityLevel,
+					IF(ac.EmployeeID IS NOT null,ac.PriorityLevel,null)) as PriorityLevel,
 					dep.Name AS Departmentname,
 					des.Name AS Designationname 
 					FROM admin ad 
@@ -77,7 +82,7 @@
 							</td>
 
 							<td>
-							<a class="dropdown-item" href="?page=maintenance/view_accessibility&id=<?php echo $row['EmployeeID'] ?>"><span class="fa fa-eye text-secodary"></span> View</a>
+							<a class="dropdown-item" href="?page=maintenance/view_accessibility&id=<?php echo $row['EmployeeID'] ?>&login_type=<?php echo $row['login_type'] ?>"><span class="fa fa-eye text-secodary"></span> View</a>
 							</td>
 							<!-- <td align="center">
 								 <button type="button" class="btn btn-flat btn-default btn-sm dropdown-toggle dropdown-icon" data-toggle="dropdown">
