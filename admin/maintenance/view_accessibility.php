@@ -119,9 +119,10 @@ if(isMobileDevice()):
 <?php endif; ?>
 <div class="card">
 <div class="card-header">
+<form id='Savebtn'>
 		<div class="card-tools">
-        <a href="?page=maintenance/accessibility" class="btn btn-flat btn-danger"><span class="fas fa-times"></span> Cancel</a>
-			<a href="?page=employees/manage_employee" class="btn btn-flat btn-primary"><span class="fas fa-save"></span> Save</a>
+        <a href="<?php echo base_url ?>classes/Master.php?f=save_employee_accessibility" class="btn btn-flat btn-danger"><span class="fas fa-times"></span> Cancel</a>
+		<button  class="btn btn-flat btn-primary"><span class="fas fa-save"></span> Save</a>
 		</div>
 	</div>
 
@@ -160,6 +161,7 @@ if(isMobileDevice()):
         <hr class="border-dark">
         <div class="row">
            
+        
             <div class="col-md-8 col-sm-12">
                 <div class="callout border-0">
                     <h5>Accessibility</h5>
@@ -181,7 +183,8 @@ if(isMobileDevice()):
 
                             <?php
 
-                            $row = $conn->query("SELECT * FROM ".( $_settings->userdata("login_type") == 1? "Admin" :"accountant"))->fetch_assoc();
+
+                            $row = $conn->query("SELECT * FROM ".( $_GET['login_type'] == 1? "Admin" :"accountant")." WHERE EmployeeID = ".$_GET['id'] )->fetch_assoc();
                            
 
                             foreach($row as $key => $item):
@@ -195,7 +198,7 @@ if(isMobileDevice()):
                                 <td id="ModuleName"><?php echo $key ?> </td>
                           
                                 <td><label class="switch">
-                                    <input type="checkbox" <?php echo $item == '1' ? "checked" : ""?>  >
+                                    <input type="checkbox" name="<?php echo $key ?>" <?php echo $item == '1' ? "checked" : ""?>  >
                                     <span class="slider round"></span></label>
                                 </td>
                             </tr>
@@ -208,16 +211,65 @@ if(isMobileDevice()):
                     </table>
                 </div>
             </div>
+            </form>
         </div>
         </div>
     </div>
 </div>
 
 <script>
+
     $(function(){
-        $('#manage_leave').click(function(){
-            uni_modal('<i class="fa fa-cog"></i> Manage Leave Credits of <?php echo $employeename; ?>','employees/manage_leave_type.php?id=<?php echo $id; ?>');
+
+        $('#Savebtn').submit(function(e){
+			
+            try { 
             
-        })
+           
+			e.preventDefault();
+            var _this = $(this);
+            console.log(new FormData($(this)[0]));
+            alert(_base_url_);
+			 $('.err-msg').remove();
+			start_loader();
+			$.ajax({
+				url:_base_url_+"/classes/Master.php?f=save_employee_accessibility",
+				data: new FormData($(this)[0]),
+                cache: false,
+                contentType: false,
+                processData: false,
+                method: 'POST',
+                type: 'POST',
+                dataType: 'json',
+				error:err=>{
+					alert_toast("An error occured",'error');
+					end_loader();
+				},
+				success:function(resp){
+					
+					if(typeof resp =='object' && resp.status == 'success'){
+						location.reload();
+					}else if(resp.status == 'failed' && !!resp.msg){
+                        var el = $('<div>')
+                            el.addClass("alert alert-danger err-msg").text(resp.msg)
+                            _this.prepend(el)
+                            el.show('slow')
+                            $("html, body").animate({ scrollTop: 0 }, "fast");
+                            end_loader()
+                    }else{
+						alert_toast("An error occured",'error');
+						end_loader();
+                        console.log(resp)
+					}
+				}
+			})
+            
+        }
+        catch(err)
+        {
+            alert(err)
+        }
+		})
+        
     })
 </script>

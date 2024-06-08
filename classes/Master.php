@@ -24,7 +24,6 @@ Class Master extends DBConnection {
 		}
 	}
 
-
 	//Save department
 	function save_department(){
 		extract($_POST);
@@ -70,7 +69,6 @@ Class Master extends DBConnection {
 		return json_encode($resp);
 	}
 
-
 	function delete_department(){
 		extract($_POST);
 		$del = $this->conn->query("DELETE FROM `department_ist` where id = '{$id}'");
@@ -84,7 +82,6 @@ Class Master extends DBConnection {
 		return json_encode($resp);
 
 	}
-
 
 	//designation management
 	function save_designation(){
@@ -125,7 +122,6 @@ Class Master extends DBConnection {
 		}
 		return json_encode($resp);
 	}
-
 
 	function delete_designation(){
 		extract($_POST);
@@ -426,7 +422,8 @@ Class Master extends DBConnection {
       }
 
 
-	function AddUpdateEmployeeON($phoneno1,$phoneno2,$phoneno3,$empid)
+	
+	  function AddUpdateEmployeeON($phoneno1,$phoneno2,$phoneno3,$empid)
 	{
 		
 		    $this->conn->query("DELETE FROM employeephoneno WHERE EmployeeID_FK = ".$empid);
@@ -604,10 +601,32 @@ Class Master extends DBConnection {
 		$resp['status'] = 'success';
 		return json_encode($resp);
 	}
+
+	function save_employee_accessibility()
+	{
+		extract($_POST);
+		
+
+		$data = "";
+		foreach($_POST as $k =>$v){
+			if(!in_array($k,array('id'))){
+				$v = addslashes($v);
+				if(!empty($data)) $data .=",";
+				$data .= " `{$k}`='{$v}' ";
+				DBConnection::debugtaglog($k,$v);
+			}
+		}
+
+		
+
+	}
 }
 
 $Master = new Master();
 $action = !isset($_GET['f']) ? 'none' : strtolower($_GET['f']);
+
+DBConnection::debuglog($action);
+
 $sysset = new SystemSettings();
 switch ($action) {
 	case 'save_department':
@@ -651,6 +670,9 @@ switch ($action) {
 	break;
 	case 'delete_img':
 		echo $Master->delete_img();
+	break;
+	case 'save_employee_accessibility':
+		echo $Master->save_employee_accessibility();
 	break;
 	default:
 		// echo $sysset->index();
