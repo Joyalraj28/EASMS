@@ -176,6 +176,11 @@ $desg_arr = array_column($designation_qry->fetch_all(MYSQLI_ASSOC),'Name','Desig
 						</div>
 
 						<div class="form-group">
+							<label for="password">Password</label>
+							<input placeholder="number" type="password" name="password" id="password" class="form-control rounded-0" value="<?php echo isset($meta['Password']) ? $meta['Password']: '' ?>" required  autocomplete="off">
+						</div>
+
+						<div class="form-group">
 							<label for="" class="control-label">Avatar</label>
 							<div class="custom-file">
 								<input type="hidden" name="avatar" value="<?php echo isset($meta['Avatar']) ? $meta['Avatar']: '' ?>">

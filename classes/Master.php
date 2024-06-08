@@ -605,34 +605,54 @@ Class Master extends DBConnection {
 	function save_employee_accessibility()
 	{
 		extract($_POST);
-		DBConnection::consolelog("Test");
-		$data = "";
-		foreach($_POST as $k =>$v){
-			if(!in_array($k,array('EmployeeID')) && !in_array($k,array('login_type'))){
-				$v = addslashes($v);
-				if(!empty($data)) $data .=",";
-				$data .= " `{$k}`='{$v}' ";
+		
+
+		// $data = "";
+		// foreach($_POST as $k =>$v){
+		// 	if(!in_array($k,array('EmployeeID')) && !in_array($k,array('login_type'))){
+
+		// 		DBConnection::debuglog($v);
+
+		// 		$v = addslashes($v);
+		// 		if(!empty($data)) $data .=",";
+		// 		$data .= " `{$k}`='{$v}' ";
 				
-			}
-		}
+		// 	}
+		// }
 	
-		DBConnection::consolelog($data);
-		$resp['status'] = 'success';
-		return json_encode($resp);
+		
 
 		if(isset($_POST['login_type']))
 		{
 			$table = $_POST['login_type'] == 1 ?"Admin":"Accountant";
+
+			//get coloumn 
+			$coloumn = $this->conn->query("SELECT * FROM ".$table)->fetch_assoc();
+
+			$data = '';
+			foreach($coloumn as $key => $item)
+			{
+				
+				if(!in_array($key,array('EmployeeID')) && !in_array($key,array('login_type')) && !in_array($key,array('PriorityLevel')))
+				{
+					if(!empty($data)) $data .=",";
+					$data .= " `{$key}`=".(array_key_exists($key,$_POST) ? "1":"0");
+					
+				
+			   }
+			}
+
 			$update = $this->conn->query("UPDATE {$table} set {$data} WHERE EmployeeID = ".$_POST['EmployeeID']);
+
+			DBConnection::debuglog($update);
 			if($update)
 			{
 				$resp['status'] = 'success';
+				DBConnection::debuglog("TT");
 		        return json_encode($resp);
 			}
 
 		}
-
-		
 
 	}
 }
@@ -640,7 +660,6 @@ Class Master extends DBConnection {
 $Master = new Master();
 $action = !isset($_GET['f']) ? 'none' : strtolower($_GET['f']);
 
-DBConnection::debuglog($action);
 
 $sysset = new SystemSettings();
 switch ($action) {

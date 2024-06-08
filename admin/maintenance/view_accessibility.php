@@ -124,7 +124,7 @@ if(isMobileDevice()):
         <input name="login_type" type="hidden" value="<?php echo isset($_GET['login_type']) ?>" />
         <input name="EmployeeID" type="hidden" value="<?php echo isset($_GET['id']) ?>" />
 		<div class="card-tools">
-        <a href="<?php echo base_url ?>classes/Master.php?f=save_employee_accessibility" class="btn btn-flat btn-danger"><span class="fas fa-times"></span> Cancel</a>
+        <a href="<?php echo base_url ?>admin/?page=maintenance/accessibility" class="btn btn-flat btn-danger"><span class="fas fa-times"></span> Cancel</a>
 		<button  class="btn btn-flat btn-primary"><span class="fas fa-save"></span> Save</a>
 		</div>
 	</div>
@@ -233,12 +233,8 @@ if(isMobileDevice()):
         $('#Savebtn').submit(function(e){
 			
             try { 
-            
-           
 			e.preventDefault();
             var _this = $(this);
-            console.log(new FormData($(this)[0]));
-            alert(_base_url_);
 			 $('.err-msg').remove();
 			start_loader();
 			$.ajax({
@@ -252,25 +248,16 @@ if(isMobileDevice()):
                 dataType: 'json',
 				error:err=>{
 					alert_toast("An error occured",'error');
-                    console.log("Error")
-                    console.log(err)
 					end_loader();
 				},
 				success:function(resp){
 					
-					if(typeof resp =='object' && resp.status == 'success'){
+                    if(resp.status == 'success'){
 						location.reload();
-					}else if(resp.status == 'failed' && !!resp.msg){
-                        var el = $('<div>')
-                            el.addClass("alert alert-danger err-msg").text(resp.msg)
-                            _this.prepend(el)
-                            el.show('slow')
-                            $("html, body").animate({ scrollTop: 0 }, "fast");
-                            end_loader()
-                    }else{
-						alert_toast("An error occured",'error');
-						end_loader();
-                        console.log(resp)
+                        window.location.href = _base_url_+"admin/?page=maintenance/accessibility";
+                        end_loader();
+                        alert_toast("An error occured",'success');
+                        
 					}
 				}
 			})
