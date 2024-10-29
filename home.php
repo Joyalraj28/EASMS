@@ -28,9 +28,9 @@
 
             <!-- Modal Body -->
             <div class="modal-body text-dark">
-                <p ><?php 
-                echo $_settings->info('about');
-                ?></p>
+                <p >
+                <?php echo  is_file(base_app.'about.html') ? file_get_contents(base_app.'about.html') : "" ?>
+                </p>
             </div>
 
             <!-- Modal Footer -->

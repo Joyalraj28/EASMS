@@ -18,7 +18,7 @@ $lname = isset($namearry[1]) ?$namearry[1]:'';
 		<div class="container-fluid">
 			<div id="msg"></div>
 			<form action="" id="manage-user">	
-				<input type="hidden" name="id" value="<?php echo $_settings->userdata('id') ?>">
+				<input type="hidden" name="id" value="<?php echo $_settings->userdata('EmployeeID') ?>">
 				<div class="form-group">
 					<label for="name">First Name</label>
 					<input type="text" name="firstname" id="firstname" class="form-control" value="<?php echo isset($fname) ? $fname: '' ?>" required>
@@ -43,7 +43,7 @@ $lname = isset($namearry[1]) ?$namearry[1]:'';
 		            </div>
 				</div>
 				<div class="form-group d-flex justify-content-center">
-					<img src="<?php echo validate_image(isset($meta['avatar']) ? $meta['avatar'] :'') ?>" alt="" id="cimg" class="img-fluid img-thumbnail">
+					<img src="<?php echo validate_image(isset($meta['Avatar']) ? $meta['Avatar'] :'') ?>" alt="" id="cimg" class="img-fluid img-thumbnail">
 				</div>
 			</form>
 		</div>
@@ -88,13 +88,19 @@ var _this = $(this)
 		    method: 'POST',
 		    type: 'POST',
 			success:function(resp){
+				end_loader();
 				if(resp ==1){
-					location.reload()
+					$('#msg').html('<div class="alert alert-success">Successfully update profile</div>')
+					location.reload(true);
 				}else{
-					$('#msg').html('<div class="alert alert-danger">Username already exist</div>')
-					end_loader()
+					console.log(resp);
+					$('#msg').html('<div class="alert alert-danger">Unable to update profile</div>')
+	
 				}
-			}
+				console.error(resp);
+	
+			},
+			
 		})
 	})
 

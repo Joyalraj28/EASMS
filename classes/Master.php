@@ -272,10 +272,170 @@ Class Master extends DBConnection {
 		return json_encode($resp);
 	}
 
+
+	function priorityLevelfun($id,$table,$PriorityLevel,$employeetype) {
+
+
+		 //Priority Level
+		 //Insert
+		 if(empty($id))
+		 {
+ 			
+			$PriorityLeveltable = $this->conn->query("SELECT * FROM ".$table." where PriorityLevel = ".$PriorityLevel)->fetch_assoc();
+			if(!empty($PriorityLeveltable))
+			{
+				$resp['status'] = 'failed';
+				$resp['msg'] = "Priority level already exist";
+				return  json_encode($resp);
+				
+			}
+			else{
+				//Admin
+				//insert
+				if($employeetype == '1')
+				{
+					$this->conn->query("INSERT INTO `admin`(`EmployeeID`, `PriorityLevel`, `ManageEmployee`, `ManageLeave`, `ManageSalary`, `ManageAttendance`) VALUES ('{$id}','1','1','1','1','1')");
+				}
+				
+				//Accountant
+				//Insert
+				if($employeetype == '2')
+				{
+					$this->conn->query("INSERT INTO `accountant`(`EmployeeID`, `PriorityLevel`, `ManageSalary`, `ManageAttendance`) VALUES ('{$id}','1','1','1')");
+				}
+				
+
+			}
+
+		 }
+
+		 //Update
+		 else if(!empty($id))
+		 {
+			//Remove old Priority level
+			$this->conn->query("DELETE FROM `admin` WHERE EmployeeID = $id");
+			$this->conn->query("DELETE FROM `accountant` WHERE EmployeeID = $id");
+
+			$PriorityLeveltable = $this->conn->query("SELECT * FROM ".$table." where PriorityLevel = ".$PriorityLevel)->fetch_assoc();
+			
+			// ob_start();
+			// var_dump($PriorityLevel);
+			// $resp['status'] = 'failed';
+			// $resp['msg'] = ob_get_clean();
+			// return json_encode($resp);
+			
+			//This Priority Level all ready set anouter employee
+			if(!empty($PriorityLeveltable) && $PriorityLeveltable['EmployeeID'] != $id)
+			{
+				$resp['status'] = 'failed';
+				$resp['msg'] = "Priority level already exist";
+				return  json_encode($resp);
+			}
+
+			//is his id
+			else if(!empty($PriorityLeveltable) && $PriorityLeveltable['EmployeeID'] == $id)
+			{
+				$this->conn->query("UPDATE ".$table." SET `PriorityLevel`='".$PriorityLevel."' WHERE `EmployeeID`='$id'");
+
+			}
+
+			//Is the id not found
+			else if(empty($PriorityLeveltable))
+			{
+				$isemployeefound = $this->conn->query("SELECT * FROM ".$table." where EmployeeID = ".$id)->fetch_assoc();
+				//Admin
+				//insert
+				if($employeetype == '1' && empty($isemployeefound))
+				{
+					$this->conn->query("INSERT INTO `admin`(`EmployeeID`, `PriorityLevel`, `ManageEmployee`, `ManageLeave`, `ManageSalary`, `ManageAttendance`) VALUES ('{$id}','{$PriorityLevel}','1','1','1','1')");
+				}
+				//Update
+				else if($employeetype == '1' && !empty($isemployeefound))
+				{
+					$this->conn->query("UPDATE ".$table." SET `PriorityLevel`='".$PriorityLevel."' WHERE `EmployeeID`='$id'");
+
+				}
+
+				//Accountant
+				//Insert
+				if($employeetype == '2' && empty($isemployeefound))
+				{
+					// ob_start();
+					// var_dump($id);
+					// $resp['status'] = 'failed';
+					// $resp['msg'] = ob_get_clean();
+					// return json_encode($resp);
+
+					$this->conn->query("INSERT INTO `accountant`(`EmployeeID`, `PriorityLevel`, `ManageSalary`, `ManageAttendance`) VALUES ('{$id}','{$PriorityLevel}','1','1')");
+				}
+				//Update
+				else if($employeetype == '2' && !empty($isemployeefound))
+				{
+					$this->conn->query("UPDATE ".$table." SET `PriorityLevel`='".$PriorityLevel."' WHERE `EmployeeID`='$id'");
+				}
+			}
+
+			else
+			{
+				//  ob_start();
+				//  var_dump($priorityLevel);
+				 $resp['status'] = 'failed';
+				 $resp['msg'] = "priority Level Update Fail";
+				 return json_encode($resp);
+			}
+			
+		 }
+
+		 return null;
+	}
+
 	//Save employee
 	function save_employee(){
-		
+
+
 		extract($_POST);
+
+		//Dir not found
+		$dir = 'uploads/';
+		if(!is_dir(base_app.$dir))
+		{
+			mkdir(base_app.$dir);
+		}
+
+		
+		$empdata = $this->conn->query("SELECT Avatar FROM `employee` WHERE Email = '$email'")->fetch_assoc();
+
+		//Upload image
+		$fname ='';
+		$Fullname =  ($_POST['firstname']." ".$_POST['lastname']);
+		if(isset($_FILES['img'])){
+			if(!empty($_FILES['img']['tmp_name']) && isset($_SESSION['userdata']) && isset($_SESSION['system_info'])){
+					$fname = $dir.$Fullname."_emp.".(pathinfo($_FILES['img']['name'], PATHINFO_EXTENSION));
+
+					
+					if(!empty($empdata["Avatar"]) && $empdata["Avatar"]==$fname)
+					{
+						$fname = $empdata["Avatar"];
+					}
+
+					else
+					{
+					$move =  move_uploaded_file($_FILES['img']['tmp_name'],base_app.$fname);
+					if($move){
+						if(!empty($avatar) && is_file(base_app.$avatar))
+							unlink(base_app.$avatar);
+					}
+				
+				    }
+				}
+		}
+	
+		
+
+		$table = $_POST['employeetype'] == 1 ?"Admin":"Accountant";
+
+
+		$Fullname =  ($_POST['firstname']." ".$_POST['lastname']);
 		
 
 		$data = "";
@@ -288,10 +448,11 @@ Class Master extends DBConnection {
 			}
 		}
 
-	
-		if(empty($id))
-		{
-        //Check Email
+
+	//Check Email 
+	if(empty($id))
+	{
+        
 		$chk2 = $this->conn->query("SELECT * FROM `employee` where Email ='{$email}'")->num_rows;
 		$this->capture_err();
 		if($chk2 > 0){
@@ -300,50 +461,30 @@ Class Master extends DBConnection {
 			return json_encode($resp);
 			exit;
 		}
-	   }
+	}
 	
-		$imageData = 'null';
-
-		//Dir not found
-		$dir = 'uploads/';
-		if(!is_dir(base_app.$dir))
-		{
-			mkdir(base_app.$dir);
-		}
-
-
-			$Fullname =  ($_POST['firstname']." ".$_POST['lastname']);
-			$gender =  $_POST['gender'];
-			$dob  = $_POST['dob'];
-			$status =  $_POST['status'];
-			$address = $_POST['address'];
-			$netsalary = $_POST['netsalary'];
-			$Email = $_POST['email'];
-			$password = $_POST['password'];
-			$designation_id  = $_POST['designation_id'];
-			$currentempid = $this->settings->userdata('EmployeeID');
-
-			//Upload image
-			if(isset($_FILES['img'])){
-			if(!empty($_FILES['img']['tmp_name']) && isset($_SESSION['userdata']) && isset($_SESSION['system_info'])){
-						$fname = $dir.$Fullname."_emp.".(pathinfo($_FILES['img']['name'], PATHINFO_EXTENSION));
-						$move =  move_uploaded_file($_FILES['img']['tmp_name'],base_app.$fname);
-						if($move){
-							$imageData = "'".$fname."'";
-							if(!empty($avatar) && is_file(base_app.$avatar))
-								unlink(base_app.$avatar);
-						}
-					}
-			}
+	$Fullname =  ($_POST['firstname']." ".$_POST['lastname']);
+	$gender =  $_POST['gender'];
+	$dob  = $_POST['dob'];
+	$status =  $_POST['status'];
+	$address = $_POST['address'];
+	$netsalary = $_POST['netsalary'];
+	$Email = $_POST['email'];
+	$password = $_POST['password'];
+	$designation_id  = $_POST['designation_id'];
+	$currentempid = $this->settings->userdata('EmployeeID');
+	$fname = $dir.$Fullname."_emp.".(pathinfo($_FILES['img']['name'], PATHINFO_EXTENSION));
 
 		
 
        try {
 
+		//Update
 		if(!empty($id))
 		{
 
-			$query = $this->conn->query("UPDATE `employee` SET `Avatar`=$imageData,`Fullname`='$Fullname',`Gender`='$gender',`DOB`='$dob',`Status`='$status',`Address`='$address',`NetSalary`='$netsalary',`Email`='$Email',`Password`='$password',`DesignationID_FK`='$designation_id',`Admin_ID_FK`='$currentempid' WHERE `EmployeeID`='$id'");
+
+			$query = $this->conn->query("UPDATE `employee` SET `Avatar`='$fname',`Fullname`='$Fullname',`Gender`='$gender',`DOB`='$dob',`Status`='$status',`Address`='$address',`NetSalary`='$netsalary',`Email`='$Email',`Password`='$password',`DesignationID_FK`='$designation_id',`Admin_ID_FK`='$currentempid' WHERE `EmployeeID`='$id'");
 			
 			
 			if($query) {
@@ -353,18 +494,33 @@ Class Master extends DBConnection {
 				$empid= $empdata['EmployeeID'];
 	  
 				$this->AddUpdateEmployeeON($phoneno1,$phoneno2,$phoneno3,$empid);
+				
+
+				   //priority level
+				if($_POST['employeetype'] != '3')
+				{
+		 		$priorityLevel= $this->priorityLevelfun($id,$table,$_POST['PriorityLevel'],$_POST['employeetype']);
+			
 
 				
-				 $resp['status'] = 'success';
-				 $resp['id'] = $id;
-				 $resp['msg'] =  "Employee inserted successfully";
-	  
-	  
+
+		  		if(isset($priorityLevel))
+		  		{
+					return $priorityLevel;
+		  		}
+			
+			    }
+
+				
+				$resp['status'] = 'success';
+				$resp['id'] = $id;
+				$resp['msg'] =  "Employee inserted successfully";
+
+			
 			} 
-			   
 
-		
 
+	    
 		}
 
 		else{
@@ -373,7 +529,7 @@ Class Master extends DBConnection {
 
        		// Bind parameters
       		$query->bind_param("ssssisdssii",
-        	$imageData,
+			$fname,
         	$Fullname,
         	$gender,
         	$dob,
@@ -400,8 +556,25 @@ Class Master extends DBConnection {
 
 		  //Insert phone no
 		  $this->AddUpdateEmployeeON($phoneno1,$phoneno2,$phoneno3,$empid);
+
+		    //priority level
+		if($_POST['employeetype'] != '3')
+		{
+
+		
+		  //priority level
+		  $priorityLevel= $this->priorityLevelfun($id,$table,$_POST['PriorityLevel'],$_POST['employeetype']);
+
+			
+
+		  if(isset($priorityLevel))
+		  {
+			return $priorityLevel;
+		  }
+
+		}
 		   $resp['status'] = 'success';
-		   $resp['id'] = $id;
+		   $resp['id'] = $empid;
 	       $resp['msg'] =  "Employee inserted successfully";
 
 
@@ -418,6 +591,7 @@ Class Master extends DBConnection {
         
           }
 
+		  
 	       return json_encode($resp);
       }
 
@@ -540,9 +714,6 @@ Class Master extends DBConnection {
 
 
 		if(empty($id)){
-
-			
-
 			$sql = "INSERT INTO `leaveapplication`(`ApplyEmpID_FK`, `LeaveDate`, `Reason`, `StartDate`, `EndDate`, `Status`, `LeaveTypeID_FK`) VALUES
 			 									  ('{$empid}','$StartDate','$Reason','$StartDate','$EndDate','0','$LeaveTypeID_FK')";
 			$save = $this->conn->query($sql);
@@ -693,7 +864,7 @@ switch ($action) {
 	case 'save_emp_leave_type':
 		echo $Master->save_emp_leave_type();
 	break;
-	case 'save_application':
+	case 'save_application': //Save leave applicatio
 		echo $Master->save_application();
 	break;
 	case 'delete_application':

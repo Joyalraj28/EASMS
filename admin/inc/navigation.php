@@ -132,7 +132,10 @@
 
                   <!-- Attendance -->
                     <li class="nav-item dropdown">
-                      <a href="<?php echo base_url ?>admin/?page=maintenance/attendance" class="nav-link nav-maintenance_attendance">
+                    
+                 
+
+                      <a href="<?php echo base_url."admin/?page=maintenance/" ?><?php echo $_settings->userdata("login_type") == 3 ?"view_attendance&id=".$_settings->userdata("EmployeeID") : "attendance" ?>" class="nav-link nav-maintenance_attendance">
                       <i class="nav-icon fas fa-calendar"></i>
                         <p>List of Attendance</p>
                       </a>
@@ -140,7 +143,7 @@
 
                      <!-- Salary -->
                      <li class="nav-item dropdown">
-                      <a href="<?php echo base_url ?>admin/?page=maintenance/salary" class="nav-link nav-maintenance_salary">
+                      <a href="<?php echo base_url ?>admin/?page=maintenance/<?php echo $_settings->userdata("login_type") == 3 ?"view_salary&id=".$_settings->userdata("EmployeeID") : "salary" ?>" class="nav-link nav-maintenance_salary">
                       <i class="nav-icon fas fa-money-bill-wave"></i>
                         <p>Salary</p>
                       </a>

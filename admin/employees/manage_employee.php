@@ -17,13 +17,16 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 	LEFT JOIN department dep ON des.DepartmentID_FK = dep.DepartmentID
 	WHERE des.DesignationID = {$meta['DesignationID_FK']}")->fetch_assoc()['DepartmentID'];
 
-	$LointypeID = $conn->query("SELECT 
+	$User = $conn->query("SELECT 
 	IF(ad.EmployeeID  IS NOT null,1,
-	IF(acc.EmployeeID IS NOT null,2,3)) as LointypeID
+	IF(acc.EmployeeID IS NOT null,2,3)) as LointypeID,
+
+	IF(ad.EmployeeID  IS NOT null,ad.PriorityLevel,
+	IF(acc.EmployeeID IS NOT null,acc.PriorityLevel,null)) as PriorityLevel
+
     FROM employee emp 
 	LEFT JOIN admin ad ON  emp.EmployeeID = ad.EmployeeID
-	LEFT JOIN accountant acc ON emp.EmployeeID = acc.EmployeeID WHERE emp.EmployeeID={$meta['EmployeeID']}")->fetch_assoc()['LointypeID'];
-
+	LEFT JOIN accountant acc ON emp.EmployeeID = acc.EmployeeID WHERE emp.EmployeeID={$meta['EmployeeID']}")->fetch_assoc();
 
 }
 
@@ -53,9 +56,9 @@ $desg_arr = array_column($designation_qry->fetch_all(MYSQLI_ASSOC),'Name','Desig
 					   <label for="employee_type">Employee type</label>
 						<select name="employeetype" class="form-control">
                         	<option selected disabled >Select</option>
-                        	<option value="1" <?php if(isset($LointypeID) && $LointypeID == 1): ?> selected="selected"<?php endif; ?>>Admin</option>
-                        	<option value="2" <?php if(isset($LointypeID) && $LointypeID == 2): ?> selected="selected"<?php endif; ?>>Accountant</option>
-                        	<option value="3" <?php if(isset($LointypeID) && $LointypeID == 3): ?> selected="selected"<?php endif; ?>>Employee</option>
+                        	<option value="1" <?php if(isset($User["LointypeID"]) && $User["LointypeID"] == 1): ?> selected="selected"<?php endif; ?>>Admin</option>
+                        	<option value="2" <?php if(isset($User["LointypeID"]) && $User["LointypeID"] == 2): ?> selected="selected"<?php endif; ?>>Accountant</option>
+                        	<option value="3" <?php if(isset($User["LointypeID"]) && $User["LointypeID"] == 3): ?> selected="selected"<?php endif; ?>>Employee</option>
                         </select>
 						</div>
 
@@ -176,8 +179,8 @@ $desg_arr = array_column($designation_qry->fetch_all(MYSQLI_ASSOC),'Name','Desig
 						</div>
 
 						<div class="form-group">
-							<label for="password">Password</label>
-							<input placeholder="number" type="password" name="password" id="password" class="form-control rounded-0" value="<?php echo isset($meta['Password']) ? $meta['Password']: '' ?>" required  autocomplete="off">
+							<label for="PriorityLevel">Priority Level</label>
+							<input placeholder="Priority level" type="number" name="PriorityLevel" id="PriorityLevel" class="form-control rounded-0" value="<?php echo isset($User['PriorityLevel']) ? $User['PriorityLevel']: '' ?>"  autocomplete="off">
 						</div>
 
 						<div class="form-group">
@@ -185,6 +188,7 @@ $desg_arr = array_column($designation_qry->fetch_all(MYSQLI_ASSOC),'Name','Desig
 							<div class="custom-file">
 								<input type="hidden" name="avatar" value="<?php echo isset($meta['Avatar']) ? $meta['Avatar']: '' ?>">
 							<input type="file" class="custom-file-input rounded-circle" id="customFile" name="img" onchange="displayImg(this,$(this))">
+							<!-- <label><?php echo $meta['Avatar'] ?></label> -->
 							<label class="custom-file-label" for="customFile">Choose file</label>
 							</div>
 						</div>

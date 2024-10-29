@@ -11,9 +11,13 @@ Class Users extends DBConnection {
 		parent::__destruct();
 	}
 	public function save_users(){
+		
 		extract($_POST);
 		$data = '';
 		
+		//meage full name
+		$Fullname = $firstname." ".$lastname;
+
 		foreach($_POST as $k => $v){
 			if(!in_array($k,array('id','password'))){
 				if(!empty($data)) $data .=" , ";
@@ -21,49 +25,94 @@ Class Users extends DBConnection {
 			}
 		}
 		if(!empty($password)){
-			$password = md5($password);
+			// $password = md5($password);
 			if(!empty($data)) $data .=" , ";
 			$data .= " `password` = '{$password}' ";
 		}
 
+		
+		
+		$fname = "";
+
 		if(isset($_FILES['img']) && $_FILES['img']['tmp_name'] != ''){
 				$fname = 'uploads/'.strtotime(date('y-m-d H:i')).'_'.$_FILES['img']['name'];
-				$move = move_uploaded_file($_FILES['img']['tmp_name'],'../'. $fname);
-				if($move){
-					$imageData = "'".$fname."'";
+				$move =  move_uploaded_file($_FILES['img']['tmp_name'],base_app.$fname);
+					if($move){
+						if(!empty($avatar) && is_file(base_app.$avatar))
+							unlink(base_app.$avatar);
 
-					if(isset($_SESSION['userdata']['avatar']) && is_file('../'.$_SESSION['userdata']['avatar']) && $_SESSION['userdata']['id'] == $id)
-						unlink('../'.$_SESSION['userdata']['avatar']);
-				}
+							$this->set_userdata('Avatar',$fname);
+					}
 		}
+		
+	
 		if(!empty($id))
 		{
-
-			$query = $this->conn->query("UPDATE `employee` SET `Avatar`=$imageData,`Fullname`='$Fullname',`Gender`='$gender',`DOB`='$dob',`Status`='$status',`Address`='$address',`NetSalary`='$netsalary',`Email`='$Email',`Password`='$password',`DesignationID_FK`='$designation_id',`Admin_ID_FK`='$currentempid' WHERE `EmployeeID`='$id'");
+			$imageData = null;
+			
+			$sql = "UPDATE `employee` SET "
+			.(isset($fname ) ? "Avatar='$fname',":"").
+			"Fullname='$Fullname',Email='$Email',Password='$password' WHERE EmployeeID='$id'";
+			ob_start();
+			var_dump($sql);
+			$this->debuglog(ob_get_clean());
+			$query = $this->conn->query($sql);
+		
+			
 			
 			
 			if($query) {
+				
+				// $empdata = $this->conn->query("SELECT * FROM `employee` WHERE Email = '$email'")->fetch_assoc();
 
-				$empdata = $this->conn->query("SELECT * FROM `employee` WHERE Email = '$email'")->fetch_assoc();
-	  
-				$empid= $empdata['EmployeeID'];
-	  
-				$this->AddUpdateEmployeeON($phoneno1,$phoneno2,$phoneno3,$empid);
+				// $this->AddUpdateEmployeeON($phoneno1,$phoneno2,$phoneno3,$id);
 
 				
-				 $resp['status'] = 'success';
-				 $resp['id'] = $id;
-				 $resp['msg'] =  "Employee inserted successfully";
-	  
+				//  $resp['status'] = 'success';
+				//  $resp['id'] = $id;
+				//  $resp['msg'] =  "Employee inserted successfully";
+				 return 1;
 	  
 			} 
-			   
 
+			else{
+				return -1;
+			}
 		
 
-		}
+	}
+
 
 	}
+
+	
+	function AddUpdateEmployeeON($phoneno1,$phoneno2,$phoneno3,$empid)
+	{
+		
+		    $this->conn->query("DELETE FROM employeephoneno WHERE EmployeeID_FK = ".$empid);
+
+ 			if(!empty($phoneno1) && isset($phoneno1))
+ 			{
+ 			$this->conn->query("INSERT INTO `employeephoneno`(`PhoneNo`, `EmployeeID_FK`) VALUES ('$phoneno1','$empid')");
+ 			}
+		
+ 			//Phone no 2
+ 			if(!empty($phoneno2) && isset($phoneno2))
+ 			{
+ 			 $this->conn->query("INSERT INTO `employeephoneno`(`PhoneNo`, `EmployeeID_FK`) VALUES ('$phoneno2','$empid')");
+ 			}
+		
+ 			//Phone no 3
+ 			if(!empty($phoneno3) && isset($phoneno3))
+ 			{
+ 			$this->conn->query("INSERT INTO `employeephoneno`(`PhoneNo`, `EmployeeID_FK`) VALUES ('$phoneno3','$empid')");
+ 			}
+
+		// }
+	}
+
+
+
 	public function delete_users(){
 		extract($_POST);
 		$avatar = $this->conn->query("SELECT avatar FROM users where id = '{$id}'")->fetch_array()['avatar'];
@@ -79,6 +128,7 @@ Class Users extends DBConnection {
 		return json_encode($resp);
 	}
 	public function save_fusers(){
+		
 		extract($_POST);
 		$data = "";
 		foreach($_POST as $k => $v){
@@ -122,6 +172,7 @@ Class Users extends DBConnection {
 	} 
 
 	public function save_susers(){
+
 		extract($_POST);
 		$data = "";
 		foreach($_POST as $k => $v){
@@ -168,6 +219,7 @@ Class Users extends DBConnection {
 
 $users = new users();
 $action = !isset($_GET['f']) ? 'none' : strtolower($_GET['f']);
+
 switch ($action) {
 	case 'save':
 		echo $users->save_users();

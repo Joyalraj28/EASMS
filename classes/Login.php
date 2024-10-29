@@ -46,6 +46,10 @@ class Login extends DBConnection {
 				}
 
 			}
+
+			ob_start();
+			var_dump($_SESSION['userdata']);
+			$this->debuglog(ob_get_clean());
 		
         if($this->settings->userdata('Status') && $this->settings->userdata('login_type') !=  $Usertype)
 		{

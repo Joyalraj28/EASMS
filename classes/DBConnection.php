@@ -53,6 +53,14 @@ class DBConnection{
         fclose($myfile);
     }
 
+
+    public static function fdebuglog($file,$output)
+    {
+        $myfile = fopen("../Debug/".$file.".txt", "a") or die("Unable to open file!");
+        fwrite($myfile, $output);
+        fclose($myfile);
+    }
+
     public static function EmployeeTypeName($EmpTypeID)  {
 
         if($EmpTypeID == 1)
@@ -94,5 +102,23 @@ class DBConnection{
     public function __destruct(){
         $this->conn->close();
     }
+
+
+    function set_userdata($field='',$value=''){
+		if(!empty($field) && !empty($value)){
+			$_SESSION['userdata'][$field]= $value;
+		}
+	}
+
+    function userdata($field = ''){
+		if(!empty($field)){
+			if(isset($_SESSION['userdata'][$field]))
+				return $_SESSION['userdata'][$field];
+			else
+				return null;
+		}else{
+			return false;
+		}
+	}
 }
 ?>

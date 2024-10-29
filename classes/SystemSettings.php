@@ -73,11 +73,11 @@ class SystemSettings extends DBConnection{
 			return true;
 		}
 	}
-	function set_userdata($field='',$value=''){
-		if(!empty($field) && !empty($value)){
-			$_SESSION['userdata'][$field]= $value;
-		}
-	}
+	// function set_userdata($field='',$value=''){
+	// 	if(!empty($field) && !empty($value)){
+	// 		$_SESSION['userdata'][$field]= $value;
+	// 	}
+	// }
 
     function ClearUserdata()
 	{
@@ -86,17 +86,18 @@ class SystemSettings extends DBConnection{
 		}
 	}
 
-	function userdata($field = ''){
-		if(!empty($field)){
-			if(isset($_SESSION['userdata'][$field]))
-				return $_SESSION['userdata'][$field];
-			else
-				return null;
-		}else{
-			return false;
-		}
-	}
+	// function userdata($field = ''){
+	// 	if(!empty($field)){
+	// 		if(isset($_SESSION['userdata'][$field]))
+	// 			return $_SESSION['userdata'][$field];
+	// 		else
+	// 			return null;
+	// 	}else{
+	// 		return false;
+	// 	}
+	// }
 	function set_flashdata($flash='',$value=''){
+		
 		if(!empty($flash) && !empty($value)){
 			$_SESSION['flashdata'][$flash]= $value;
 		return true;

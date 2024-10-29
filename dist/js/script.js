@@ -33,6 +33,15 @@ $(document).ready(function(){
 			data:$(this).serialize(),
 			error:err=>{
 				console.log(err)
+				end_loader()
+
+				var _frm = $('#login-frm')
+						var _msg = "<div class='alert alert-danger text-white err_msg'><i class='fa fa-exclamation-triangle'></i> Invaild email or password</div>"
+						_frm.prepend(_msg)
+						_frm.find('input').addClass('is-invalid')
+						_frm.find('select').addClass('is-invalid')
+						$('[name="Usertype"]').focus()
+						
 
 			},
 			success:function(resp){
@@ -50,8 +59,9 @@ $(document).ready(function(){
 						_frm.find('input').addClass('is-invalid')
 						_frm.find('select').addClass('is-invalid')
 						$('[name="Usertype"]').focus()
+						
 					}
-						end_loader()
+					end_loader();
 				}
 			}
 		})
@@ -68,6 +78,7 @@ $(document).ready(function(){
 			data:$(this).serialize(),
 			error:err=>{
 				console.log(err)
+				end_loader();
 
 			},
 			success:function(resp){
@@ -103,6 +114,7 @@ $(document).ready(function(){
 			data:$(this).serialize(),
 			error:err=>{
 				console.log(err)
+				
 
 			},
 			success:function(resp){

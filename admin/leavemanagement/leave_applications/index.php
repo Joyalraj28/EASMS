@@ -95,13 +95,13 @@
 				                    <span class="sr-only">Toggle Dropdown</span>
 				                  </button>
 				                  <div class="dropdown-menu" role="menu">
-								  	<a class="dropdown-item view_application" href="javascript:void(0)" data-id="<?php echo $row['LeaveApplicationID'] ?>"><span class="fa fa-eye"></span> View</a>
+								  	<a class="dropdown-item view_application" href="javascript:void(0)" data-id="<?php echo  $row['LeaveApplicationID'] ?>"><span class="fa fa-eye"></span> View</a>
 				                    <div class="dropdown-divider"></div>
-									<?php if($_settings->userdata('type') != 3): ?>
+									<?php if($_settings->userdata('login_type') != 3): ?>
 				                    <a class="dropdown-item update_status" href="javascript:void(0)" data-id="<?php echo $row['LeaveApplicationID'] ?>"><span class="fa fa-check-square"></span> Update Status</a>
 				                    <div class="dropdown-divider"></div>
 									<?php endif; ?>
-									<?php if($_settings->userdata('type') != 3 || ($row['status'] == '0') ): ?>
+									<?php if($_settings->userdata('login_type') != 3 || ($row['Status'] == '0') ): ?>
 				                    <a class="dropdown-item" href="?page=leavemanagement/leave_applications/manage_application&id=<?php echo $row['LeaveApplicationID'] ?>"><span class="fa fa-edit text-primary"></span> Edit</a>
 				                    <div class="dropdown-divider"></div>
 				                    <a class="dropdown-item delete_data" href="javascript:void(0)" data-id="<?php echo $row['LeaveApplicationID'] ?>"><span class="fa fa-trash text-danger"></span> Delete</a>

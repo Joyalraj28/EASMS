@@ -1,120 +1,897 @@
-1
-TT
-1
-TT
+bool(true)
+
 <SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
+=>http://localhost/EASMS/admin/?page=user
 <\SESSION>
 <USER>
 T
 <\USER>
-<Recordlog>
-1
-<\Recordlog>
-1
-TT
+bool(true)
+
 <SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
+=>http://localhost/EASMS/admin/?page=user
 <\SESSION>
 <USER>
 T
 <\USER>
-<Recordlog>
-1
-<\Recordlog>
+bool(true)
+
 <SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
+=>http://localhost/EASMS/admin/?page=user
 <\SESSION>
 <USER>
 T
 <\USER>
-<Recordlog>
-1
-<\Recordlog>
-1
-TT
 <SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
+=>http://localhost/EASMS/admin/?page=user
 <\SESSION>
 <USER>
 T
 <\USER>
-<Recordlog>
-1
-<\Recordlog>
+bool(true)
+
 <SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
+=>http://localhost/EASMS/admin/?page=user
 <\SESSION>
 <USER>
 T
 <\USER>
-<Recordlog>
-1
-<\Recordlog>
-1
-TT
+bool(true)
+
+bool(true)
+
 <SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+array(18) {
+  ["EmployeeID"]=>
+  string(1) "1"
+  ["Avatar"]=>
+  string(24) "uploads/John Leo_emp.jpg"
+  ["Fullname"]=>
+  string(8) "John Lee"
+  ["Gender"]=>
+  string(4) "Male"
+  ["DOB"]=>
+  string(10) "1999-03-18"
+  ["Status"]=>
+  string(1) "1"
+  ["Address"]=>
+  string(6) "Jaffna"
+  ["NetSalary"]=>
+  string(5) "99.99"
+  ["Email"]=>
+  string(14) "John@gmail.com"
+  ["Password"]=>
+  string(3) "123"
+  ["DesignationID_FK"]=>
+  string(1) "3"
+  ["Admin_ID_FK"]=>
+  string(1) "1"
+  ["login_type"]=>
+  string(1) "1"
+  ["PriorityLevel"]=>
+  string(1) "1"
+  ["AdminManageEmployee"]=>
+  string(1) "1"
+  ["AdminManageLeave"]=>
+  string(1) "1"
+  ["AdminManageSalary"]=>
+  string(1) "1"
+  ["AdminManageAttendance"]=>
+  string(1) "1"
+}
+
+<SESSION>
+=>http://localhost/EASMS/admin/
 <\SESSION>
 <USER>
 T
 <\USER>
-<Recordlog>
-1
-<\Recordlog>
 <SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
+=>http://localhost/EASMS/admin/?page=user
 <\SESSION>
 <USER>
 T
 <\USER>
-<Recordlog>
-1
-<\Recordlog>
-1
-TT
+bool(true)
+
 <SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
+=>http://localhost/EASMS/admin/?page=user
 <\SESSION>
 <USER>
 T
 <\USER>
-<Recordlog>
-1
-<\Recordlog>
-1
-TT
 <SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
+=>http://localhost/EASMS/admin/?page=user
 <\SESSION>
 <USER>
 T
 <\USER>
-<Recordlog>
-1
-<\Recordlog>
-1
-TT
+bool(true)
+
+bool(true)
+
 <SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
+=>http://localhost/EASMS/admin/?page=user
 <\SESSION>
 <USER>
 T
 <\USER>
-<Recordlog>
-1
-<\Recordlog>
-1
-TT
+bool(true)
+
 <SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
+=>http://localhost/EASMS/admin/?page=user
 <\SESSION>
 <USER>
 T
 <\USER>
-<Recordlog>
-1
-<\Recordlog>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=user
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=user
+<\SESSION>
+<USER>
+T
+<\USER>
+string(136) "UPDATE `employee` SET Avatar=uploads/1729868520_joyal.jpg,Fullname='John Lee',Email='John@gmail.com',Password='123' WHERE EmployeeID='1'"
+
+string(138) "UPDATE `employee` SET Avatar='uploads/1729868520_joyal.jpg',Fullname='John Lee',Email='John@gmail.com',Password='123' WHERE EmployeeID='1'"
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=user
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=user
+<\SESSION>
+<USER>
+T
+<\USER>
+string(110) "UPDATE `employee` SET Avatar='',Fullname='John Lee',Email='John@gmail.com',Password='123' WHERE EmployeeID='1'"
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=user
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=user
+<\SESSION>
+<USER>
+T
+<\USER>
+string(138) "UPDATE `employee` SET Avatar='uploads/1729868700_joyal.jpg',Fullname='John Lee',Email='John@gmail.com',Password='123' WHERE EmployeeID='1'"
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=user
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=user
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=user
+<\SESSION>
+<USER>
+T
+<\USER>
+string(110) "UPDATE `employee` SET Avatar='',Fullname='John Lee',Email='John@gmail.com',Password='123' WHERE EmployeeID='1'"
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=user
+<\SESSION>
+<USER>
+T
+<\USER>
+string(138) "UPDATE `employee` SET Avatar='uploads/1729869060_joyal.jpg',Fullname='John Lee',Email='John@gmail.com',Password='123' WHERE EmployeeID='1'"
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=user
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+array(18) {
+  ["EmployeeID"]=>
+  string(1) "1"
+  ["Avatar"]=>
+  string(28) "uploads/1729869060_joyal.jpg"
+  ["Fullname"]=>
+  string(8) "John Lee"
+  ["Gender"]=>
+  string(4) "Male"
+  ["DOB"]=>
+  string(10) "1999-03-18"
+  ["Status"]=>
+  string(1) "1"
+  ["Address"]=>
+  string(6) "Jaffna"
+  ["NetSalary"]=>
+  string(5) "99.99"
+  ["Email"]=>
+  string(14) "John@gmail.com"
+  ["Password"]=>
+  string(3) "123"
+  ["DesignationID_FK"]=>
+  string(1) "3"
+  ["Admin_ID_FK"]=>
+  string(1) "1"
+  ["login_type"]=>
+  string(1) "1"
+  ["PriorityLevel"]=>
+  string(1) "1"
+  ["AdminManageEmployee"]=>
+  string(1) "1"
+  ["AdminManageLeave"]=>
+  string(1) "1"
+  ["AdminManageSalary"]=>
+  string(1) "1"
+  ["AdminManageAttendance"]=>
+  string(1) "1"
+}
+
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+array(12) {
+  ["EmployeeID"]=>
+  string(1) "3"
+  ["Fullname"]=>
+  string(9) "Joyal Raj"
+  ["Gender"]=>
+  string(4) "Male"
+  ["DOB"]=>
+  string(10) "1999-03-18"
+  ["Status"]=>
+  string(1) "1"
+  ["Address"]=>
+  string(6) "Jaffna"
+  ["NetSalary"]=>
+  string(5) "99.99"
+  ["Email"]=>
+  string(27) "singarasajoyalraj@gmail.com"
+  ["Password"]=>
+  string(3) "123"
+  ["DesignationID_FK"]=>
+  string(1) "1"
+  ["Admin_ID_FK"]=>
+  string(1) "1"
+  ["login_type"]=>
+  string(1) "3"
+}
+
+array(18) {
+  ["EmployeeID"]=>
+  string(1) "1"
+  ["Avatar"]=>
+  string(28) "uploads/1729869060_joyal.jpg"
+  ["Fullname"]=>
+  string(8) "John Lee"
+  ["Gender"]=>
+  string(4) "Male"
+  ["DOB"]=>
+  string(10) "1999-03-18"
+  ["Status"]=>
+  string(1) "1"
+  ["Address"]=>
+  string(6) "Jaffna"
+  ["NetSalary"]=>
+  string(5) "99.99"
+  ["Email"]=>
+  string(14) "John@gmail.com"
+  ["Password"]=>
+  string(3) "123"
+  ["DesignationID_FK"]=>
+  string(1) "3"
+  ["Admin_ID_FK"]=>
+  string(1) "1"
+  ["login_type"]=>
+  string(1) "1"
+  ["PriorityLevel"]=>
+  string(1) "1"
+  ["AdminManageEmployee"]=>
+  string(1) "1"
+  ["AdminManageLeave"]=>
+  string(1) "1"
+  ["AdminManageSalary"]=>
+  string(1) "1"
+  ["AdminManageAttendance"]=>
+  string(1) "1"
+}
+
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=user
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+array(18) {
+  ["EmployeeID"]=>
+  string(1) "1"
+  ["Avatar"]=>
+  string(28) "uploads/1729869060_joyal.jpg"
+  ["Fullname"]=>
+  string(8) "John Lee"
+  ["Gender"]=>
+  string(4) "Male"
+  ["DOB"]=>
+  string(10) "1999-03-18"
+  ["Status"]=>
+  string(1) "1"
+  ["Address"]=>
+  string(6) "Jaffna"
+  ["NetSalary"]=>
+  string(5) "99.99"
+  ["Email"]=>
+  string(14) "John@gmail.com"
+  ["Password"]=>
+  string(3) "123"
+  ["DesignationID_FK"]=>
+  string(1) "3"
+  ["Admin_ID_FK"]=>
+  string(1) "1"
+  ["login_type"]=>
+  string(1) "1"
+  ["PriorityLevel"]=>
+  string(1) "1"
+  ["AdminManageEmployee"]=>
+  string(1) "1"
+  ["AdminManageLeave"]=>
+  string(1) "1"
+  ["AdminManageSalary"]=>
+  string(1) "1"
+  ["AdminManageAttendance"]=>
+  string(1) "1"
+}
+
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=system_info
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=user
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+29=>http://localhost/EASMS/admin/forgotpassword.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+array(18) {
+  ["EmployeeID"]=>
+  string(1) "1"
+  ["Avatar"]=>
+  string(28) "uploads/1729869060_joyal.jpg"
+  ["Fullname"]=>
+  string(8) "John Lee"
+  ["Gender"]=>
+  string(4) "Male"
+  ["DOB"]=>
+  string(10) "1999-03-18"
+  ["Status"]=>
+  string(1) "1"
+  ["Address"]=>
+  string(6) "Jaffna"
+  ["NetSalary"]=>
+  string(5) "99.99"
+  ["Email"]=>
+  string(14) "John@gmail.com"
+  ["Password"]=>
+  string(3) "123"
+  ["DesignationID_FK"]=>
+  string(1) "3"
+  ["Admin_ID_FK"]=>
+  string(1) "1"
+  ["login_type"]=>
+  string(1) "1"
+  ["PriorityLevel"]=>
+  string(1) "1"
+  ["AdminManageEmployee"]=>
+  string(1) "1"
+  ["AdminManageLeave"]=>
+  string(1) "1"
+  ["AdminManageSalary"]=>
+  string(1) "1"
+  ["AdminManageAttendance"]=>
+  string(1) "1"
+}
+
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=system_info
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=system_info
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+array(18) {
+  ["EmployeeID"]=>
+  string(1) "1"
+  ["Avatar"]=>
+  string(28) "uploads/1729869060_joyal.jpg"
+  ["Fullname"]=>
+  string(8) "John Lee"
+  ["Gender"]=>
+  string(4) "Male"
+  ["DOB"]=>
+  string(10) "1999-03-18"
+  ["Status"]=>
+  string(1) "1"
+  ["Address"]=>
+  string(6) "Jaffna"
+  ["NetSalary"]=>
+  string(5) "99.99"
+  ["Email"]=>
+  string(14) "John@gmail.com"
+  ["Password"]=>
+  string(3) "123"
+  ["DesignationID_FK"]=>
+  string(1) "3"
+  ["Admin_ID_FK"]=>
+  string(1) "1"
+  ["login_type"]=>
+  string(1) "1"
+  ["PriorityLevel"]=>
+  string(1) "1"
+  ["AdminManageEmployee"]=>
+  string(1) "1"
+  ["AdminManageLeave"]=>
+  string(1) "1"
+  ["AdminManageSalary"]=>
+  string(1) "1"
+  ["AdminManageAttendance"]=>
+  string(1) "1"
+}
+
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leavereport
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+array(12) {
+  ["EmployeeID"]=>
+  string(1) "3"
+  ["Fullname"]=>
+  string(9) "Joyal Raj"
+  ["Gender"]=>
+  string(4) "Male"
+  ["DOB"]=>
+  string(10) "1999-03-18"
+  ["Status"]=>
+  string(1) "1"
+  ["Address"]=>
+  string(6) "Jaffna"
+  ["NetSalary"]=>
+  string(5) "99.99"
+  ["Email"]=>
+  string(27) "singarasajoyalraj@gmail.com"
+  ["Password"]=>
+  string(3) "123"
+  ["DesignationID_FK"]=>
+  string(1) "1"
+  ["Admin_ID_FK"]=>
+  string(1) "1"
+  ["login_type"]=>
+  string(1) "3"
+}
+
+array(18) {
+  ["EmployeeID"]=>
+  string(1) "1"
+  ["Avatar"]=>
+  string(28) "uploads/1729869060_joyal.jpg"
+  ["Fullname"]=>
+  string(8) "John Lee"
+  ["Gender"]=>
+  string(4) "Male"
+  ["DOB"]=>
+  string(10) "1999-03-18"
+  ["Status"]=>
+  string(1) "1"
+  ["Address"]=>
+  string(6) "Jaffna"
+  ["NetSalary"]=>
+  string(5) "99.99"
+  ["Email"]=>
+  string(14) "John@gmail.com"
+  ["Password"]=>
+  string(3) "123"
+  ["DesignationID_FK"]=>
+  string(1) "3"
+  ["Admin_ID_FK"]=>
+  string(1) "1"
+  ["login_type"]=>
+  string(1) "1"
+  ["PriorityLevel"]=>
+  string(1) "1"
+  ["AdminManageEmployee"]=>
+  string(1) "1"
+  ["AdminManageLeave"]=>
+  string(1) "1"
+  ["AdminManageSalary"]=>
+  string(1) "1"
+  ["AdminManageAttendance"]=>
+  string(1) "1"
+}
+
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+array(12) {
+  ["EmployeeID"]=>
+  string(1) "3"
+  ["Fullname"]=>
+  string(9) "Joyal Raj"
+  ["Gender"]=>
+  string(4) "Male"
+  ["DOB"]=>
+  string(10) "1999-03-18"
+  ["Status"]=>
+  string(1) "1"
+  ["Address"]=>
+  string(6) "Jaffna"
+  ["NetSalary"]=>
+  string(5) "99.99"
+  ["Email"]=>
+  string(27) "singarasajoyalraj@gmail.com"
+  ["Password"]=>
+  string(3) "123"
+  ["DesignationID_FK"]=>
+  string(1) "1"
+  ["Admin_ID_FK"]=>
+  string(1) "1"
+  ["login_type"]=>
+  string(1) "3"
+}
+
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/manage_application&id=2
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=user
+<\SESSION>
+<USER>
+T
+<\USER>
+string(178) "UPDATE `employee` SET Avatar='uploads/1729877340_Outdoors-man-portrait_(cropped).jpg',Fullname='Joyal Raj',Email='singarasajoyalraj@gmail.com',Password='123' WHERE EmployeeID='3'"
+
+<SESSION>
+=>http://localhost/EASMS/admin/?page=user
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+array(13) {
+  ["EmployeeID"]=>
+  string(1) "3"
+  ["Avatar"]=>
+  string(54) "uploads/1729877340_Outdoors-man-portrait_(cropped).jpg"
+  ["Fullname"]=>
+  string(9) "Joyal Raj"
+  ["Gender"]=>
+  string(4) "Male"
+  ["DOB"]=>
+  string(10) "1999-03-18"
+  ["Status"]=>
+  string(1) "1"
+  ["Address"]=>
+  string(6) "Jaffna"
+  ["NetSalary"]=>
+  string(5) "99.99"
+  ["Email"]=>
+  string(27) "singarasajoyalraj@gmail.com"
+  ["Password"]=>
+  string(3) "123"
+  ["DesignationID_FK"]=>
+  string(1) "1"
+  ["Admin_ID_FK"]=>
+  string(1) "1"
+  ["login_type"]=>
+  string(1) "3"
+}
+
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+array(18) {
+  ["EmployeeID"]=>
+  string(1) "1"
+  ["Avatar"]=>
+  string(28) "uploads/1729869060_joyal.jpg"
+  ["Fullname"]=>
+  string(8) "John Lee"
+  ["Gender"]=>
+  string(4) "Male"
+  ["DOB"]=>
+  string(10) "1999-03-18"
+  ["Status"]=>
+  string(1) "1"
+  ["Address"]=>
+  string(6) "Jaffna"
+  ["NetSalary"]=>
+  string(5) "99.99"
+  ["Email"]=>
+  string(14) "John@gmail.com"
+  ["Password"]=>
+  string(3) "123"
+  ["DesignationID_FK"]=>
+  string(1) "3"
+  ["Admin_ID_FK"]=>
+  string(1) "1"
+  ["login_type"]=>
+  string(1) "1"
+  ["PriorityLevel"]=>
+  string(1) "1"
+  ["AdminManageEmployee"]=>
+  string(1) "1"
+  ["AdminManageLeave"]=>
+  string(1) "1"
+  ["AdminManageSalary"]=>
+  string(1) "1"
+  ["AdminManageAttendance"]=>
+  string(1) "1"
+}
+
 <SESSION>
 =>http://localhost/EASMS/admin/
 <\SESSION>
@@ -128,116 +905,314 @@ T
 T
 <\USER>
 <SESSION>
-=>http://localhost/EASMS/admin/?page=employees
+=>http://localhost/EASMS/admin/?page=employees/manage_employee&id=3
 <\SESSION>
 <USER>
 T
 <\USER>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/accessibility
-<\SESSION>
-<USER>
-T
-<\USER>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
-<\SESSION>
-<USER>
-T
-<\USER>
-<Recordlog>
+<type>
+3
+<\type>
+<employeetype>
 1
-<\Recordlog>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/accessibility
-<\SESSION>
-<USER>
-T
-<\USER>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
-<\SESSION>
-<USER>
-T
-<\USER>
-<Recordlog>
+<\employeetype>
+<gender>
+Male
+<\gender>
+<firstname>
+Joyal
+<\firstname>
+<lastname>
+Raj
+<\lastname>
+<dob>
+1999-03-18
+<\dob>
+<phonenoOld1>
+
+<\phonenoOld1>
+<phoneno1>
+0779854983
+<\phoneno1>
+<phonenoOld2>
+
+<\phonenoOld2>
+<phoneno2>
+
+<\phoneno2>
+<phonenoOld3>
+
+<\phonenoOld3>
+<phoneno3>
+
+<\phoneno3>
+<address>
+Jaffna
+<\address>
+<status>
 1
-<\Recordlog>
+<\status>
+<department_id>
 1
-TT
-<SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
-<\SESSION>
-<USER>
-T
-<\USER>
-<Recordlog>
+<\department_id>
+<designation_id>
 1
-<\Recordlog>
+<\designation_id>
+<netsalary>
+99.99
+<\netsalary>
+<email>
+singarasajoyalraj@gmail.com
+<\email>
+<password>
+123
+<\password>
+<PriorityLevel>
+
+<\PriorityLevel>
+<avatar>
+uploads/1729877340_Outdoors-man-portrait_(cropped).jpg
+<\avatar>
 <SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+array(18) {
+  ["EmployeeID"]=>
+  string(1) "1"
+  ["Avatar"]=>
+  string(28) "uploads/1729869060_joyal.jpg"
+  ["Fullname"]=>
+  string(8) "John Lee"
+  ["Gender"]=>
+  string(4) "Male"
+  ["DOB"]=>
+  string(10) "1999-03-18"
+  ["Status"]=>
+  string(1) "1"
+  ["Address"]=>
+  string(6) "Jaffna"
+  ["NetSalary"]=>
+  string(5) "99.99"
+  ["Email"]=>
+  string(14) "John@gmail.com"
+  ["Password"]=>
+  string(3) "123"
+  ["DesignationID_FK"]=>
+  string(1) "3"
+  ["Admin_ID_FK"]=>
+  string(1) "1"
+  ["login_type"]=>
+  string(1) "1"
+  ["PriorityLevel"]=>
+  string(1) "1"
+  ["AdminManageEmployee"]=>
+  string(1) "1"
+  ["AdminManageLeave"]=>
+  string(1) "1"
+  ["AdminManageSalary"]=>
+  string(1) "1"
+  ["AdminManageAttendance"]=>
+  string(1) "1"
+}
+
+<SESSION>
+=>http://localhost/EASMS/admin/
 <\SESSION>
 <USER>
 T
 <\USER>
-<Recordlog>
-1
-<\Recordlog>
-1
-TT
 <SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
+=>http://localhost/EASMS/admin/?page=maintenance/designation
 <\SESSION>
 <USER>
 T
 <\USER>
 <SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
-<\SESSION>
-<USER>
-T
-<\USER>
-<Recordlog>
-1
-<\Recordlog>
-1
-TT
-<SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
+=>http://localhost/EASMS/admin/?page=maintenance/department
 <\SESSION>
 <USER>
 T
 <\USER>
 <SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/accessibility
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
 <\SESSION>
 <USER>
 T
 <\USER>
 <SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/view_accessibility&id=1&login_type=1
-<\SESSION>
-<USER>
-T
-<\USER>
-<Recordlog>
-1
-<\Recordlog>
-<SESSION>
-=>http://localhost/EASMS/admin/?page=maintenance/accessibility
+=>http://localhost/EASMS/admin/?page=leavemanagement/leavereport
 <\SESSION>
 <USER>
 T
 <\USER>
 <SESSION>
-=>http://localhost/EASMS/admin/?page=employees
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
 <\SESSION>
 <USER>
 T
 <\USER>
 <SESSION>
-=>http://localhost/EASMS/admin/?page=employees/manage_employee
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
 <\SESSION>
 <USER>
 T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications/
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leavereport
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_applications
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leave_type
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/?page=leavemanagement/leavereport
+<\SESSION>
+<USER>
+T
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
+<\USER>
+<SESSION>
+=>http://localhost/EASMS/admin/login.php
+<\SESSION>
+<USER>
+F
 <\USER>

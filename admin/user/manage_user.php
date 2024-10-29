@@ -98,6 +98,9 @@ var _this = $(this)
 		    method: 'POST',
 		    type: 'POST',
 			success:function(resp){
+
+				console.log(resp);
+				
 				if(resp ==1){
 					location.href = './?page=user/list';
 				}else{
